@@ -1,10 +1,7 @@
-/* simple confusing but exellently done man  */
-/* awesome */
 .textRevealContainer {
   position: absolute;
   left: 50%;
   top: 50%;
-  background-color: aqua;
   transform: translate(-50%, -50%);
   font-family: "Comic Sans MS", cursive, sans-serif;
   font-size: 1.5em; /*adjust according to your need*/
@@ -29,13 +26,7 @@
   transform: translateX(-100%);
   animation: textRevealAnim 2s ease 0.5s forwards;
 }
-/* 
-  textReveal has two divs under it 
-  first div has the second div 
-  and the second div has the thired div .
 
-  and mind that the second div has the textt content .
- */
 @keyframes textRevealAnim {
   to {
     transform: translateX(0);
@@ -50,8 +41,6 @@
     border-left: 2px solid transparent;
   }
 }
-/* simple confusing but exellently done man  */
-/* awesome */
 
 .textReveal.x50 {
   transform: translateX(-50%);

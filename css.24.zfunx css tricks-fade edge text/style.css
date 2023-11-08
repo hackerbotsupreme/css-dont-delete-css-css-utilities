@@ -1,0 +1,20 @@
+body {
+  background: url(https://web.opendrive.com/api/v1/download/file.json/NTlfMTA0NTI4NDhf?inline=1);
+  background-size: cover;
+  margin: 0;
+  background-attachment: fixed;
+}
+
+.fadedEdge {
+  overflow: auto;
+  height: 100%;
+}
+
+.fadedEdge > p {
+  color: #fff;
+  padding: 8px;
+  background: linear-gradient(transparent, #fff 10%, #fff 90%, transparent);
+  background-attachment: fixed;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
