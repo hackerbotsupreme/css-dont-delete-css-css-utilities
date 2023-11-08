@@ -7,9 +7,10 @@ button {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: relative;
-  color: #fff; 
-  /* For IE */
+
+  color: #fff; /*For IE*/
 }
+
 button:after {
   content: "";
   position: absolute;
@@ -32,6 +33,6 @@ button:hover,
 button:hover:after {
   background-position: 0;
   font-size: 1.1em;
+
   color: orangeRed; /*For IE*/
 }
-
