@@ -11,5 +11,4 @@
 
 .bounce:hover {
   transform: scale(1.5, 1.5);
-  /* [sx, sy] */
 }

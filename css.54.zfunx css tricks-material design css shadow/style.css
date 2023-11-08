@@ -1,0 +1,20 @@
+.newspaper {
+  column-count: 2;
+  text-align: justify;
+}
+
+.newspaper p:first-of-type:first-letter {
+  font-size: 3em;
+  float: left;
+  /*adjust the following properties at your own risk*/
+  line-height: 50%;
+  margin: 0.1em 0.1em 0.1em -0.05em;
+}
+.newspaper img {
+  height: auto;
+  width: 100%;
+}
+
+.newspaper h2 {
+  column-span: all;
+}

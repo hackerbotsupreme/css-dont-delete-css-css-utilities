@@ -28,15 +28,15 @@ html {
 .gradDynamic:after {
   background: radial-gradient(circle, red, transparent);
   background-size: 400%;
-  animation: colorSpin 15s linear infinite;
+  animation: colorSpin 30s linear infinite;
 }
+
 .gradDynamic:before {
   background-color: yellow;
 }
 
-
 @keyframes colorSpin {
-  /* 25% {
+  25% {
     background-position: 0 100%;
   }
   50% {
@@ -44,7 +44,7 @@ html {
   }
   75% {
     background-position: 100% 0;
-  } */
+  }
   100% {
     filter: hue-rotate(360deg);
   }
