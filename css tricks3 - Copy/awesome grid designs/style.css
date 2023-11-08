@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.page-1,
+.page-2 {
+  height: 100vh;
+  width: 100%;
+  background-color: silver;
+}
+.container-grid {
+  background-color: red;
+  display: grid;
+  grid-template-columns: repeat(4, 50px);
+  grid-auto-rows: 50px;
+}
+.page-1:nth-child(1) .container-grid{
+  gap: 1rem;
+}
+.page-1:nth-child(2) .container-grid{
+  column-gap: 1rem;
+}
+.page-1:nth-child(3) .container-grid{
+  row-gap: 1rem;
+}
+.container-grid > div {
+  background-color: blue;
+  border: 3px solid black;
+}
+.container-flex {
+  background-color: red;
+  display: flex;
+  gap: 1rem;
+
+}
+.container-flex > div {
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+  border: 3px solid black;
+}
+.content-box:nth-child(1){
+    overflow: auto;
+}
+.content-box:nth-child(2){
+    overflow: hidden;
+    scrollbar-gutter: stable  both-edges;
+    /* it does not resizes your content  */
+    /* does not supports in firefox */
+}

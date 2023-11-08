@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: silver;
+}
+a {
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: red;
+  color: white;
+  border: 1px solid blue;
+  outline: 2px dotted purple;
+  transition: 0.5s;
+}
+a:hover {
+  outline: 5px solid blue;
+  outline-offset: 15px;
+}
+a:nth-child(2):hover {
+  outline: 8px ridge rgba(55, 255, 78, 0.6);
+  border-radius: 2rem;
+  outline-offset: 15px;
+}
+a:nth-child(3):hover {
+  outline: dashed red;
+  outline-offset: 15px;
+}
+a:nth-child(4):hover {
+  outline: thick double #32a1ce;
+  /* outline: thick triple #32a1ce; */
+  /* does not work */
+  outline-offset: 15px;
+}
