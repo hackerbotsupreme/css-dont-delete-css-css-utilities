@@ -1,0 +1,120 @@
+index.html ->
+<!-- online tutorials--css creative menu hover effects tutorials  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>creative menu hover effects</title>
+</head>
+<body>
+    <ul>
+        <li><a href="" data-text="Home">Home</a></li>
+        <li><a href="" data-text="About">About</a></li>
+        <li><a href="" data-text="Services">Services</a></li>
+        <li><a href="" data-text="Menu">Menu</a></li>
+        <li><a href="" data-text="Our Team">Our Team</a></li>
+    </ul>
+</body>
+</html>
+
+style.css ->
+special highlight  ->
+content: attr(data-text);:
+
+The content property is used to specify what content should be generated before the anchor element. In this case, it uses the attr(data-text) function to retrieve the value of the data-text attribute of the anchor element.
+The data-text attribute contains text like "Home," "About," "Services," etc., which will be used to generate content before the link.
+position: absolute;:
+
+This property positions the generated content absolutely within its parent anchor element. It means that the content will be positioned relative to the anchor and can overlap with other elements.
+
+top: -2px;:
+
+This property shifts the generated content 2 pixels above the anchor element. This is done to hide the content initially.
+width: 100%;:
+
+The width of the generated content is set to 100%, making it initially cover the entire width of the anchor element.
+color: #262626;:
+
+This property sets the color of the generated content to a dark gray (#262626).
+overflow: hidden;:
+
+This ensures that any overflow of the generated content (if it extends beyond the anchor's boundaries) is hidden.
+white-space: nowrap;:
+
+This property prevents the text within the generated content from wrapping to the next line. It ensures that the text remains on a single line.
+transition: 0.5s ease-in-out;:
+
+This CSS rule adds a smooth transition effect to the generated content. When the width of the content changes (which will happen on hover), it will transition over half a second with an ease-in-out timing function for a smooth visual effect.
+
+ul:hover li a:before and ul li:hover a:before:
+
+These selectors specify how the generated content behaves on hover:
+ul:hover li a:before: When you hover over the entire unordered list (<ul>), it targets the generated content before all anchor elements inside list items. It sets the width of the generated content to 0, effectively hiding it.
+ul li:hover a:before: When you hover over an individual anchor element (<a>) within a list item (<li>), it targets the generated content before that specific anchor element. It sets the width of the generated content to 100%, revealing it
+
+
+and one more property is important here , that is  
+    white-space: nowrap;
+
+which actuallly , 
+The white-space CSS property sets how white space inside an element is handled.
+
+white-space: normal;
+normal
+Sequences of white space are collapsed. Newline characters in the source are handled the same as other white space. Lines are broken as necessary to fill line boxes.
+
+
+
+white-space: nowrap;
+nowrap
+Collapses white space as for normal, but suppresses line breaks (text wrapping) within the source.
+in simple words , The CSS property white-space: nowrap; is used to prevent text from wrapping to the next line when it encounters whitespace or reaches the end of its container. Instead, it makes the text stay on a single line and overflow the container if necessary.
+As a result, the text inside the paragraph will not wrap, regardless of the container's width. If the text overflows the container's width, it will be clipped and won't wrap to the next line.
+
+This is useful when you want to ensure that long strings of text or content remain on a single line, which can be handy for things like menu items, URLs, or filenames where line breaks can disrupt the display.
+
+
+
+
+white-space: pre
+pre
+Sequences of white space are preserved. Lines are only broken at newline characters in the source and at <br> elements.
+
+white-space: pre-wrap;
+pre-wrap
+Sequences of white space are preserved. Lines are broken at newline characters, at <br>, and as necessary to fill line boxes.
+
+
+white-space: pre-line;
+pre-line
+Sequences of white space are collapsed. Lines are broken at newline characters, at <br>, and as necessary to fill line boxes.
+
+
+
+white-space: break-spaces
+break-spaces
+The behavior is identical to that of pre-wrap, except that:
+
+Any sequence of preserved white space always takes up space, including at the end of the line.
+A line-breaking opportunity exists after every preserved white space character, including between white space characters.
+Such preserved spaces take up space and do not hang, thus affecting the box's intrinsic sizes (min-content size and max-content size).
+
+
+
+
+
+
+and  one more critical thing is - 
+using content to put contetnt  just like image:url()
+like  
+ content: attr(data-text); ,
+ content : '+',
+ content : url(image.png),
+ content : 'abcd..',
+ 
+
+
+

@@ -1,0 +1,98 @@
+div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: inset 0 50px 150px rgba(0,0,0,1);
+    border-bottom: 1px solid #fff;
+    animation: animate 1s ease-in-out forwards;
+}
+
+  box-shadow: inset 0 50px 150px rgba(0,0,0,1);
+ - how the box-shadow is  working ?
+
+ChatGPT
+The box-shadow property you've specified, inset 0 50px 150px rgba(0,0,0,1);, is used to apply an inset shadow to an element. Let's break down how this particular box-shadow rule works:
+
+inset:
+
+The inset keyword indicates that the shadow should be applied inside the element, creating a recessed or inner shadow effect.
+0:
+
+The first value specifies the horizontal offset of the shadow. In this case, it's set to 0, which means the shadow is directly below the element with no horizontal offset.
+50px:
+
+The second value specifies the vertical offset of the shadow. It's set to 50px, which means the shadow is 50 pixels below the element, giving the element a raised or elevated appearance.
+150px:
+
+The third value indicates the blur radius of the shadow. In this case, it's set to 150px, which makes the shadow quite blurry and diffuse, contributing to the softness and depth of the shadow.
+rgba(0,0,0,1):
+
+This part defines the color of the shadow using the RGBA color model. It's set to solid black, represented as rgba(0,0,0,1). The 1 in the last component represents full opacity.
+Now, let's understand how the box-shadow is working in the context of your CSS:
+
+The box-shadow rule is applied to each of the div elements in your HTML.
+
+Since you've set the inset keyword, the shadow appears inside each div element, creating a visual effect of the elements being raised or elevated above the background.
+
+The 50px vertical offset moves the shadow below each div, contributing to the illusion of depth.
+
+The 150px blur radius creates a soft, diffuse shadow that appears to spread out around each element, enhancing the 3D effect.
+
+The black color (rgba(0,0,0,1)) gives the shadow a typical shadow color, which contrasts with the background.
+
+In summary, the box-shadow property with inset creates an inner shadow that gives the circular div elements a three-dimensional appearance, as if they are floating above the background with a soft, blurry shadow below them.
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////
+
+what exactly the offset  works .... i means what is it?
+
+ChatGPT
+The "offset" in the context of a box shadow refers to how far the shadow is displaced from the element it's applied to. It determines the distance between the element and the shadow in both the horizontal and vertical directions.
+
+In the box-shadow property, the offset is specified using two values: the horizontal offset and the vertical offset. These values control the shadow's position relative to the element.
+
+The horizontal offset determines how far to the right or left the shadow is placed from the element's border. A positive value moves the shadow to the right, and a negative value moves it to the left.
+
+The vertical offset controls how far above or below the element's border the shadow is positioned. A positive value moves the shadow downwards, while a negative value moves it upwards.
+
+For example, consider the following box-shadow property:
+
+css
+Copy code
+box-shadow: 5px 10px 20px rgba(0,0,0,0.5);
+5px is the horizontal offset. It places the shadow 5 pixels to the right of the element.
+
+10px is the vertical offset. It moves the shadow 10 pixels below the element.
+
+20px is the blur radius, which controls how diffuse or sharp the shadow edges are.
+
+rgba(0,0,0,0.5) specifies the shadow color, in this case, a semi-transparent black.
+/////////////////////////////////////////////////////////////////////////////////
+
+Indeed, at first glance, it may appear that the div elements are stacked vertically, but upon closer examination of the code, you'll notice that all these elements share the same positioning plane. They are all set to position: absolute;, which means they are positioned relative to their nearest ancestor.
+
+Without the use of z-index to specify the stacking order, these div elements will naturally stack on top of each other. This behavior occurs because they are positioned relative to the same parent or ancestor, and by default, they occupy the same space in the stacking order, with the last one declared in the HTML code appearing on top.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

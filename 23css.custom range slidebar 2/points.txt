@@ -1,0 +1,63 @@
+html ->
+<div>
+      <span id="rangeValue">0</span>
+      <input
+        type="range"
+        name=""
+        value="0"
+        min="0"
+        max="1000"
+        onchange="rangeSlide(this.value)"
+        onmousemove="rangeSlide(this.value)"
+        class="range"
+      />
+    </div>
+    <script type="text/javascript">
+      function rangeSlide(value) {
+        document.getElementById("rangeValue").innerHTML = value;
+      }
+    </script>
+
+css-> 
+#rangeValue {
+  position: relative;
+  display: block;
+  text-align: center;
+  font-size: 6em;
+  color: #999;
+  font-weight: 400;
+}
+.range {
+  width: 400px;
+  height: 15px;
+  -webkit-appearance: none;
+  background: #111;
+  outline: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 1);
+}
+.range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #00fd0a;
+  cursor: pointer;
+  border: 4px solid #333;
+  box-shadow: -407px 0 0 400px #00fd0a;
+}
+-what does - -webkit-appearance  - does ?
+By setting -webkit-appearance to none, you essentially tell the browser not to apply its default styling to the range input element, giving you full control over its visual presentation using your own CSS styles.
+
+///////////////////////////////////////////////////////////
+
+Certainly! Just like in your previous example, you're using -webkit-appearance: none; to remove the default styling provided by the browser for the range input. Here's a breakdown of the other CSS properties in your code:
+width: 15px; height: 15px; border-radius: 50%; background: #00fd0a;: These properties customize the appearance of the slider thumb (the draggable part):
+width and height set the dimensions of the thumb.
+border-radius: 50%; creates a circular shape for the thumb.
+background: #00fd0a; sets the background color of the thumb.
+cursor: pointer;: This property changes the mouse cursor to a pointer hand when hovering over the thumb, indicating that it can be clicked or dragged.
+border: 4px solid #333;: This property adds a border around the thumb to give it a defined appearance.
+box-shadow: -407px 0 0 400px #00fd0a;: This property creates a box shadow effect on the thumb, giving it a 3D-like appearance. The shadow makes it look like the thumb is inset into the slider track.
+Overall, these CSS properties allow you to fully customize the appearance of the range slider, including the thumb, to match your desired design.
