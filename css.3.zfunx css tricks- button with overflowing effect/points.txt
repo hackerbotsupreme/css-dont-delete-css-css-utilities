@@ -1,0 +1,48 @@
+tell me, 
+why we used  --bg-color  instead of  background color ?
+
+
+
+The use of --bg-color instead of background-color in the CSS code is related to the concept of CSS custom properties, also known as CSS variables. These custom properties allow you to define values that can be reused throughout your CSS code. In this case, --bg-color is being used to define the background color for the .overflow-icon-btn class.
+
+The advantage of using custom properties like --bg-color is that they can be easily updated and modified in one place, and those changes will automatically apply to all elements that use that custom property. This makes your CSS code more maintainable and flexible.
+
+For example, if you want to change the background color for all buttons with the .overflow-icon-btn class from dodgerblue to a different color, you can simply update the value of --bg-color in one place, and it will cascade down to all the elements that use it.
+
+Critical Points:
+
+Using custom properties like --bg-color enhances code maintainability by centralizing property values.
+It allows for easy theming and consistent design across a website.
+
+
+/////////////////////////////////
+
+
+-webkit-text-stroke-color
+-webkit-text-stroke-width
+
+webkit-text-stroke-color is a CSS property that specifies the color of the stroke (outline) around the text characters in web content. It is primarily used in conjunction with the -webkit-text-stroke-width property to create a stroke effect around text.
+
+Real-world application: You can use -webkit-text-stroke-color to add a stroke around text elements, making them stand out from the background or other elements. For example, you might use it to create eye-catching headlines or decorative text effects on a website.
+
+
+-webkit-text-stroke-width is another CSS property specific to webkit-based browsers. It is used to specify the width or thickness of the stroke (outline) around text characters when creating text effects.
+
+Real-world application: You can use -webkit-text-stroke-width to control how thick or thin the stroke appears around text. For example, you might increase the stroke width to create a bold outline effect on text, which can be useful for creating unique and eye-catching typography in web design.
+
+
+
+///////////////////////////////////////////////
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+
+
+///////////////////////////////////////////
+
+vertical-align: super; - what is this 
+
+
+
+vertical-align: super; is a CSS property that controls the vertical alignment of an element's content in relation to its parent element's content. When you set it to super, it aligns the content to be positioned above the baseline of the parent element.
+
+Real-world application: This property is often used in situations where you want to create superscript text, such as for footnotes or mathematical notations. For example, in mathematical equations, you can use vertical-align: super; to raise an exponent or superscript.

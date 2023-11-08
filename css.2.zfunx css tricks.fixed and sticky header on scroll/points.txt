@@ -1,0 +1,21 @@
+ok it doesnot have anything special but 
+it covers some of the elements to revice ,
+like ,
+  background-attachment: fixed;
+means its now position itself relative to the   screen .
+
+////////////////
+
+as we know  align-items have the following vlaues , 
+align-items: stretch;
+align-items: center;
+align-items: start;
+align-items: end;
+align-items: flex-start;
+align-items: flex-end;
+align-items: right;
+align-items: left ;
+align-items: center ;
+
+
+///////////////

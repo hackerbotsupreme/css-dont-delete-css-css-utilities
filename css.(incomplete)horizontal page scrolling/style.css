@@ -1,0 +1,49 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+
+}
+section{
+    min-width: 100%;
+    height: auto;
+    display: flex;
+
+}
+section .imgBx{
+    position: relative;
+    min-width: 50%;
+    height: 100vh;
+
+}
+section .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+section .storyBox{
+    padding: 100px 60px;
+
+}
+section .storyBox h2{
+    margin: 0 0 20px;
+    padding: 0;
+    font-size: 48px ;
+
+}
+section .storyBox p{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    text-align: justify;
+}

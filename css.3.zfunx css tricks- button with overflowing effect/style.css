@@ -1,0 +1,104 @@
+.overflow-icon-btn {
+  --bg-color: dodgerblue;
+  text-decoration: none;
+  background-color: var(--bg-color, dodgerblue);
+  padding: 12px 16px;
+  color: #fff;
+  border-radius: 4px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  text-shadow: 0 0 8px var(--bg-color, dodgerblue);
+  box-shadow: 0 0 4px var(--bg-color, dodgerblue);
+  transition: 0.3s;
+}
+
+.overflow-icon-btn i {
+  -webkit-text-stroke-color: var(--bg-color, dodgerblue);
+  -webkit-text-stroke-width: 0.02em;
+}
+
+.overflow-icon-btn:hover {
+  text-shadow: 0 0 24px var(--bg-color, dodgerblue);
+  box-shadow: 0 0 12px var(--bg-color, dodgerblue);
+}
+
+div.margin-8-wrapper {
+  margin: 8px;
+  display: inline-block;
+}
+
+/*for IE*/
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .overflow-icon-btn {
+    background-color: dodgerblue;
+    text-shadow: 0 0 8px dodgerblue;
+    box-shadow: 0 0 4px dodgerblue;
+  }
+
+  .overflow-icon-btn:hover {
+    text-shadow: 0 0 24px dodgerblue;
+    box-shadow: 0 0 12px dodgerblue;
+  }
+}
+
+.overflow-icon-btn.like {
+  --bg-color: #3b5998;
+}
+
+.overflow-icon-btn.instagram {
+  --bg-color: #cd486b;
+}
+
+.overflow-icon-btn.youtube {
+  --bg-color: #cc181e;
+}
+
+.overflow-icon-btn.youtube i {
+  vertical-align: sub;
+}
+
+.overflow-icon-btn.twitter {
+  --bg-color: #00aced;
+}
+
+.overflow-icon-btn.twitter i {
+  vertical-align: sub;
+}
+
+.overflow-icon-btn.pinterest {
+  --bg-color: #c92228;
+}
+
+.overflow-icon-btn.email {
+  --bg-color: gray;
+}
+
+.overflow-icon-btn.email i {
+  vertical-align: middle;
+}
+
+.overflow-icon-btn.amazon {
+  --bg-color: #ff9900;
+}
+
+.overflow-icon-btn.amazon i {
+  vertical-align: super;
+}
+
+.overflow-icon-btn.whatsapp {
+  --bg-color: #25d366;
+}
+
+.overflow-icon-btn.heart {
+  --bg-color: deepPink;
+}
+
+.overflow-icon-btn.paypal {
+  --bg-color: #003087;
+}
+
+.overflow-icon-btn.paypal i {
+  vertical-align: middle;
+}
