@@ -1,0 +1,38 @@
+<!-- source 
+ https://web.dev/learn/design/responsive-images/-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>amazing image design knowledge</title>
+</head>
+
+<body>
+    <main>
+        <section>
+            <p>This is some introductory text. On a small screen it will be displayed before the image. On a wider
+                screen
+                the image will appear next to this text.</p>
+        </section>
+        <section>
+            <img src="https://storage.googleapis.com/web-dev-uploads/image/KT4TDYaWOHYfN59zz6Rc0X4k4MH3/PEK3BODIcHQdpOLSc3Gg.jpg"
+                alt="Portrait of a happy-looking handsome dog with a ball in its mouth." width="300" height="200"
+                loading="lazy" decoding="async"
+                srcset="https://storage.googleapis.com/web-dev-uploads/image/KT4TDYaWOHYfN59zz6Rc0X4k4MH3/PEK3BODIcHQdpOLSc3Gg.jpg 300w,
+            https://storage.googleapis.com/web-dev-uploads/image/KT4TDYaWOHYfN59zz6Rc0X4k4MH3/7jLnRoFUlcDBkm6kkaT5.jpg 600w,
+            https://storage.googleapis.com/web-dev-uploads/image/KT4TDYaWOHYfN59zz6Rc0X4k4MH3/ehboim8g0fQYR5Q39rbl.jpg 1200w" sizes="(min-width: 66em) 33vw,
+            (min-width: 44em) 50vw,
+            100vw">
+        </section>
+        <section>
+            <p>Here is some more text. On a small screen, this text will appear after the image. Only when the viewport
+                is
+                wide enough will all three pieces of content appear side by side.</p>
+        </section>
+    </main>
+</body>
+
+</html>
