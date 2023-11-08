@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+.circle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  z-index: 2;/* its here to apply an consistency where when one expands othres are visible too */
+}
+/* if its not there then the doc flow will takes place on whether what will overshadow whhich one  */
+.circle:hover {
+   z-index: 1;/* */
+}
+.circle:nth-child(1) {
+  background: url(glitch.webp);
+  /* background-attachment: fixed; */
+  clip-path: circle(100px at 0 0);
+}
+.circle:nth-child(1):hover {
+  clip-path: circle(1200px at 0 0);
+}
+.circle:nth-child(2) {
+  background: url(mars.webp);
+  /* background-attachment: fixed; */
+  clip-path: circle(100px at 100% 0);
+}
+
+.circle:nth-child(2):hover {
+  clip-path: circle(1200px at 100% 0);
+}
+.circle:nth-child(3) {
+  background: url(nature.webp);
+  /* background-attachment: fixed; */
+  clip-path: circle(100px at 0 100%);
+}
+.circle:nth-child(3):hover {
+  clip-path: circle(1200px at 0 100%);
+}
+.circle:nth-child(4) {
+  background: url(peace.jpg);
+  /* background-attachment: fixed; */
+  clip-path: circle(100px at 100% 100%);
+}
+.circle:nth-child(4):hover {
+  clip-path: circle(1200px at 100% 0100%);
+}

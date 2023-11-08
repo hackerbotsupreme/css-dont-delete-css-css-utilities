@@ -1,0 +1,260 @@
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; 
+}
+/* Header section CSS */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: #000000;
+  z-index: 1;
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+  color:#ffffff;
+}
+
+nav .img-logo #logo{
+  width: 70px;
+  display: inline-block;
+  border: 3px ridge #000000;
+  border-radius: 10px;
+  box-shadow: 3px 3px #ffffff;
+  margin: 0.7rem;
+  position: relative;
+  top: 7px;
+}
+
+nav .img-logo .name{
+  display: inline-block;
+  /* margin-top: 10px; */
+  padding-top: 0;
+  position: fixed;
+  top: 30px;
+  left: 85px;
+  font-family: helvetica;
+  color:#ffffff;
+  font-weight:lighter;
+}
+nav .name .title{
+  color:#ffa500;
+  font-weight:bolder;
+}
+
+nav ul{
+ display: flex;
+ list-style: none;
+
+}
+nav ul li{
+  margin: 0 5px;
+}
+
+nav ul li a{
+  font-size: 17px;
+  color: #ffffff;
+  font-weight: bolder;
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+
+  
+}
+nav ul li a:hover{
+  color: black;
+  background-color: white;
+}
+
+
+#click-here{
+  display: none;
+}
+/*responiveness for NaV*/
+nav .menu-bar i{
+  color: #fff;
+  font-size: 30px;
+  display: none;
+}
+@media screen and (max-width: 1046px){
+  nav .menu-bar i{
+    display: block;
+  }
+  nav ul{
+    position: fixed;
+    top: 70px;
+    left: -100%;
+     background-color: #000000;
+     height: 100vh;
+     width: 100%;
+     display: block;
+     text-align: center;
+     transition: all 0.3s ease;
+  }
+
+  #click-here:checked ~ ul{
+    left: 0%;
+  }
+  nav ul li{
+    margin: 20px 0;
+  }
+  nav ul li a{
+    font-size: 16px;
+    display: block;
+  }
+  nav ul li a:hover{
+  color: greenyellow;
+  background: none;
+}
+
+}
+
+
+/* Footer Section CSS */
+.footer {
+  text-align: center;
+  background-color: #000000;
+  width: 100%;
+  /* height: 550px; */
+  padding: 3rem 1rem;
+  /* margin: -8px 0 0 -8px; */
+}
+.footer .row {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  flex-wrap: wrap;
+}
+.footer ul li {
+  list-style: none;
+  font-size: 1rem;
+  color: #e1e5df;
+  text-align: left;
+}
+
+.footer ul li a {
+  color: #e1e5df;
+  text-decoration: none;
+}
+.footer ul li a:hover{
+  color:#007bff;
+}
+.footer h2 {
+  font-size: 1.5rem;
+  color: #e1e5df;
+  text-align: center;
+  padding: 20px 10px 0 30px;
+  font-family: "Times New Roman";
+}
+
+/* new style for icons  */
+.footer .social-links {
+  margin-top: 20px;
+}
+.footer .social-links a {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #007bff;
+  border-radius: 100%;
+
+  text-align: center;
+}
+.footer .social-links a i {
+  width: 10px;
+  height: 10px;
+}
+.footer .social-links a:hover {
+  background-color: #007bff;
+  color: white;
+}
+/* .footer .col1 .fa {
+  padding: 5px 5px 5px 5px;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 5px 8px 40px 8px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 100%;
+  background-color: darkblue;
+  color: #ffffff;
+} */
+/* .footer .col1 .fa:hover {
+  position: relative;
+  bottom: 10px;
+} */
+.footer p {
+  padding: 0px 10px;
+  color: #d9dfd7;
+  font-size: 1rem;
+}
+.footer .col1 {
+  width: 320px;
+  height: auto;
+  float: left;
+  margin-top: -20px;
+}
+/* Animation in hr tag */
+@keyframes animate1 {
+  from {
+    width: 10%;
+  }
+  to {
+    width: 60%;
+  }
+} 
+.footer #line{
+  opacity:0.4;
+  width:60%;
+  text-align:center;
+  animation-name: animate1;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  border-radius: 100px;
+  border:2px solid #007bff;
+}
+/* .footer #line {
+  position: relative;
+  right:200px;
+  margin-top: 50px;
+  width:500px;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%); 
+
+  animation-name: animate1;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  border-radius: 100px;
+  color: #007bff;
+   margin: 25px 100px 5px 50px; 
+} */
+@media screen and (min-width: 1024px) {
+  .footer {
+    /* height: 60vh; */
+  }
+  .footer ul li {
+    font-size: 1.5rem;
+  }
+  .footer h2 {
+    font-size: 2rem;
+  }
+  .footer p {
+    /* padding-top: 300px; */
+  }
+  .footer .col1 {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 1100px) {
+  #nav ul li{
+    padding:9px;
+  }
+}

@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    
+    min-height: 100vh;
+    background: rgb(161, 161, 161);
+  }
+  
+  .container-404{ 
+    
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #343434
+  }
+  
+  
+  .container-404 h1{
+    font-size: 200px;
+    margin: 0;
+    font-weight: 900;
+    color: #343434;
+    letter-spacing: -40px;
+
+    /* background: url(../images/bg1-404.jpg) center no-repeat; */
+    /* -webkit-text-fill-color: transparent; */
+    /* -webkit-background-clip: text; */
+  }
+  .container-404 h1 > span{
+    font-size: 200px;
+    margin: 0;
+    font-weight: 900;
+    /* color: #343434; */
+    letter-spacing: -40px;
+    text-shadow: -8px 0 0 rgb(161, 161, 161);
+    /* background: url(../images/bg1-404.jpg) center no-repeat; */
+    /* -webkit-text-fill-color: transparent; */
+    /* -webkit-background-clip: text; */
+  }
+  
+  .container-404 a{
+    text-decoration: none;
+    background: #007bff;
+    color: #fff;
+    padding: 12px 24px;
+    display: inline-block;
+    border-radius: 25px;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: 0.4s;
+  }
+  
+  .container-404 a:hover{
+    background: #0255af;
+  }
+  

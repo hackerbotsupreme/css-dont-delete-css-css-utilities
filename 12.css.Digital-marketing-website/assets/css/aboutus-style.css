@@ -1,0 +1,136 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "open sans",sans-serif,Arial;
+}
+.img1{
+        margin:auto;
+        text-align: center;
+        box-sizing: border-box;
+        width: 220px;
+        height: 60px;
+        padding: 15px;  
+        border: 5px solid rgb(233, 225, 225);
+        background: -webkit-linear-gradient(left, red , blue);
+        background: -o-linear-gradient(right, red, blue); 
+        background: -moz-linear-gradient(right, red, blue);
+        background: linear-gradient(to right, red , blue);
+        color: white;
+        font-size: 16px;
+    }
+.about-section{
+  width: 100%;
+  background: #f1f1f1;
+  padding: 40px 0;
+}
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.inner-width{
+  /*background-image: url(demo.jpg);
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 200px;
+  font-size: 120px;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Steelfish Rg', 'helvetica neue',helvetica, arial, sans-serif;
+  font-weight: 800;
+  -webkit-font-smoothing: antialiased;
+*/
+  max-width: 1000px;
+  overflow: hidden;
+  padding: 0 20px;
+  margin: auto;
+}
+.about-section h1{
+  text-align: center;
+}
+.border{
+  width: 100px;
+  height: 3px;
+  background:#007bff; /*#e74c3c;*/
+  margin: 40px auto;
+}
+.about-section-row{
+  display: flex;
+  flex-wrap: wrap;
+}
+.about-section-col{
+  flex: 50%;
+}
+.about{
+  padding-right: 30px;
+}
+.about p{
+  text-align: justify;
+  margin-bottom: 20px;
+}
+.about a{
+  display: inline-block;
+  color:#007bff; /*#e74c3c;*/
+  text-decoration: none;
+  border: 2px solid #007bff; /*#e74c3c;*/
+  border-radius: 24px;
+  padding: 8px 40px;
+  transition: 0.4s linear;
+}
+.about a:hover{
+  color: #fff;
+  background: #007bff; /*#e74c3c;*/
+}
+.skills{
+  padding-left: 30px;
+}
+.skill{
+  margin-bottom: 10px;
+}
+.progress{
+  width: 100%;
+  height: 12px;
+  background: #ddd;
+  border-radius: 12px;
+}
+.progress-bar{
+  height: 12px;
+  background: #e74c3c;
+  border-radius: 12px;
+}
+.p1{
+  width: 90%;
+}
+.p2{
+  width: 70%;
+}
+.p3{
+  width: 50%;
+}
+.progress-bar span{
+  float: right;
+  margin-right: 6px;
+  line-height: 13px;
+  color: #fff;
+  font-size: 12px;
+}
+@media screen and (max-width:700px) {
+  .about-section-col{
+    flex: 100%;
+    margin: 10px 0;
+  }
+  .about,.skills{
+    padding: 0;
+  }
+  .about{
+    text-align: center;
+  }
+}

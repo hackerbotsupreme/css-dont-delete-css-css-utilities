@@ -1,0 +1,17 @@
+The clip-path CSS property creates a clipping region that sets what part of an element should be shown. Parts that are inside the region are shown, while those outside are hidden.
+
+clip-path: circle(40%);
+clip-path: ellipse(130px 140px at 10% 20%);
+clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+clip-path: path('M 0 200 L 0,75 A 5,5 0,0,1 150,75 L 200 200 z');
+
+
+Clip path is commonly used in web development to create visually appealing and complex shapes or to control the visibility of parts of an element. For example, if you have an image and you want to display only a certain portion of it in a non-rectangular shape, you can use clip path. This is often seen in design elements like rounded or custom-shaped images, avatars, and decorative divs.
+Clip path is especially useful when you need to create non-rectangular or complex shapes.
+It allows you to define the visible area of an element by specifying a path.
+The path can be created using various methods like basic shapes, SVG path commands, or even a URL to an SVG file.
+It can be applied to any HTML element, not just images.
+
+
+
+

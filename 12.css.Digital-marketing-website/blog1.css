@@ -1,0 +1,287 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial;
+    box-sizing: border-box;
+}
+
+.blg{
+    text-align: center;
+    padding: 30px 0;
+    margin: auto;
+    font-size: 50px;
+    line-height: 30px;
+    font-family: 'Zilla Slab Highlight', cursive;
+}
+
+.blg span{
+    font-size: 30px;
+    color:lightseagreen;
+}
+
+
+.header{
+    width: 100%;
+    display: flex;
+}
+.header div{
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.header div img{
+    width: 100%;
+    height: 100%;
+    transition: 0.4s ease-in-out;
+}
+
+.header div img:hover{
+    transform: scale(1.2);
+}
+
+.header div p{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+.header div a{
+    text-decoration: none;
+    background: rgb(73, 202, 202);
+    color: white;
+    font-size: 15px;
+    padding: 5px 10px;
+}
+
+#play{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: translate(-50%,-50%);
+    font-size: 17px;
+    background: rgb(248, 250, 250);
+    padding: 20px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+#about{
+    padding: 100px 50px;
+    width: 100%;
+}
+
+.about-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left{
+    flex-basis: 70%;
+    text-align: center;
+}
+.right{
+    flex-basis: 30%;
+}
+.left img{
+    width: 80%;
+    
+}
+.left h2{
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+.left h3{
+    font-size: 25px;
+    color: rgb(73, 202, 202);
+}
+.left p{
+    color: rgb(11, 49, 49);
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 10px 0px;
+}
+#txt{
+    font-size: 15px;
+    text-align: justify;
+    color: grey;
+    width: 80%;
+    margin: 20px auto;
+    text-transform: capitalize;
+}
+.left a{
+    text-decoration: none;
+    color: white;
+    background: rgb(73, 202, 202);
+    padding: 10px 20px;
+    border: 1px solid white;
+}
+.about-us{
+    padding:16px;
+    text-align: center;
+    max-width: 300px;
+    margin: 16px auto;
+}
+.about h3{
+    font-size: 40px;
+    position: relative;
+    font-family: 'Times New Roman', Times, serif;
+}
+.about-us h2{
+    font-size: 20px;
+    color: rgb(12, 143, 143);
+}
+
+hr{
+    display: inline-block;
+    border-style:dashed rgb(123, 231, 231) none none;
+    border-radius: 50%;
+    width: 50%;
+    font-weight: bolder;
+}
+
+.about-us i{
+    margin: 20px 5px;
+    font-size: 20px;
+    border: 2px transparent rgb(33, 150, 165);
+    border-radius: 20%;
+    padding: 10px;
+    background: lightblue;
+}
+.about-us i:hover{
+  background:  rgb(73, 202, 202);
+  color: white;
+  transition: 0.2s linear;
+}
+
+.about-us input{
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid rgb(218, 217, 217);
+    margin: 20px 0;
+}
+
+.about-us button{
+    width: 80%;
+    background: rgb(73, 202, 202);
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    margin: 20px 0;
+}
+
+.about-us button:hover{
+    background:rgb(33, 150, 165);
+    color: white;
+    transition: 0.4s linear;
+}
+
+#trends{
+    width: 100%;
+    padding: 50px 100px;
+}
+.hg{
+    margin: auto;
+    font-size: 30px;
+    color:  rgb(73, 202, 202);
+    font-weight: 100;
+    text-align: center;
+    padding: 20px 0;
+}
+.trends-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.left{
+    flex-basis: 60%;
+    cursor: pointer;
+}
+.right{
+    width: 100%;
+    flex-basis: 30%;   
+}
+
+.post{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+.post img{
+    width: 100px;
+    height: 100px;
+    margin-right: 50px;
+    border-radius: 50%;
+}
+.post p{
+    text-align: justify;
+    color: rgb(133, 132, 132);
+}
+
+.txt h3{
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    text-align: justify;
+}
+
+.txt h3:hover{
+    color: rgb(73, 202, 202);
+    
+}
+.right img{
+    width: 120%;
+    height: 100%;
+    padding: 5px 0px;
+}
+.right p strong{
+    color:rgb(73, 202, 202) ;
+}
+.right p{
+    color: grey;
+    text-align:unset;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 10px 0px; 
+}
+
+.nav2{
+    display: flex;
+    width: 120%;
+    box-shadow: 2px 3px 5px grey;
+    justify-content: center;
+}
+.menu{
+    width: 100%;
+    height: 50px;
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.menu a{
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+    padding: 5px 10px;   
+}
+    
+/*
+h1{
+    font-family: 'Zilla Slab Highlight', cursive;
+}
+
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+}*/

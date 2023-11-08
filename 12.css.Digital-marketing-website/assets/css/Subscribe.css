@@ -1,0 +1,88 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.holder-container{
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	align-self: center;
+}
+
+.mother-container{
+	position: relative;
+	margin: 10px auto;
+	height: 50px;
+	width: 400px;
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	align-self: center;
+	
+
+}
+.mother-container .clc-1{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background: blue;
+	color: #FFF;
+	font-weight: 200;
+	font-size: 20px;
+	line-height: 55px;
+	border-radius: 10px;
+	cursor: pointer;
+	align-self: center;
+	padding: 0 10px;
+
+	transition: 0.4s cubic-bezier(0.68,-0.55,0.265,1);
+}
+#clck:checked ~ .clc-1{
+	height: 40px;
+	width: 100px;
+	opacity: 0;
+	pointer-events: none;
+}
+.mother-container .child-field{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	pointer-events: none;
+	transition: 0.4s cubic-bezier(0.68,-0.55,0.265,1);
+
+}
+.mother-container #clck{
+	display: none;
+}
+
+#clck:checked ~ .child-field{
+	opacity: 1;
+	pointer-events: auto;
+}
+.mother-container .child-field input{
+	height: 100%;
+	width: 100%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19S);
+	padding: 0 130px 0 15px;
+	font-size: 20px;
+	outline: none;
+}
+
+.mother-container .child-field .clc-2{
+	position: absolute;
+	right: 15px;
+	top: 50%;
+	transform: translateY(-50%);
+	height: 40px;
+	width: 100px;
+	background: #664AFF;
+	color: white;
+	line-height: 40px;
+	cursor: pointer;
+
+}
