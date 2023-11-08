@@ -11,18 +11,19 @@
 <body>
     <div class="onClickTextOverImage"
         style="background-image:url(https://web.opendrive.com/api/v1/download/file.json/NTlfMTMzMTc2ODdf?inline=1)">
-        <a href="#oranges"></a>
-        <div id="oranges">
-            Oranges are orange
+        <div>Oranges are <a target="_blank" href="https://www.google.com" onclick="stopPropagation(event)">orange</a>
         </div>
     </div>
 
     <div class="onClickTextOverImage"
         style="background-image:url(https://web.opendrive.com/api/v1/download/file.json/NTlfMTMzMTc3NjFf?inline=1)">
-        <a href="#banana"></a>
-        <div id="banana">
-            Bananas are Bananas
+        <div>Bananas are <a target="_blank" href="https://www.google.com" onclick="stopPropagation(event)">Bananas</a>
         </div>
+    </div>
+
+    <div class="onClickTextOverImage"
+        style="background-image:url(https://web.opendrive.com/api/v1/download/file.json/NTlfMTMzMTgyNzlf?inline=1)">
+        <div>Apples are not oranges</div>
     </div>
     <script src="app.js"></script>
 </body>

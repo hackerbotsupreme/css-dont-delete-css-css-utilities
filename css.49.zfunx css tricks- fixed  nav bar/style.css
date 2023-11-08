@@ -1,0 +1,41 @@
+body,
+html {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.navList {
+  background-color: darkMagenta;
+  border-bottom: 1px solid darkMagenta;
+  box-shadow: 0 2px 8px 0px rgba(0, 0, 0, 0.2);
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  z-index: 100; /*keep it high*/
+}
+.navList li {
+  float: left;
+}
+.content {
+  flex: 1;
+  overflow: auto;
+  padding: 8px;
+}
+
+.navList a {
+  color: #fff;
+  padding: 8px;
+  text-decoration: none;
+  display: block;
+  transition: 0.3s;
+}
+.navList a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.navList a[href="#two"] {
+  color: #000;
+  background-color: #fff;
+}
