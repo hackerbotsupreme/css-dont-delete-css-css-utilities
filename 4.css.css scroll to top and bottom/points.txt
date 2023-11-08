@@ -1,0 +1,30 @@
+main thing here is - 
+    <!-- example of offset  -->
+    <!-- <div id="offsetElement"></div> -->
+
+    <!-- this also works  -->
+    <!-- <div id="top"></div>
+    <a href="#top" class="scroll top">Top</a> -->
+
+    <!-- i am impreseed  -->
+    <a href="" class="scroll top">Top</a>
+    <a href="#finish" class="scroll bottom">bottom</a>
+    <section>
+        <h1>Pure CSS Scroll to top and Bottom</h1>
+        
+    </section>
+    <div id="finish"></div>
+
+and what's most important here is  the syntax of the  a and link 
+a href="#finish"
+div id="finish"
+
+one observation yu can make is how  a / link is interacting to div to create scroll effect ?
+while  i know that the links can only interactcts withh link to travel anuwhere .
+1. Can <a> links only interact with other links?
+
+No, <a> links (anchor tags) in HTML can interact with various elements, not just other links.
+
+but also i have to know  waht behaviour does links show when two links are on the same page is that why i am getting error on clicking any links of buttons?
+
+i might also think  how hen i click on the top button it lands me on the  top section while it didnot have any link.

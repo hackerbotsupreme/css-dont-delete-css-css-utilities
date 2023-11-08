@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Borel&family=Kaushan+Script&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Borel", cursive;
+  /* font-family: 'Kaushan Script', cursive; */
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #03a9f4, #ff53a0);
+}
+ul {
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 500px;
+  flex-direction: column;
+  /* grid-area: 0; */
+  gap: 0;
+  transition: 0.5s;
+  /* display: block; */
+}
+ul li {
+  position: relative;
+  list-style: none;
+  width: 450px;
+  height: 100px;
+  padding: 15px;
+  background: #dbdbdb;
+  gap: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 6px;
+  box-shadow: 0 -15px 25px rgba(0, 0, 0, 00.25);
+  transition: 0.5s;
+  transition-delay: calc(var(--i) * 0.5s);
+}
+
+ul li:nth-child(1) {
+  transform: translateZ(-75px) translateY(20px);
+  opacity: 0.6;
+}
+ul li:nth-child(3) {
+  transform: translateZ(75px) translateY(-30px);
+  background: #eee;
+}
+ul li:nth-child(4) {
+  transform: translateZ(155px) translateY(-70px);
+  background: #fff;
+}
+ul li img {
+  max-width: 70px;
+  border-radius: 4px;
+}
+ul:hover {
+  gap: 30px;
+}
+
+ul:hover li {
+transform: translateZ(0px) translateY(0px);
+  opacity: 1;
+  background: #fff;
+}
+
+ul li .content {
+  width: 100%;
+  cursor: pointer;
+}
+
+ul li .content h4 {
+  font-weight: 600;
+  color: #333;
+}
+
+ul li .content p {
+  position: relative;
+  color: #333;
+  line-height: 1em;
+  width: 100%;
+}
+
+ul li .content p span {
+  position: absolute;
+  color: #333;
+  top: 0;
+  right: 0;
+  font-size: 0.75em;
+}

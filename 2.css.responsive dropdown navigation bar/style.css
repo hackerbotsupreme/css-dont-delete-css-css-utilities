@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'poppins',sans-serif;
+}
+header{
+    width: 100%;
+    background: #000;
+
+}
+header   ul{
+    display: flex;
+    justify-content: flex-end;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+header ul li{
+    list-style: none;
+    position: relative;
+    padding: 10px 0;
+    transition: 0.5s;
+    box-sizing: border-box;
+    border-right: 1px solid rgba(255,255,255,.2);
+
+}
+
+header ul li:last-child{
+    border-right: none;
+}
+header ul li a{
+    text-decoration: none;
+    padding: 0 20px;
+    color: #fff;
+}
+
+
+header ul li a{
+    
+}
+
+

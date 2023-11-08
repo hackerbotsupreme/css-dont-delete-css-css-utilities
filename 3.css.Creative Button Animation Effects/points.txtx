@@ -1,0 +1,64 @@
+plan to make this , 
+so first , we will make an a tag which will have four span tag , each tag will become animation 
+
+
+
+
+
+//////////////////////////////////
+why we placed span inside the link tag  .. what advantage is it creating ? 
+
+the fist thing you have to notice that the animation is going around the button's area so it gives us a clue the elements that we are making those animations with are inside the link tag .
+placing <span> elements inside the <a> tag allows you to create visually appealing and interactive button-like elements while preserving semantic HTML structure, accessibility, and flexibility in styling and animation.
+
+///////////////////////////////
+
+
+the  second thing that is creating onfusion is the  clour inside the button ?
+now you have already sensed that effect cannot be done using the linear gradient  so 
+how could that be done  ?
+we can make it by making an another element (pseudo element)  that will have the same size as the button 
+will have different colour and transparency  which will shift 50% to the left to make that effect .
+
+
+//////////////////////////////////////
+
+and the last confusion is how the animation is being created  ?
+
+firstly we will apply linear gradient to elements  which will go from rigth to left 
+in a given time period in linear and infinite manner . 
+same for the other elements . 
+
+exaample - 
+
+
+///////////////////////////////////////////
+
+another tricky part is how different span are placed on the  different edges of the a  with their position ?
+look at this , 
+first span 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+
+second span 
+top: 0;
+    right: 0;
+    width: 2px;
+    height: 100%;
+
+third span 
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+
+
+fourth  span ,
+    top: 0;
+    left: 0;
+    width: 2px;// width is 2 px .
+    height: 100%;// becomes equal to the height of the  a .
+and remember that all the span shares same positioning  which is position : absolute .
+means all the spans are on the different planes they all are not related with one another .

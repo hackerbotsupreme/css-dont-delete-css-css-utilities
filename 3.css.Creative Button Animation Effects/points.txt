@@ -1,0 +1,24 @@
+here i will start with ,
+the background color of the button 
+which half blue and half is darkblue 
+but more important is there is a  a distinct line between 
+two colours  ,
+
+now i know yu will first think about the 
+liner-gradient but this is the drawback of linear gradient that 
+you can not create a dintict line between the colrs and yu can not control 
+how much area wil be accupied by one color 
+and thats why gradiet will not work on it .
+
+so what the other options could be ?
+the other op tion could be to make a element blue in color  of the same back size and 
+then replace its half in the -x  with overflow hidden , 
+but who can be that element  well we already have some clue 
+where it should be? in back ground so the element should be inline also 
+so that it does not creates unneccesary issues 
+. 
+so the options are , span , i etc.
+
+with span  you can do absolute positioning 
+then you add linear gradient (as a bcakground) width will be 2px 
+and add animation delay and animation to it  with proper timing .

@@ -1,0 +1,40 @@
+/* <!-- css custom cursor with hover effects  --> */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+section {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  cursor: url("pointer.png"), pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section:active {
+  cursor: url("pointer\ \(1\).png"), pointer;
+}
+h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 8em;
+  color: #262626;
+  text-transform: uppercase;
+  transition: 0.5s;
+  text-align: center;
+}
+h2:hover {
+  color: #ccc;
+}
+
+h2.smile {
+  cursor: url("smile.png"), pointer;
+}
+h2.heart {
+  cursor: url("cupid.png"), pointer;
+}
+h2.star {
+  cursor: url("star.png"), pointer;
+}
