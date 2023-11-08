@@ -15,7 +15,7 @@
   transform: scale(-1);
   transition: 0.3s;
 }
-/* 
+
 .stripesLoader:before {
   content: "";
   position: absolute;
@@ -43,4 +43,4 @@
   to {
     background-position: 60px 100%;
   }
-} */
+}

@@ -44,8 +44,8 @@ body {
   50% {
     border-color: #fff;
   }
+
   100% {
-    /* border-color: #fff; */
     top: -20px;
     bottom: -20px;
     left: -20px;
