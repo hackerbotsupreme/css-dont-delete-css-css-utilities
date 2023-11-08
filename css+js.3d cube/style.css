@@ -28,7 +28,7 @@ body {
     transform: rotateY(360deg);
   }
 }
- .top,
+.top,
 .bottom,
 .left,
 .right,
@@ -61,7 +61,6 @@ body {
 .left {
   transform: translateX(-1em) rotateY(90deg);
 }
-/*
 
 .shadow {
   position: absolute;
@@ -75,4 +74,4 @@ body {
   left: 4.2em;
   box-shadow: 0 120px 100px 10px blue, 0 120px 200px 10px blue;
   filter: blur(100px);
-} */
+}
