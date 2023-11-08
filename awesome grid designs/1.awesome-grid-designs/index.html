@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="site">
+        <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+        <header class="masthead">
+            <h2 class="site-title">Standard two-column layout</h2>
+        </header><!-- .masthead -->
+        <main id="content" class="main-content">
+            <h2>Main content area</h2>
+            <p>The main content area is where the magic happens. Right now, the main content is on the left and the
+                sidebar is on the right. If you go into the markup for this document and add <code>dir="rtl"</code> to
+                the <code>html</code> element, the two elements will swap spaces because CSS Grid honors text direction.
+            </p>
+        </main>
+        <aside class="sidebar">
+            <h3>The Sidebar</h3>
+            <p>The sidebar typically contains things like:</p>
+            <ul>
+                <li>Links</li>
+                <li>Menus</li>
+                <li>Ads</li>
+            </ul>
+        </aside>
+        <aside class="twin">
+            This should take up half the space
+        </aside>
+        <aside class="twin">
+            This should take up the other half of the space
+        </aside>
+        <footer class="colophon grid">
+            <aside>Content, layout, design: <a href="https://twitter.com/mor10" target="_blank" rel="nofollow">Morten
+                    Rand-Hendriksen</a>.</aside>
+        </footer>
+    </div>
+</body>
+
+</html>
+<!-- With this article, I set out to demonstrate both how CSS grid allows you to create dynamic, responsive, modern layouts using pure CSS and how clean and easily managed this code is compared to traditional layout methods. On a more zoomed-out level, I also wanted to give you a new framework for thinking about web layouts. Using CSS grid, much of what we know about placing content within the viewport has changed, and even for simple layouts like what I’ve demonstrated here, the approach is both fundamentally different and much more intuitive. Gone are all of the CSS alchemy and counter-intuitive tricks and hacks, replaced by structured grids and declarative statements.
+
+Now it’s time for you to take CSS grid for a spin in your own projects. You can take my hardline approach and pave the cowpaths with this new module, or you can combine it with backwards-compatible code to serve up the same or similar experiences to all visitors. It’s entirely up to you and your development philosophy.
+
+Even if you are working on projects that require backwards compatibility and think CSS grid is too bleeding-edge, start incorporating it in your projects anyway. Using @supports and the approach I’ve outlined in this article enables you to progressively enhance existing websites without causing problems in legacy browsers. CSS grid requires a new mindset, and we all need to start that transition today. So, go forth and gridify the web! -->
+<!-- sources
+https://codemyui.com/tag/grid-layout/
+https://bashooka.com/coding/25-awesome-css-grid-layout-examples/
+https://www.smashingmagazine.com/2017/06/building-production-ready-css-grid-layout/-->

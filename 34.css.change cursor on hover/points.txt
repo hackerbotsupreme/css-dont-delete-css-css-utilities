@@ -1,0 +1,101 @@
+what does mix blend do? and how does it works ?
+
+ They determine how the colors of overlapping elements blend together.
+For example, let's say you have two overlapping elements with different background colors. By applying a mix blend mode like "multiply" to one of them, the colors will blend based on a mathematical formula that simulates multiplication, resulting in a visually appealing effect.
+
+
+
+mix-blend-mode: multiply;
+mix-blend-mode: hard-light;
+mix-blend-mode: difference;
+mix-blend-mode: color;
+
+////////////////////////////////////////////////////////////////
+areyu saying 'ul li:hover .cursor'   this  targets only the  cursor that is  direct desendent  and  'ul li:hover ~ .cursor'   targets the  cursor  that is present in the file ? 
+
+I apologize for any confusion in my previous responses. Let me clarify:
+
+'ul li:hover .cursor'(any kind of descendent ) targets any element with the class "cursor" that is a descendant of a hovered list item (li) within an unordered list (ul). It does not necessarily have to be a direct descendant; it can be nested at any level inside the hovered li.
+
+'ul li:hover ~ .cursor' (silbling of li ) targets any element with the class "cursor" that is a sibling of a hovered list item (li) within the same parent unordered list (ul). It does not consider elements inside the hovered li; it looks for siblings that appear after the hovered li in the HTML structure.
+
+To summarize, 'ul li:hover .cursor' selects descendants of the hovered li, while 'ul li:hover ~ .cursor' selects siblings of the hovered li that come after it in the same parent ul.
+
+
+/////////////////////////////////////////////////////////////////
+
+
+isual Effect of mix-blend-mode: difference;:
+
+The presence of mix-blend-mode: difference; creates a high-contrast and inverted visual effect between overlapping elements.
+Explanation with Real-World Application:
+
+When mix-blend-mode: difference; is applied to an element, it subtracts the background color from the color of that element. This results in an inverted color effect where dark areas of the element become light, and light areas become dark.
+For instance, if you have a white cursor element with this blend mode applied on a dark background, the cursor will appear as a dark shape with a light outline.
+
+
+/////////////////////////////////////////////////////////////////
+
+plan - >  
+first we are gonna make an ul with li then we wll set the backgrond black and text color white 
+then we are going to modigy the cursor as its width and height as its normal state 
+then we will declare the effects like scales up and color of cursor changes  with  backgrond color also changing . 
+
+
+the main problemhere is how we will modify the cursor ? 
+
+here in this case i can come up with two ideas  like  
+1. make an element that will follow the cursor movement and  behave as the cusor .
+2. modify the cursor itself .
+
+
+now here i am choosing the second approach as i cant  modify teh cursor .
+
+
+so in order to execute it we need an element. so what do we have 
+as options ?
+
+yeah lets reverse engineer  the code .
+why we choosed div to do this role ... why the div elemnt  ..... why not span,i etc ..... to follow the cursor movement ?
+
+
+
+Answer: Using a div element to create a custom cursor effect is a common and practical choice in web development for several reasons:
+
+Reasoning:
+
+Size and Shape Control: A div element provides greater flexibility in controlling the size and shape of the custom cursor. This is important when you want to create cursor effects like scaling up, as seen in your code. A div can easily be styled to represent a circle or any other shape.
+
+Easy Positioning: The div element allows for straightforward positioning using CSS properties like left and top. This makes it simple to follow the cursor's movement by updating its position based on the mouse coordinates, as you've done in your JavaScript code.
+
+Layering: Using a div with CSS properties like position: fixed; ensures that the custom cursor element is placed above other page content. This is crucial to prevent any interference with the underlying elements and to make the cursor visible.
+
+Interactivity Control: By setting pointer-events: none;, the div cursor element doesn't interfere with user interactions with the page's content. It allows clicks and hover events to pass through, ensuring a seamless user experience.
+
+While other HTML elements like span, i, or img could technically be used to create custom cursors, a div is a versatile and widely accepted choice due to its ease of styling, positioning, and interaction control. The choice of element may also depend on the specific design requirements of the project, but div is often preferred for its flexibility and ease of implementation.
+
+
+
+
+so div is the perfect element . 
+ 
+
+here i can see that  when i hover on the li items cusor is becoming black and scales up also but the li items are getting 
+insivle why ?
+
+The reason the list items become invisible is that the cursor's scaled-up size and the box shadow cover them entirely when you hover over them. This behavior is intentional in your code because it creates a visual effect where the cursor appears to "consume" or overlay the list items.
+
+If you want the list items to remain visible when you hover over them and not be obscured by the cursor, you can modify the CSS for your cursor to ensure it doesn't completely cover the list items. For example, you can reduce the scale factor or adjust the cursor's size and positioning to leave some space for the list items to be visible.
+
+
+
+so the options we can think of is zindex and mix-blend-mode ....
+now which one should work 
+now i can clearly say that the  zindex wont work as the positioning of li and div.cursor  have different  positing .
+
+so we have to differenciete  the backgrond color of the cursor and  the color of li or in other words  the child baackground and the paerents bg and color should interact in a way that the colors shold make a contrast visual effect ... so which property can help me doing it ? 
+
+
+  mix-blend-mode: difference; /* Apply mix-blend-mode for contrast */
+
+this helps me to do so ... the problem solved .

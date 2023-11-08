@@ -1,0 +1,104 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.containerGrid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  gap: 10px;
+}
+.box{
+background-color: aqua;
+}
+
+.one {
+  grid-column: 1 / 3;
+  grid-row: 1;
+}
+
+.two {
+  grid-column: 2 / 4;
+  grid-row: 1 / 3;
+}
+.three {
+  grid-column: 1;
+  grid-row: 2 / 5;
+}
+.four {
+  grid-column: 3;
+  grid-row: 3;
+}
+.five {
+  grid-column: 2;
+  grid-row: 4;
+}
+.six {
+  grid-column: 3;
+  grid-row: 4;
+}
+
+
+/* grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(100px, auto); - what does it says ?
+ChatGPT
+Grid-template-columns: repeat(3, 1fr);
+
+Answer: Yes, it's correct.
+Reason with real-world application and evidence:
+
+This CSS code sets up a grid layout with three columns of equal width.
+The grid-template-columns property is used to define the columns of a CSS grid.
+repeat(3, 1fr) specifies that there will be three columns (repeat(3, ...)) with each column taking up an equal fraction of the available space (1fr means one fractional unit).
+This is a common approach for creating responsive grid layouts, where the columns automatically adjust their width based on the available space.
+Critical points and their relation to the final answer:
+
+The critical point here is using repeat(3, 1fr) to create three equally spaced columns.
+The 1fr unit ensures that the columns distribute the available space evenly.
+Short summary of more real-world applications and approaches:
+
+This code is commonly used in responsive web design to create grid-based layouts.
+It allows for flexible and adaptive column layouts that adjust to different screen sizes.
+Best practices of the topic:
+
+Use grid layouts for complex arrangements of elements on a webpage.
+Adjust the number of columns and their widths according to your design requirements.
+Combine with media queries to make the grid responsive to different screen sizes.
+In summary, the provided CSS code sets up a grid layout with three equally spaced columns, which is a useful technique in responsive web design for creating flexible layouts. */
+
+
+/* grid-column: 1 / 3;
+  grid-row: 1; - what does this says ?
+
+ChatGPT
+grid-column: 1 / 3;
+
+Answer: Yes, it's correct.
+Reason with real-world application and evidence:
+
+This CSS code is setting the grid placement for an element with the class "one" inside a grid container with the class "containerGrid."
+grid-column: 1 / 3; specifies that the element should span from the start of the first column (column 1) to the end of the third column (column 3) within the grid.
+Similarly, grid-row: 1; indicates that the element should be placed in the first row of the grid.
+Critical points and their relation to the final answer:
+
+The critical point is defining the precise placement of the element within the grid using grid-column and grid-row.
+This is a common technique in grid-based layouts to control the position and span of grid items.
+Short summary of more real-world applications and approaches:
+
+This code is used to control the layout of elements within a CSS grid.
+By specifying the column and row values, you can precisely position and size grid items as needed.
+Best practices of the topic:
+
+Ensure that the values for grid-column and grid-row match the desired placement within the grid.
+Be mindful of the grid's overall structure and how grid items interact with each other.
+In summary, the provided CSS code (grid-column: 1 / 3; grid-row: 1;) is used to position an element with the class "one" within a grid container. It specifies that the element spans from the first column to the third column and is placed in the first row of the grid. This technique is commonly used in grid-based layouts to control the placement of grid items.
+ */
+
+ /* This CSS code is setting the grid placement for an element.
+grid-column: 2 / 4; specifies that the element should span from the start of the second column (column 2) to the end of the fourth column (column 4) within the grid.
+Similarly, grid-row: 1 / 3; indicates that the element should span from the start of the first row to the end of the third row within the grid. */
+
+
+/* This CSS code is setting the grid placement for an element.
+grid-column: 2; specifies that the element should be placed in the second column (column 2) of the grid.
+Similarly, grid-row: 4; indicates that the element should be placed in the fourth row of the grid. */

@@ -1,0 +1,38 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(75, 70, 70);
+}
+section{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+}
+
+section .imgBox{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(pexels-akbph-17374039.jpg);
+    /* background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center; */
+    transform: scale(1.2);
+    filter: blur(2px);
+}
+
+section .glass{
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        transform: translateX(-50%);
+        filter: invert(1);
+
+
+}

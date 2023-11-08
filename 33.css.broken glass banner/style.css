@@ -1,0 +1,26 @@
+body {
+  background: url(pexels-akbph-17374039.jpg);
+  margin: 0;
+  padding: 0;
+  background-size: 100%;
+  background-position: center;
+}
+.container {
+  width: 500px;
+  height: 300px;
+  margin: 200px auto;
+}
+/* glass effect  */
+
+.glass {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.1)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 12px 0 rgba(255, 255, 255, 0.37);
+}
