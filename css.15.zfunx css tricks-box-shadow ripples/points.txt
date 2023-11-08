@@ -1,0 +1,117 @@
+we will start with 
+this wonderful piece of shit , 
+box-shadow: 0 0 0 16px rgba(0, 0, 0, 0.2)- what is - 16px - here ?
+
+
+
+In the CSS property box-shadow, the value 16px represents the size of the shadow blur radius. It determines how much the shadow is blurred or spread out from the object casting the shadow.
+
+Here's what each part of the box-shadow property does:
+
+0 (horizontal offset): This value determines the horizontal offset of the shadow. In your example, it's 0, meaning the shadow is directly behind the element without any horizontal offset.
+
+0 (vertical offset): This value determines the vertical offset of the shadow. Again, it's 0 in your example, indicating that the shadow is directly below the element without any vertical offset.
+
+0 (blur radius): This value sets the blur radius of the shadow. In your case, it's 0, which means the shadow is not blurred, and it's a sharp shadow.
+
+16px (spread radius): This value represents the spread radius of the shadow. It controls how much the shadow extends outward from the element's boundaries. In your example, it's 16px, indicating that the shadow extends 16 pixels from the element's edges.
+
+rgba(0, 0, 0, 0.2) (shadow color): This part of the box-shadow property defines the color and transparency of the shadow. In your case, it's a semi-transparent black shadow with an alpha value of 0.2, making it partially see-through.
+
+So, the 16px in box-shadow: 0 0 0 16px rgba(0, 0, 0, 0.2) specifies that the shadow should extend 16 pixels outward from the element's boundaries, creating a spread effect.
+
+
+////////////////////////////////////////////
+
+
+so i want to know now how the ripples are getting created ?
+
+ok so how its created is in 1s the shadows are expanding to a given spread radius 
+in 1s  from the 1/2 size of that circle  , and the same will happen in the next second .
+and you may ask what happens the that animation which are done well as i know only the 
+keyword forwards let an animation retain its last state but as there is no forwards 
+so the animation goes back to its start and as   from the 1/2 size of that circle  it seems 
+like theanimation is already runnning when you hover and when you rermove hover from it 
+then play-state goes paused . 
+
+//////////////////////////////////////////////
+
+i was asking  if every shadow has - rgba(0, 0, 0, 0.2) - color only the spread radius is different then  why  am i seeing different colurs on different blur radius ?
+
+
+The spread radius in the box-shadow property primarily affects the size and intensity (depth) of the shadow, but it does not alter the color. Thank you for pointing out the importance of clarifying this aspect, and I appreciate your patience. If you have any more questions or need further clarification, please feel free to ask.
+
+
+
+//////////////////////////////////////////////
+
+important things - 
+
+1.
+
+@keyframes ripples {
+  to {
+    box-shadow: 0 0 0 16px rgba(0, 0, 0, 0.2), 0 0 0 32px rgba(0, 0, 0, 0.2),
+      0 0 0 48px rgba(0, 0, 0, 0.2), 0 0 0 64px rgba(0, 0, 0, 0);
+  }
+}
+
+look at the to keywrd it says the final state of the animation .
+
+2.
+  animation-play-state: running;
+  opacity: 0;
+  visibility: hiiden;
+  transform: scale(1);
+
+  look at this combo , this not only 
+  controlling play stte , but also , making element transparent , with diabling the interactions .
+and making the element big upto its og size  which will make an visual effect of popping up from the center .
+
+animation-play-state: running;: This property is controlling the animation play state and ensuring that the animation is running when the element is hovered over.
+
+opacity: 0;: This property is making the element transparent by setting its opacity to 0, effectively making it invisible.
+
+visibility: hidden;: This property hides the element from view by setting its visibility to hidden. When an element's visibility is set to hidden, it's not only invisible but also doesn't occupy space in the layout.
+
+transform: scale(1);: This property scales the element to its original size (scale factor of 1), giving the visual effect that it's "popping up" to its full size when hovered over.
+
+Together, these CSS properties create the desired visual effect: the element becomes visible, pops up from the center, and runs the animation when hovered over, and it returns to its initial hidden and transparent state when the hover state is removed. This combination of properties allows for the animation to control the element's appearance and behavior effectively.
+
+3.
+  animation-play-state: paused/running ;
+
+Yes, your understanding of the animation-play-state property is correct. It indeed offers the flexibility of playing and pausing animations, and it can be particularly useful for scenarios where you want an animation to continue from where it left off instead of restarting from the beginning.
+
+For example, if you have an animation that is paused when you hover over an element and resumes when you remove the hover, it allows for a smoother and more continuous transition, maintaining the animation's state. This is helpful when you want to create interactive and seamless animations triggered by user actions or events.
+
+4. 
+  top: -3px;
+  bottom: -3px;
+  left: -3px;
+  right: -3px;
+
+5. 
+box-shadow-ripples:before
+box-shadow-ripples:hover:before
+
+
+
+6.
+box-shadow: 0 0 rgba(0, 0, 0, 0.2), 0 0 0 16px rgba(0, 0, 0, 0.2),
+    0 0 0 32px rgba(0, 0, 0, 0.2), 0 0 0 48px rgba(0, 0, 0, 0.2);
+                        |
+                        |
+to {
+    box-shadow: 0 0 0 16px rgba(0, 0, 0, 0.2), 0 0 0 32px rgba(0, 0, 0, 0.2),
+      0 0 0 48px rgba(0, 0, 0, 0.2), 0 0 0 64px rgba(0, 0, 0, 0);
+  }
+remeber the third one is the blur .
+means 
+the spread radius , the fourth value
+0 to 16px
+16px to 32px
+32px to 48px
+48px to 64px
+
+
