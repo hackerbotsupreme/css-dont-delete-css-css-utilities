@@ -1,0 +1,103 @@
+this is one of the example of pro programming , ok .
+
+look at this ,
+    <a href="http://codepen.io/zFunx/pen/GmMGax" class="textOverImage"
+        style="background-image:url(http://www.nature.com/nature/journal/v477/n7365/images/477415a-f1.2.jpg)"
+        data-title="A flower" data-text="sometimes known as a bloom or blossom, is the reproductive structure found in plants that are floral (plants of the division Magnoliophyta, also called angiosperms). The biological function of a flower is to effect reproduction, usually by providing a mechanism for the union of sperm with eggs. Flowers may facilitate outcrossing (fusion of sperm and eggs from different individuals in a population) or allow selfing (fusion of sperm and egg from the same flower).
+	">
+    </a>
+
+
+now look at tthis beauty ,
+
+
+
+    <a href="http://codepen.io/zFunx/pen/GmMGax" class="textOverImage"
+        style="background-image:url(http://www.nature.com/nature/journal/v477/n7365/images/477415a-f1.2.jpg)"
+        data-title="A flower" data-text="sometimes known as a bloom or blossom, is the reproductive structure found in plants that are floral (plants of the division Magnoliophyta, also called angiosperms). The biological function of a flower is to effect reproduction, usually by providing a mechanism for the union of sperm with eggs. Flowers may facilitate outcrossing (fusion of sperm and eggs from different individuals in a population) or allow selfing (fusion of sperm and egg from the same flower).
+	">
+    </a>
+
+    <a href="http://codepen.io/zFunx/pen/GmMGax" class="textOverImage"
+        style="background-image:url(https://web.opendrive.com/api/v1/download/file.json/NTlfMzgwNDE0Nl8?inline=1)"
+        data-title="Raspberry" data-text="dolor sit amet, consectetur adipiscing elit. Vivamus vestibulum, velit ut pulvinar laoreet, orci odio commodo nisl, eget bibendum urna libero eu magna. Maecenas pellentesque at risus id vestibulum. Praesent consectetur ornare efficitur. Curabitur congue turpis in orci sodales, in scelerisque enim tincidunt. Suspendisse nunc nulla, sollicitudin vel iaculis nec, maximus sed arcu. Nam semper leo ac viverra rhoncus. Nam dictum orci quis nibh laoreet, at sodales neque consectetur. Curabitur lacinia erat eget lobortis tempus. Phasellus mollis imperdiet neque vitae efficitur. Donec commodo imperdiet elit, nec varius est aliquam eu. Duis varius mi sit amet erat volutpat, euismod mollis justo volutpat. Aenean egestas finibus neque, sed facilisis ligula sagittis a.
+	">
+    </a>
+
+    <a href="http://codepen.io/zFunx/pen/GmMGax" class="textOverImage"
+        style="background-image:url(https://web.opendrive.com/api/v1/download/file.json/NTlfMzgwNDE0NV8?inline=1)"
+        data-title="Lorem ipsum" data-text="dolor sit amet, consectetur adipiscing elit. Vivamus vestibulum, velit ut pulvinar laoreet, orci odio commodo nisl, eget bibendum urna libero eu magna. Maecenas pellentesque at risus id vestibulum. Praesent consectetur ornare efficitur. Curabitur congue turpis in orci sodales, in scelerisque enim tincidunt. Suspendisse nunc nulla, sollicitudin vel iaculis nec, maximus sed arcu. Nam semper leo ac viverra rhoncus. Nam dictum orci quis nibh laoreet, at sodales neque consectetur. Curabitur lacinia erat eget lobortis tempus. Phasellus mollis imperdiet neque vitae efficitur. Donec commodo imperdiet elit, nec varius est aliquam eu. Duis varius mi sit amet erat volutpat, euismod mollis justo volutpat. Aenean egestas finibus neque, sed facilisis ligula sagittis a.
+	">
+    </a>
+
+
+not only the text-content but also the background-image with class 
+we have fitted into it . 
+
+
+pro tip : try to look at the designs as it is a one element 
+then if you dont find anyrhing then we can think of disecting 
+and thinking   each of the effect individually 
+means isolating the problem before solving it . 
+
+/////////////////////////////////////////
+
+
+one thing that will surely surprise you is 
+how a link is acting like its a div 
+
+without any display property . 
+but how ?
+
+Inline Elements: By default, anchor elements (<a>) are inline elements. Inline elements do not have a height and width property, but they do have a line height. In your CSS, when you set width: 300px; and height: 300px;, you're essentially breaking away from the default inline behavior and treating the anchor elements as block-level elements, which allows you to set their height and width.
+
+Block-level Elements: Block-level elements, like <div> or <p>, have height and width properties by default, and they typically stack on top of each other, taking up the full width of their parent container. By setting width: 300px; and height: 300px;, you're causing the anchor elements to behave like block-level elements, which is why they have the specified dimensions.
+
+So, in summary, while anchor elements are naturally inline elements, you can use CSS to change their behavior to that of block-level elements by setting their width and height, which is why they obtain dimensions without explicitly setting the display property.
+
+/////////////////////////////////////////
+
+one thing that is definately worth 
+noticing  is , 
+where  float property is used to control all the  behaviour ?
+uh, it is in the link itself .
+
+now why its neccesary is if i would have wanted this same result/behaviour 
+then the options are - display : flex  - or  - position : absolute/relative/fixed 
+now what is wrong with that is  this approach needs an external conainer 
+means i have to put more lines /work . 
+
+so , this is also a pro tip (how certain property controls element differenly even if the results will look the same 
+but this approach is definately very creative and unique )
+
+
+
+/////////////////////////////////////////
+
+important note about data- or data-text that we used for the 
+text content . 
+
+the data-text does not shows dorectly inside the element 
+it have to be used with  content: attr() to access it .
+
+
+///////////////////////////////////////////////////
+
+so now i want to know when i already made an a a div then why i made  an pseudo element when showing up the contetn when hover can also be done by changin the background position so what could the reason behind making an pseudo element  instead  of  doing this ?
+
+You're correct that changing the background position is one way to achieve the effect of showing content when hovering over an element. However, using a pseudo-element (::before or ::after) to display additional content during hover has some advantages and considerations:
+
+1.Separation of Concerns: 
+2.Layering and Z-index:
+3.Complex Animations:
+4.Accessibility: 
+5.Consistency
+
+
+In contrast, changing the background position is a simpler method but may have limitations when it comes to complex designs or animations. It also directly modifies the background, which might not be suitable if you want to preserve the original appearance of the element.
+
+The choice between using a pseudo-element and changing the background position depends on your specific design goals and how you want to structure your CSS code. Pseudo-elements offer greater flexibility and maintainability for more elaborate designs, while direct background manipulation can be a simpler and more lightweight approach for straightforward effects.
+
+
+
+

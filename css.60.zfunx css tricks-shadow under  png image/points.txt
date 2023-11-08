@@ -1,0 +1,29 @@
+box-shadow: -20px -20px 50px 2px #000 inset;
+what does it means ?
+
+box-shadow: This is a CSS property used to create a shadow effect around an element.
+
+-20px: The first value (-20px) represents the horizontal offset of the shadow. In this case, it means the shadow will be positioned 20 pixels to the left of the element.
+
+-20px: The second value (-20px) represents the vertical offset of the shadow. Here, it means the shadow will be positioned 20 pixels above the element.
+
+50px: The third value (50px) is the blur radius of the shadow. It specifies how blurry or soft the shadow's edge will be. In this case, it's set to 50 pixels, creating a relatively soft edge.
+
+2px: The fourth value (2px) is the spread radius of the shadow. It controls how much the shadow expands or contracts relative to the element's size. Here, it's set to 2 pixels, indicating a slight expansion.
+
+#000: This part (#000) specifies the color of the shadow. In this code, it's set to black.
+
+inset: The "inset" keyword is used to create an inner shadow. This means the shadow will be inside the element, giving it a pressed or sunken appearance.
+
+////////////////////////////////////////////
+box-shadow: 20px 20px 50px 2px #000 inset;
+
+only difference is , 
+
+20px: The first value (20px) represents the horizontal offset of the shadow. In this case, it means the shadow will be positioned 20 pixels to the right of the element.
+
+20px: The second value (20px) represents the vertical offset of the shadow. Here, it means the shadow will be positioned 20 pixels below the element.
+
+
+
+////////////////////////////////////////////

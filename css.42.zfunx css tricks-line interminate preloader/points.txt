@@ -1,0 +1,14 @@
+how margin: auto is centering element 
+not just horizontally but also vertically ?
+
+. Here's how it works:
+
+When you specify one value for margin, it applies the same margin to all four sides of the element. If this value is auto, it will center the element horizontally within its parent container.
+
+When you specify two values for margin, the first value applies to the top and bottom margins, and the second value applies to the left and right margins. If you set the second value to auto, it will center the element horizontally within its parent container.
+
+So, by setting margin: auto;, you can indeed center an element horizontally within its parent container. However, for vertical centering, additional techniques, such as using position: absolute; or position: fixed; in combination with top: 50%; and transform: translateY(-50%);, are typically employed. These techniques are necessary because margin: auto; alone doesn't inherently center an element vertically.
+
+
+/////////////////////////////////////////////
+

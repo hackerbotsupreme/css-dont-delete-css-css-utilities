@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>css frosted glass effect using bakdrop-filter </title>
+</head>
+
+<body>
+    <section>
+        <h2>Frosted Glass</h2>
+        <div class="glass"></div>
+    </section>
+    <script>
+        document.addEventListener('mousemove', function (e) {
+            const glass = document.querySelector('.glass');
+            glass.style.left = e.offsetX + 'px';
+            glass.style.top = e.offsetY + 'px';
+        })
+    </script>
+</body>
+
+</html>

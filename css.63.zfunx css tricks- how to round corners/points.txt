@@ -1,0 +1,91 @@
+ok firstly i would say that 
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+and  this 
+  width: 100px;
+  height: 100px;
+are not same thing .
+now how , 
+
+when i say 
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; 
+top, bottom, left, and right properties:
+
+These properties are typically used for positioning elements within a container.
+They are used with the CSS positioning property (e.g., "position: absolute;") to precisely place an element relative to its containing element or parent.
+Setting "top: 0;" means the top edge of the element will be aligned with the top edge of its containing element or parent.
+Setting "bottom: 0;" means the bottom edge of the element will be aligned with the bottom edge of its containing element or parent.
+Setting "left: 0;" means the left edge of the element will be aligned with the left edge of its containing element or parent.
+Setting "right: 0;" means the right edge of the element will be aligned with the right edge of its containing element or parent.
+These properties are often used to create layouts or positioning effects.
+width and height properties:
+
+These properties are used to specify the dimensions of an element, such as its width and height in pixels or other units.
+Setting "width: 100px;" means the element's width will be 100 pixels.
+Setting "height: 100px;" means the element's height will be 100 pixels
+    
+so, 
+inshort -   top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;- this gives the spce of the element  and -  width: 100px;
+  height: 100px;- this gives size or dimensiions of the elements right 
+ChatGPT
+Exactly, in short:
+
+"top: 0; bottom: 0; left: 0; right: 0;" is used to define the positioning of an element within its containing element or parent, effectively specifying its space or location within that container.
+
+"width: 100px; height: 100px;" is used to set the dimensions or size of an element, determining its width and height. These properties define the physical size of the element on the web page.
+
+////////////////////////////////////////////////////////////////
+
+another thing that will easily surpise you is 
+
+.loader,
+.loader:before,
+.loader:after {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+
+.loader {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin{
+  100% {
+    transform: rotate(360deg);
+    filter: hue-rotate(360deg);
+  }
+}
+
+.loader:before {
+  border: 5px solid #aaa;
+  border-bottom: 5px solid orange;
+  border-left: 5px solid orange;
+  animation: spin1 1s linear infinite;
+}
+
+
+-- first thing to do is apply one this css to the html and coment the rest 
+look at then look at the  animation of both before and the loader it self ,
+
+now what you wil notice is the before element 
+is following the animations of spin where the before element is given spin1 along with the rotation also animation 
+to folow  but before and the  loader are the seperate elements ?
+
+so why is it happening?

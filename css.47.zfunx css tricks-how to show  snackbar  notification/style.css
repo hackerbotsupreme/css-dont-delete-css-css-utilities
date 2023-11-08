@@ -1,0 +1,25 @@
+#snackbar {
+  background-color: #000;
+  color: #fff;
+  padding: 12px;
+  height: 20px;
+  position: fixed;
+  bottom: -64px;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  visibility: hidden;
+}
+
+#snackbar.show {
+  visibility: visible;
+  animation: slideUpDown 5s ease;
+}
+
+@keyframes slideUpDown {
+  5%,
+  80% {
+    bottom: 0px;
+  }
+}

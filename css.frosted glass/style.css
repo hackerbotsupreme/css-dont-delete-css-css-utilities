@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url(pexels-benjamin-suter-3617500.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow: hidden;
+}
+
+section h2 {
+  font-size: 5em;
+  color: #fff;
+  pointer-events: none;
+  text-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+section .glass {
+  position: absolute;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 200px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+  background: transparent;
+  backdrop-filter: blur(10px);
+  transition: 0.5s;
+}

@@ -1,0 +1,49 @@
+there are only two and two simple things but they ar every important .
+
+they are - 
+1/cubic-bezier
+2/ scale(1.5, 1.5)
+
+so 
+1/
+cubic-bezier
+The <easing-function> CSS data type denotes a mathematical function that describes the rate at which a numerical value changes.
+
+
+The cubic-bezier() function is an inbuilt function in CSS that is used to define a Cubic Bezier curve. 
+A Bezier curve is a mathematically defined curve used in two-dimensional graphic applications like adobe illustrator, Inkscape, etc. The curve is defined by four points: the initial position and the terminating position i.e P0 and P3 respectively (which are called “anchors”) and two separate middle points i.e P1 and P2(which are called “handles”) i
+
+This function accepts four parameters that are mandatory. It contains a numeric value and the value of x1 and x2 lies between 0 to 1.
+ It may be used to describe how fast values change during animations. This lets you vary the animation's speed over the course of its duration. 
+it also has a visual representation of how it works ,
+is at 
+Bezier_curve mdn 
+
+
+cubic-bezier(0.3, 0.7, 1.0, 0.1);
+cubic-bezier(x, y, x ,y);
+The first value (0.3) controls the initial point of the curve on the x-axis.
+The second value (0.7) controls the initial point of the curve on the y-axis.
+The third value (1.0) controls the final point of the curve on the x-axis.
+The fourth value (0.1) controls the final point of the curve on the y-axis.
+
+
+2/ scale(1.5, 1.5)
+
+The scale() CSS function defines a transformation that resizes
+ an element on the 2D plane. Because the amount of scaling is
+  defined by a vector [sx, sy], it can resize the horizontal and vertical dimensions at different scales.
+
+
+sx
+
+    A <number> or <percentage> representing the abscissa (horizontal, x-component) of the scaling vector.
+sy
+
+    A <number> or <percentage> representing the ordinate (vertical, y-component) of the scaling vector. If not defined, its default value is sx, resulting in a uniform scaling that preserves the element's aspect ratio.
+
+and remeber 
+we can also 
+use them seperately like 
+scaleX()
+scaleY()

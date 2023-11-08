@@ -1,0 +1,15 @@
+.box {
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  margin: 80px;
+  /*adjust margin so that it won't go ouside the boundary after zoom*/
+}
+.bounce {
+  transition: 0.3s cubic-bezier(0, 1.2, 0.2, 1.5);
+}
+
+.bounce:hover {
+  transform: scale(1.5, 1.5);
+  /* [sx, sy] */
+}

@@ -1,0 +1,48 @@
+now , will you belive what what ever you are seeing here 
+that is made only with linear-gradoent 
+
+this just diesplays how much we can really do if we 
+master this and that is the real eassence of this 
+project . 
+
+
+  background-image: linear-gradient(
+      80deg,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.8) 60%,
+      rgba(0, 0, 0, 0.8) 60%,
+      rgba(0, 0, 0, 0.2) 61%,
+      rgba(255, 255, 255, 0.8) 61%,
+      rgba(255, 255, 255, 0.8) 62%,
+      rgba(0, 0, 0, 0.8) 62%,
+      transparent
+    ),
+
+look at this this is all it took to made ,
+
+so lets explain it a little more 
+
+It starts with a 80-degree angle gradient.
+It begins with a semi-transparent white color (rgba(255, 255, 255, 0.8)).
+At 60%, it transitions to a semi-transparent black color (rgba(0, 0, 0, 0.8)).
+At 61%, it transitions to a slightly less transparent black (rgba(0, 0, 0, 0.2)).
+At 61%, it transitions back to semi-transparent white.
+Finally, at 62%, it transitions to semi-transparent black again, creating a visually interesting pattern.
+
+
+what does it mean by -At 60%
+ChatGPT
+At 60% means that in the linear gradient defined by linear-gradient(80deg, ...) in your CSS code, a color transition occurs at the point where the gradient has progressed 60% of its distance.
+
+In the provided CSS linear-gradient, there are color stops defined at various points along the gradient line.
+
+
+When you specify 60% as a color stop, it means that at the point where the gradient has covered 60% of its length from the starting point (usually the top or left side, depending on the angle), a color transition will occur.
+
+Critical Points:
+
+The percentage values in gradient color stops allow you to precisely control where color transitions occur in a linear gradient.
+It's a way to create smooth and visually appealing transitions between colors in the background gradient.
+In summary, "At 60%" means that in the linear gradient, there's a color transition occurring at the point where the gradient has reached 60% of its length from the starting point, which is defined by the linear-gradient function in your CSS.
+
+/////////////////////////////

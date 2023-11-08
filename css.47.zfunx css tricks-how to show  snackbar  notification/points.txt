@@ -1,0 +1,10 @@
+what can we learn from it ?
+
+the inly thing apart from js 
+that is important  here is 
+how we can make that animation ?
+there is actually two choices , 
+1. tranlateY to chage the position then use animation to give it the position 
+2. use bottom : -100% then use animation for  bottom:0.
+
+///////////////////////////////

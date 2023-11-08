@@ -1,0 +1,37 @@
+  background: transparent;
+  backdrop-filter: blur(10px);
+
+here what it is doing is  is its making the background  transparrent  
+and also making it blur by 10px .
+
+and note that ,
+
+whenever we need to work with/apply any thing on the  background  ,this 
+property  backdrop-filter comes handy .
+
+//////////////////////////////////////
+backdrop-filter
+
+The backdrop-filter CSS property lets you apply graphical effects such as blurring or color shifting to the area behind an element. Because it applies to everything behind the element, to see the effect you must make the element or its background at least partially transparent.
+
+backdrop-filter: sepia(90%);
+backdrop-filter: invert(80%);
+
+The backdrop-filter property in CSS is used to apply filter effects (grayscale, contrast, blur, etc) to the background/backdrop of an element. The backdrop-filter has the same effect as the filter property,
+
+can be any one of the following:
+
+    blur()
+    brightness()
+    contrast()
+    drop-shadow()
+    grayscale()
+    hue-rotate()
+    invert()
+    opacity()
+    saturate()
+    sepia()
+    url() – (for applying SVG filters)
+
+
+

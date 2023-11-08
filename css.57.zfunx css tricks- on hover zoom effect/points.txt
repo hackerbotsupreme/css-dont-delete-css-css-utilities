@@ -1,0 +1,15 @@
+here 
+we are trying to make are 
+trying to make a changing colour gradient 
+on the screen 
+but how will we make it 
+
+well the first thing we need is the canvas 
+to create a linear gradient  on 
+
+and here we needed an initial colour so are gonna make a second canvas to give a fixed colour .
+then we need need a hue rotate on it to change the colour constantly .
+
+
+but i dont understand why the background size of the background is 400%?
+and also why do we need to change the background position constantly?

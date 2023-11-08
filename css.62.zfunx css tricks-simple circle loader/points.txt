@@ -1,0 +1,79 @@
+the main thhing to 
+understand here is how the border 
+and the border colour is making this 
+animation 
+
+first , lets understand this property 
+  border-color: orange transparent transparent;
+what  does this mean?
+
+the best explanation you will find in mdn hover over 
+the property and click in the mdn reference .
+it says , 
+The border-color shorthand CSS property sets the color of an element's border.
+(it says it is a shorthand property) which it 
+this is a combined property of many .
+
+ehich is Each side can be set individually using border-top-color, border-right-color, border-bottom-color, and border-left-color; or using the writing mode-aware border-block-start-color, border-block-end-color, border-inline-start-color, and border-inline-end-color.
+
+
+so now if we look at the examples ,
+border-color: red #32a1ce;
+border-color: red yellow green transparent;
+
+
+/////////////////////////////////////////////////
+
+and now the next important thing is , 
+how we can center this using margin auto ?
+  /* we can also make it center to the scren using */
+  /* position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto; */
+
+
+we only knew that margin : auto can only center items horizontally 
+but here its also centering element vertically .
+how ? 
+well the answer lies into ,
+This property is a shorthand for the following CSS properties:
+
+    margin-top
+    margin-right
+    margin-bottom
+    margin-left
+and , 
+The margin property may be specified using one, two, three, or four values. Each value is a <length>, a <percentage>, or the keyword auto. Negative values draw the element closer to its neighbors than it would be by default.
+
+    When one value is specified, it applies the same margin to all four sides.
+    When two values are specified, the first margin applies to the top and bottom, the second to the left and right.
+    When three values are specified, the first margin applies to the top, the second to the right and left, the third to the bottom.
+    When four values are specified, the margins apply to the top, right, bottom, and left in that order (clockwise).
+
+and for clarification , what margin is ?
+margin is the space / extra space around the element.
+
+Margins create extra space around an element, unlike padding, which creates extra space within an element.
+
+Horizontal centering
+
+To center something horizontally in modern browsers, you can use display: flex; justify-content: center;.
+However, in older browsers like IE8-9 that do not support Flexible Box Layout, these are not available. In order to center an element inside its parent, use margin: 0 auto;.
+
+and  i might think if i could also  gpt 
+but the fact here is  this data is picked straight up from the  mdn official
+which gives accurate documentation and exact and critical explations in one go 
+but gpt can or can not give the important imformation and if you talk about 
+ exact and critical explations it will definately take more than one attempt and more time 
+ without clarity ,
+
+ so its always recommendation to forst look at the mdn then try 
+ asking good and articulated questions , if neccesary 
+ also first look at google i mean in the reputaded and dependable sites like freecodecamp , geeksforgeeks , w3schools .
+
+////////////////////////////////////////////
+
+

@@ -1,0 +1,84 @@
+what do we get to learn from here ?
+
+this file teaches us that 
+how to look into the design 
+every thing that is inside the content 
+not necessarily have to be 
+the pseudo elements  or 
+anything  we can also make designs using most simplest/basic  things
+and do it in thte most simple way 
+
+///////////////////////////////
+
+pro tips(updating how will i use gpt from now )
+
+first whatever we need we will search the content directly 
+in mdn then we will take some taste of it 
+then if we havenot found our solutions  
+yet 
+think about the problem once more then 
+ask gpt the appropiate things to ask ..
+then if that's not it  then also first 
+search in the google 
+then search in the communities etc etc
+.
+///////////////////////////////
+
+here the design was feeling line 
+it it the peudo content inside it 
+but on contemplating more diversely 
+it is just the content inside 
+the div that is using 
+
+  padding-top: 35%;
+  and 
+  opacity: 0;
+
+and on :target 
+it will become 
+
+  opacity: 1;
+  padding-top: 40%;
+
+///////////////////////////////
+
+yeah one important thing is 
+:target -- what is it ?
+source mdn 
+
+:target
+
+The :target CSS pseudo-class represents a unique element (the target element) with an id matching the URL's fragment.
+
+The :target pseudo-class can be used to highlight the portion of a page that has been linked to from a table of contents.
+
+Yes, it's correct. The :target pseudo-class in CSS is used to style an element that is the target of a fragment identifier in the URL.
+
+Real-world Application and Evidence:
+
+Imagine you have a single-page website with different sections, and you want to create a navigation menu that, when clicked, scrolls to the corresponding section and highlights the selected menu item.
+
+:target is used to style the element that corresponds to a fragment identifier in the URL, making it useful for creating single-page navigation menus and enhancing user experience in web development.
+
+
+
+
+User
+is :target acts like if clikcked ?
+ChatGPT
+No, it's not correct. The :target pseudo-class in CSS doesn't act like a click event. Instead, it applies styles to an element that is the target of a fragment identifier in the URL.
+Explanation:
+
+When you click a link with an associated fragment identifier (e.g., <a href="#section1">Section 1</a>), it doesn't trigger a click event on the target element (e.g., <div id="section1">Content of Section 1</div>).
+Instead, it changes the URL in the browser's address bar to include the fragment identifier (e.g., https://example.com/page#section1).
+The :target pseudo-class comes into play by selecting and applying styles to the element with the corresponding id (in this case, id="section1").
+Critical Points:
+
+:target is a CSS selector that styles the target element based on the URL fragment identifier.
+It doesn't trigger any JavaScript or perform actions like a click event.
+Real-world Applications:
+
+:target is commonly used to create single-page navigation menus where clicking a link changes the URL to scroll to a specific section and apply styles to indicate the active section.
+In summary, the :target pseudo-class in CSS is used to style the element targeted by a fragment identifier in the URL but doesn't simulate a click event or trigger JavaScript actions.
+
+///////////////////////////////
