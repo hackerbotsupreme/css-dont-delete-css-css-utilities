@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>ScrollSpy Javascript</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <!-- search ionicons -- click  on the  link -- go to usage  --- get its cdn -->
+        <a href="#home" style="--clr: #f3218b" class="active">
+          <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+          <span class="text">Home</span>
+        </a>
+        <a href="#profile" style="--clr: #2196f3">
+          <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+          <span class="text">Profile</span>
+        </a>
+        <a href="#messages" style="--clr: #008a1b">
+          <span class="icon"><ion-icon name="chatbubble-outline"></ion-icon></span>
+          <span class="text">Messages</span>
+        </a>
+        <a href="#photos" style="--clr: #dc1dff">
+          <span class="icon"><ion-icon name="camera-outline"></ion-icon></span>
+          <span class="text">Photos</span>
+        </a>
+        <a href="#settings" style="--clr: #d56f1d">
+          <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+          <span class="text">Settings</span>
+        </a>
+        <div class="indicator"></div>
+      </nav>
+    </header>
+    <section id="home">Home</section>
+    <section id="profile">Profile</section>
+    <section id="messages">Messages</section>
+    <section id="photos">Photos</section>
+    <section id="settings">Settings</section>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- <script src="#"></script> : it is a wrong  way if we write js in it it will not work as  it will refer to another source -->
+    <script>
+        let sec= document.querySelectorAll('section');
+        let links=document.querySelectorAll('header  nav  a');
+        window.onscroll=()=> {
+            sec.forEach(section=>{
+                let top=window.scrollY;
+                let offset = section.offsetTop;
+                let height=section.offsetHeight;
+                let id=section.getAttribute('id');
+                if(top>=offset && top < offset + height){
+                    links.forEach(link=>{
+                        link.classList.remove('active');
+                        document.querySelector('header nav a[href*='+id+']').classList.add('active');
+
+                    })
+                }
+            })
+        }
+    </script>
+  </body>
+</html>

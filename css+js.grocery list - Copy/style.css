@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Borel&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Borel", cursive;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #9c27b0, #31d5eb);
+}
+.container {
+  position: relative;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.container .box {
+  position: relative;
+  width: 400px;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+.container .box h2 {
+  font-size: 1.75em;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 15px;
+  width: 100%;
+  text-align: center;
+}
+.container .box #Grocery {
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+.container .box #Grocery input {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #333;
+  outline: none;
+}
+.container .box #Grocery button {
+  background: #4bae4f;
+  color: #fff;
+  min-width: 100px;
+  font-weight: 500;
+  border: 1px solid #333;
+  cursor: pointer;
+  outline: none;
+}
+.container ol {
+  position: relative;
+  padding: 10px 20px 10px 40px;
+  width: 100%;
+  min-height: 350px;
+  background: #fff
+    repeating-linear-gradient(
+      transparent 0%,
+      transparent 99%,
+      #000 99%,
+      #000 100%
+    );
+  background-size: 50px 50px;
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.1);
+}
+.container ol li {
+  position: relative;
+  font-size: 1.5em;
+  height: 50px;
+}
+.container ol li .remove {
+  position: absolute;
+  width: 25px;
+  top: 5px;
+  right: 0;
+  height: 25px;
+  /* background: url(minus.png); */
+  background: red;
+  border-radius: 50%;
+  background-size: cover;
+  cursor: pointer;
+}
+.container ol li.Done p{
+  text-decoration: line-through;
+  color: rgba(0, 0, 0, 0.2);
+}
+.container ol li.Done p:after{
+  content: "";
+  position: absolute;
+  width: 25px;
+  top: 5px;
+  right: 35px;
+  height: 25px;
+  background: green;
+  border-radius: 50%;
+  background-size: cover;
+  cursor: pointer;
+}

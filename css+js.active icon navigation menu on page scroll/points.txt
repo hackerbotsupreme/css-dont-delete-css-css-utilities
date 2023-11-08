@@ -1,0 +1,2 @@
+we cant seleect elements of we make 
+do position fixed .

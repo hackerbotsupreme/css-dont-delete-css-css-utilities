@@ -1,0 +1,45 @@
+the main thing is , 
+label, how we made that effect using label?
+
+we are using js to split words into letters one by one
+into span then we 
+are adding colour + text-shadow + cubic-bezier(0.5, 1,0.5) + transition 
+one at a time .
+
+first we are making all fspan items 
+a flexitems using    display: inline-flex;
+display: inline-flex;:
+
+The display property specifies how an HTML element should be displayed. In this case, it's set to "inline-flex."
+inline-flex combines the features of both inline and flex display values.
+inline:
+
+The inline value makes an element behave like an inline-level element (similar to inline text or inline links).
+Inline-level elements flow within a line of text or content and do not start on a new line.
+flex:
+
+The flex value defines a flex container, which allows for the creation of a flexible box layout. Flexbox provides a way to distribute space within a container and align elements.
+So, when you use display: inline-flex;, you are essentially creating an inline-level container that has the flexible box layout properties of a flex container. Here are some key characteristics:
+
+Elements with inline-flex can sit within a line of text or other inline elements without causing a line break.
+They can also use flex properties like flex-direction, justify-content, and align-items to control the layout and alignment of their child elements.
+inline-flex is often used when you want a combination of inline behavior and the flexibility and alignment control provided by flexbox.
+then we are adding flex-direction : row so the 
+transition happens from left to right 
+then the we are adding 
+the cubic bezier which adds colour and the moving effect at 
+the same time .
+
+No, the cubic-bezier function itself does not add color to text. It is specifically used to define the timing function for CSS transitions and animations, controlling how properties change over time, such as movement, size, or opacity.
+
+transition: 0.25s cubic-bezier(0.5, 1, 0.5);
+This line defines a transition with the following properties:
+
+0.25s: This specifies the duration of the transition, which is 0.25 seconds. During this time, CSS property changes will be animated from their initial state to their final state.
+
+cubic-bezier(0.5, 1, 0.5): This part defines the timing function for the transition. The cubic-bezier function allows you to create custom timing curves for animations. In this case, the function is defined by four values: 0.5 for the X coordinate of the starting point, 1 for the Y coordinate of the starting point, 0.5 for the X coordinate of the ending point, and 1 for the Y coordinate of the ending point. This particular timing function creates an ease-in-out effect, meaning the animation starts slow, speeds up in the middle, and slows down again at the end.
+
+sorry there was a mistake the 
+got added using js and the cubic-bezier is 
+only a timing function which used to move it and
+defines the for the movement .

@@ -1,0 +1,35 @@
+just a standard way of maing elements in columns 
+is 
+  display: flex;
+  flex-direction: column;
+remember that ,
+//////////////////////////////////////////////////////
+
+the main thing you will be wondering 
+is how the colours are going up ?
+
+well its an illusion , 
+you see when all are following the same animation 
+and same fixed transition-delay it may appear like 
+the animation effect  is going up .
+
+
+more refined, 
+
+Yes, it's correct.
+
+This phenomenon can be explained as an optical illusion created by synchronized animations with a fixed transition-delay. When multiple elements follow the same animation and have the same delay, it can give the impression that the animation effect is moving upwards.
+
+The critical point here is that the perception of motion in web animations can be influenced by the timing and synchronization of elements. When elements move or change color simultaneously with identical delays, our brains interpret it as a collective upward motion, even though each element is stationary or undergoing the same change independently.
+
+In real-world applications, this illusion can be used creatively in web design to simulate effects like a rising tide, a cascading waterfall, or a unified color transition. By carefully synchronizing elements and their transitions, designers can achieve visually appealing animations that convey a sense of upward motion.
+
+Best practices for utilizing this illusion include experimenting with different transition timings, easing functions, and element placements to achieve the desired effect. Additionally, consider the overall design context and user experience when incorporating such illusions into web development projects.
+
+
+
+//////////////////////////////////////////////////////
+
+
+
+

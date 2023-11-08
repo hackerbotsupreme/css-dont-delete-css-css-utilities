@@ -1,0 +1,36 @@
+the main thing is there is so many 
+divs , but do ewe made that manually 
+or do we made it using some other technique ?
+
+well , if we see then making  this much div is 
+really very hard using flex or even grid 
+with maintaining it and at the same point 
+adding content like emojis at the same time and make them functioning at the same time 
+is the real deal .
+
+so ,
+
+how we made it ?
+
+well we made it using    <div class="game"></div>
+
+where  we will contantly be adding div using js 
+and all the handling like height , width and all that goes to css 
+
+as we can see the elements are flipping 
+and when matched the show their selves permanenetly ,
+so lets break it down ,
+
+to start off we will start with the 
+  transform-style: preserve-3d;(allowing the 3d style)
+then we will add the the depth/z-index 
+by , perspective: 500px;
+
+and we will ,
+
+and note that 
+div + flex box creates an bbeautiful effect 
+like the element has the total width with cretain size of its own .
+
+and mix it the bacface-visibility :hidden 
+makes it tooally 3d flip effect .

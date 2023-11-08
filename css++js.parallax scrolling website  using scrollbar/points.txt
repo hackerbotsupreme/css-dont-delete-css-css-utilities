@@ -1,0 +1,65 @@
+this is the one of the most important 
+pojects of
+with this we are laearning  the gsap of js/important tool of jss . which is used to create 
+some of the most trending and important designs ,
+
+like the parallax website we created here ,
+but what is gasp , this is a short intoduction 
+
+GSAP is a robust JavaScript toolset that turns developers into animation superheroes. Build high-performance animations that work in every major browser. Animate CSS, SVG, canvas, React, Vue, WebGL, colors, strings, motion paths, generic objects... anything JavaScript can touch!
+
+///////////////////////////////////////////////////
+
+do you remember 
+our old school technique for making single page website ?
+for 
+revice ,
+its ,
+overflow:hidden  with box-sizing:border box .
+
+and for awareness we can also conltrol overlfow for our design requirements 
+like ,
+  overflow-x: hidden;
+  overflow-x: visible ;
+  it is used  to block the content that  crossed  box-border in the x direction
+  or in other words for the horizontal scrolling .
+  and
+  overflow-y: hidden;
+  overflow-y: visible ;
+  it is used  to block the content that  crossed  box-border in the y direction
+  or in other words for the vertical scrolling .
+
+///////////////////////////////////////////////////
+
+for revice ,
+right x is +ve , and up y is the +ve direction 
+
+
+///////////////////////////////////////////////////
+
+the first impressive thing here is 
+
+header  with 
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
++
+.parallax with
+  position: relative;
+  height: 100vh;
+
+////////////////////////////////////////////////////
+
+lets discuss the the approach for the 
+parallax effect in detail , 
+
+see first we need to make a base for the parallax elements ,
+with   position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+then 

@@ -1,0 +1,93 @@
+rememner  the that 
+used to toggle 
+is to just add and remove a 
+class/or something else from the classlist 
+on a certain event using js 
+
+more specifically,
+
+Certainly, you're referring to using JavaScript to toggle the visibility or behavior of elements on a web page by adding or removing a class from the classlist of those elements. This is a common technique for creating interactive and dynamic web experiences.
+
+Here's a summary of the concept:
+
+Toggling Visibility or Behavior: You can use JavaScript to toggle the visibility (show/hide) or behavior (e.g., changing styles) of HTML elements.
+
+Adding and Removing Classes: To achieve this, you typically define CSS classes with specific styles or behaviors. Then, in your JavaScript code, you use methods like element.classList.add('className') and element.classList.remove('className') to add or remove those classes from the elements.
+
+Event Listeners: You often trigger these class changes in response to user interactions or events, like clicking a button, hovering over an element, or scrolling down a page. You attach event listeners to the relevant elements or events to listen for user actions.
+
+Conditional Logic: JavaScript allows you to use conditional logic (e.g., if statements) to determine when to add or remove classes based on specific conditions or user input.
+
+Animation and Transitions: Combining class toggling with CSS transitions or animations can create smooth and visually appealing effects.
+
+but also remember that 
+to toggle like dark mode /white mode 
+we often used custom properties like 
+:root etc.. this technique is also often used in the web development .
+
+Absolutely, you're referring to the technique of implementing dark mode and light mode themes in web development using custom properties (CSS variables) and the :root pseudo-class. This is a popular approach for providing users with the option to switch between different visual themes on a website. Here's a summary of this technique:
+
+CSS Custom Properties (Variables): Custom properties, often referred to as CSS variables, allow you to define reusable values in your CSS that can be easily changed or manipulated using JavaScript. They are declared within the :root pseudo-class to make them globally accessible throughout your CSS.
+
+css
+Copy code
+:root {
+  --background-color-light: #ffffff;
+  --background-color-dark: #333333;
+  --text-color-light: #333333;
+  --text-color-dark: #ffffff;
+}
+Defining Theme Variables: You define custom properties for various aspects of your theme, such as background colors, text colors, fonts, or any other style-related properties you want to toggle between light and dark modes.
+
+Applying Theme Variables: In your CSS rules, you use these custom properties to set the values of specific style properties. For example:
+
+css
+Copy code
+body {
+  background-color: var(--background-color-light);
+  color: var(--text-color-light);
+}
+Toggle Mechanism: You use JavaScript to detect the user's preference for light or dark mode (e.g., by clicking a button or based on system settings). When the user selects a mode, you update the values of the custom properties to correspond to the chosen theme:
+
+javascript
+Copy code
+document.querySelector('#darkModeButton').addEventListener('click', () => {
+  document.documentElement.style.setProperty('--background-color', '#333333');
+  document.documentElement.style.setProperty('--text-color', '#ffffff');
+});
+Responsive Design: This approach allows for responsive design, as you can easily adapt the color schemes and styles based on user preferences or device settings.
+
+CSS Media Queries: You can also use CSS media queries to conditionally apply styles based on the chosen theme. For example, you might change the theme based on screen width or other factors.
+
+
+///////////////////////////////////////////
+
+and the next thing that will 
+catch your eyes that how the buttons 
+are laid out , look carefully in the design can you say 
+what technique did we used to make it that way ?
+
+we have used grid here , so its 
+  display: grid;
+but  how we managed the grid is the gem ,
+  grid-column: span 4;
+but we see the other buttons like that clear , now how does that done ,
+  grid-column: span 2;
+plus button ,
+  grid-row: span 2;
+alsio equal is ,
+  grid-row: span 2;
+
+
+and when we combine it with the shadow 
+to its active/clicked state , it create a beautiful click effect 
+like ,
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff,
+    inset 5px 5px 10px rgba(0, 0, 0, 0.1);
+
+the rest is now simple .
+
+///////////////////////////////////////////
+
+
+

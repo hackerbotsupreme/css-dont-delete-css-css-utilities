@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Borel&family=Kaushan+Script&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Borel", cursive;
+  font-family: "Kaushan Script", cursive;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #29313a;
+}
+.InputBox {
+  position: relative;
+  width: 350px;
+}
+
+.InputBox input {
+  position: relative;
+  width: 100%;
+  padding: 10px 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #999;
+  color: #fff;
+  font-size: 1.25em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+}
+
+.InputBox label {
+  position: absolute;
+  left: 0;
+  padding: 10px 0;
+  pointer-events: none;
+  color: #666;
+  user-select: none;
+}
+/* label */
+.InputBox label span {
+  position: relative;
+  display: inline-flex;
+  flex-direction: row;
+  font-size: 1.25em;
+  letter-spacing: 0.05em;
+  transition: 0.25s cubic-bezier(0.5, 1,0.5);
+}
+
+.InputBox input:focus ~ label span,
+.InputBox input:valid ~ label span {
+  color: #0f0;
+  text-shadow: 0 0 5px #0f0, 0 0 15px #0f0, 0 0 30px #0f0;
+  transform: translateY(-30px);
+}
+
+.InputBox input:focus,
+.InputBox input:valid {
+  border-radius: 2px solid #fff;
+}

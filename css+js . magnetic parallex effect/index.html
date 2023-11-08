@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>parallex image hover effects</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card" style="--img: url(img1.jpeg)">
+        <h2>Image 01</h2>
+      </div>
+      <div class="card" style="--img: url(image.jpeg)">
+        <h2>Image 02</h2>
+      </div>
+    </div>
+    <script>
+      let cards = document.querySelectorAll(".card").forEach((card) => {
+        card.addEventListener("mousemove", (e) => {
+          let x = e.offsetX;
+          let y = e.offsetY;
+          let CardWidth = card.clientWidth;
+          let CardHeight = card.clientHeight;
+          let transX = x - CardWidth / 2;
+          let transY = y - CardWidth / 2;
+          card.style.transform = `translateX(${transX}px) translateY(${transY}px)`;
+          card.style.backgroundPositionX = -x / 2 + "px";
+          card.style.backgroundPositionY = -y / 2 + "px";
+        });
+        card.addEventListener("mouseout", (e) => {
+          card.style.transform = ``;
+          card.style.backgroundPositionX = ``;
+          card.style.backgroundPositionY = ``;
+        });
+      });
+    </script>
+  </body>
+</html>

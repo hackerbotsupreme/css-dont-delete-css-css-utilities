@@ -1,0 +1,65 @@
+the main thing you will be thinking heere 
+is , 
+how the input box 
+and i are meged one onto  another to create such 
+design ,
+
+so first what we have to do is 
+undress the default design of the input like 
+  position: relative;
+  padding: 8px 10px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  font-size: 1.25em;
+  letter-spacing: 0.05em;
+  z-index: 2;
+and then add the i or html element or pseudo wlwmwnt 
+accorading to your design requirements 
+like 
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(45deg, #2196f3, #ff4685);
+    transition: 0.5s;
+    z-index: 1;
+    border-radius: 4px;
+    pointer-events: none;
+
+////////////////////////////////
+
+and lastly , 
+wwhat is ~ in  .container .inputBox input:valid ~ i?
+
+In the CSS selector ".container .inputBox input:valid ~ i," the tilde (~) symbol represents the general sibling combinator. It selects elements that are siblings of the preceding element and share the same parent.
+source mdn 
+The general sibling combinator (~) separates two selectors and matches all iterations of the second element, that are following the first element (though not necessarily immediately), and are children of the same parent element.
+
+Syntax
+
+css
+
+/* The white space around the ~ combinator is optional but recommended. */
+former_element ~ target_element { style properties }
+css
+
+p ~ span {
+  color: red;
+}
+
+
+
+
+
+
+
+The adjacent sibling combinator (+) separates two selectors and matches the second element only if it immediately follows the first element, and both are children of the same parent 
+
+
+
+

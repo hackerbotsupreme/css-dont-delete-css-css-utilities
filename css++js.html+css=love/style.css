@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Qwitcher+Grypen:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-family: "Kaushan Script", cursive;
+  /* font-family: "Qwitcher Grypen", cursive; */
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #eee;
+  gap: 30px;
+}
+.drop {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  /* background: #ccc; */
+  display: flex;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  color: #333;
+  text-shadow: -2px -2px 5px #fff;
+  filter: drop-shadow(4px 4px 10px #fff);
+  /* box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.05),
+    inset -10px -10px 15px rgba(255, 255, 255, 0.9),
+    15px 25px 10px rgba(0, 0, 0, 0.05), 15px 20px 20px rgba(0, 0, 0, 0.05); */
+  box-shadow:
+   inset 10px 10px 10px rgba(0, 0, 0, 0.05),
+    inset -10px -10px 15px rgba(255, 255, 255, 0.9);
+  /* box-shadow:
+    15px 25px 10px rgba(0, 0, 0, 0.05), 
+    15px 20px 20px rgba(0, 0, 0, 0.05); */
+}
+
+.drop ion-icon {
+  color: #ff5353;
+  font-size: 2em;
+  margin-top: 20px;
+}
+
+.drop::before {
+  content: "";
+  position: absolute;
+  left: 25px;
+  top: 35px;
+  background: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  filter: blur(2px);
+}
+.drop::after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: 50px;
+  background: #fff;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  filter: blur(2px);
+}
+
+span {
+  font-size: 3em;
+}

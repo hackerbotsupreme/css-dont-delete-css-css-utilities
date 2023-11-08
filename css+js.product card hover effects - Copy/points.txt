@@ -1,0 +1,20 @@
+first thing you will start with 
+the pseudo element , 
+the first thing  you will ask that why do we need the pseudo element ?
+thing you will observe that the  only icon will canging to that card but the border 
+and the glow effect is not changing .
+
+so we get that the glow effect is not changing rather of effects ,
+but the icon is chaging into the card and vice versa 
+so as the icon is changing that is why we can not attach the shaadow to it 
+and that is why we needed to make the pseudo element .
+
+/////////////////////////////////////////////////////////////////////
+
+important thing is 
+there are 5 things that you should keep in mind 
+filter 
+backdrop-filter 
+drop-shadow 
+box-shadow 
+text-shadow 

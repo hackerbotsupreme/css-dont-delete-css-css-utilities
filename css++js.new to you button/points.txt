@@ -1,0 +1,70 @@
+
+i always told you 
+put design into wordds then into css and html
+make the html more simple it matters most .
+think about the most optimized approach with the html then connect all with css 
+and mdn , web, gpt is always there 
+
+the main thing is how 
+the html is simply brilliant ,
+
+which 
+is 
+    <a href="#"><span>New To You</span></a>
+
+also revice what element with pseudo 
+eement offers is simple html + most flexibility and control 
+but the disadvantage is you have to be more than careful 
+when using this , you got to be the eexact  thing in your mind ok.
+ then  for css ,
+ we wonder why we needed  pseudo elements here ?
+
+now if yu were thinking  that you will make the 
+span an inset element 
+by making that a block element but as you see 
+  /* display: block;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  inset: 1px;
+  background: #272727; 
+this will not work because  the a 
+tag doesnot have set it's width and height we 
+only added padding which is his and not heigth and width
+
+and 
+when it comes to  
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  inset: 1px;
+this 
+it will not work as expected 
+bcz 
+Specifies how far an absolutely positioned box's right margin edge is offset to the left of the right edge of the box's 'containing block'.
+so it has to be absolutely positioned to follow this 
+and 
+that is why we needed to 
+make the before 
+and after for the glow effect  
+
+but how do we make it / what will be our approach ?
+
+so on hover we can see blur with linear-gradient 
+
+so with all it should look like 
+
+a::after {
+  content: "";
+  position: absolute;
+  inset: 0px;
+  border-radius: 9px;
+  transition: 0.5s;
+  background: linear-gradient(45deg, #3394d4, #69007f, #fc0987);
+  opacity: 0;
+  filter: blur(20px);
+}

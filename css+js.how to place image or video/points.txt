@@ -1,0 +1,67 @@
+first , 
+thing (and it is th imoortant thing also )
+that each element is having the 
+total viewport 
+which means 100vh ,
+and how can we do that ?
+
+make the div ,
+  min-height: 100vh;
+
+  ////////////////////////
+
+but the next thing is how 
+each of them  have a line 
+
+whie display flex make element side by side 
+and to make them up and down
+we have two options ,
+1. flex-direction  : column 
+2. flex-wrap : wrap 
+
+so any of it  works .
+
+  ////////////////////////
+
+but that is not the most crazy part 
+the most crazy part it ,
+to fit photo and video we only used ,
+
+
+/* img  */
+.container .box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mix-blend-mode: screen;
+}
+/* video */
+.container .box video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+but what does this do?
+  mix-blend-mode: screen;
+
+The CSS property mix-blend-mode with the value screen is used to control how the colors of overlapping elements or layers in a web page are blended together when they intersect. Specifically, the "screen" blending mode lightens the colors, creating a brightening effect.
+
+Critical Points:
+
+The "screen" blending mode in CSS takes the colors of the top layer and blends them with the colors of the underlying layers, resulting in a lighter and often more vibrant appearance.
+It works by inverting the colors of the top layer and then multiplying them with the colors of the layers below. This effectively lightens the dark areas of the top layer.
+The "screen" mode is particularly useful for creating highlights, glow effects, or for adding light to an image or design element.
+
+  ////////////////////////
+
+but the next question that arises is how 
+if the video is seen without the  mix-blend why do the picture need it ?
+
+

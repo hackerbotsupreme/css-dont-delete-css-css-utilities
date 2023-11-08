@@ -1,0 +1,16 @@
+you see how we make something the 
+approach / understanding the approach is really really important 
+
+here, the way we made ir  is 
+we we made the container elements centered by default 
+by ,
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+when hovered ,
+as we see a magnetic effect is taking place means 
+the previous /main button is not chaning rather another 
+element is appearing to make that effect so 
+
+that s why we created the before effect 

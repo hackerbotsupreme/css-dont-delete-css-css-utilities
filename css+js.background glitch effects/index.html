@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Background Glitch Effects</title>
+  </head>
+  <body>
+    <section></section>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript">
+      $(function glitchEffects() {
+        $glitch = $('<div class="glitch"></div>');
+        var x = Math.random() * 200;
+        var y = Math.random() * 200;
+        $glitch
+          .css({
+            left: x + "px",
+            top: x + "px",
+          })
+          .appendTo("section")
+          .fadeOut(200, function () {
+            $(this).remove();
+            glitchEffects();
+          });
+      });
+    </script>
+  </body>
+</html>

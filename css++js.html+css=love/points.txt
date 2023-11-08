@@ -1,0 +1,80 @@
+the main thing you 
+will be wodering in here is ,
+the there is a shadow simialr to the shadow in the outside ?
+
+pro tip : first 
+whatever you see try to put it into words then put in into property ,
+so there it will be 
+there is a shadow inside the the box/div which is inset in css property
+and there is a shadow ouside  the the box/div  which is its a normal shadow  in css property
+
+so but the next  conceptual thing that comes to the mind that when the 
+box is circle how can we reshape th circle ?
+
+so to understand this ffirst we have to be clear about teh 
+box shadow roperty ,
+so 
+box shadow look like  ,
+box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.05),
+
+here the  first 10px is the vertical offset and the next 10px is the horizontal offset 
+and next valies are blur and jyst for the information we can also add spread radius to the shadow which does makes the shadow bigger .
+
+but  so what is vertical offset 10px means ?
+A vertical offset of 10px means that the shadow is shifted 10 pixels downward from the element that casts the shadow. This creates the effect of the shadow appearing lower than the element itself.
+
+Critical Points:
+
+Vertical offset controls the shadow's position in the vertical (up-and-down) direction.
+A positive value like 10px moves the shadow downward from the element.
+
+and  what the vertical offest would have been if i wanted to cast shadow at the upward of the element that is casting shadoww?
+
+ChatGPT
+Yes, it's correct.
+
+To cast a shadow upward from the element that is casting the shadow, you would use a negative vertical offset value. So, if you want the shadow to appear above the element, you can use a vertical offset like -10px. This means the shadow would be shifted 10 pixels upward from the element.
+
+Critical Points:
+
+A negative vertical offset value moves the shadow in the opposite direction of the positive vertical offset.
+Using a negative value like -10px for vertical offset shifts the shadow above the element.
+
+
+now with this understanding when we look at the  
+shadow ,
+  box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.05),
+    inset -10px -10px 15px rgba(255, 255, 255, 0.9),
+    15px 25px 10px rgba(0, 0, 0, 0.05), 15px 20px 20px rgba(0, 0, 0, 0.05);
+
+then we can clearly observe that there is  
+two types of shadow ,
+one is on the inside and 
+this is made up of teo shadows ,
+    inset 10px 10px 10px rgba(0, 0, 0, 0.05), its black shadow 
+    inset -10px -10px 15px rgba(255, 255, 255, 0.9),  its white  shadow 
+ok , first dont think its too complicated 
+its actually simple ,
+think inset like inset is pulling the ouside shaddow drom ouside to inside 
+thats all and the 
+The first inset shadow is defined as "inset 10px 10px 10px rgba(0, 0, 0, 0.05)." This creates an inner shadow that is 10 pixels to the right and 10 pixels down from the element, with a 10-pixel blur radius, and a light gray color with low opacity.
+
+The second inset shadow is "inset -10px -10px 15px rgba(255, 255, 255, 0.9)." This is also an inner shadow but in the opposite direction. It's 10 pixels to the left and 10 pixels up from the element, with a 15-pixel blur radius, and a white color with higher opacity.
+the key here is the opposite direction is all to make this .
+so how this combined shadow would look like ?
+
+
+one is on the outside 
+its easy .
+
+/////////////////////////////////////////////
+
+
+and the last this 
+you will be thinking about  how the + and = 
+are fitted on that 
+its bcz we used 
+  gap: 30px;
+
+happily ever after 
+

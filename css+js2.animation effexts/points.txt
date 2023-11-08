@@ -1,0 +1,21 @@
+the main thing we can discuss is 
+the html  and the css we used for it ,
+
+only html is ,
+    <h2>Happy <br> Independence <br> Day </h2>
+
+and the bubbles and from down to up  is gonna 
+make using css .
+
+bubbles made using js .
+
+
+the animation is ,
+@keyframes animate {
+  0% {
+    transform: translateY(calc(100vh + 350px));
+  }
+  100% {
+    transform: translateY(-300px);
+  }
+}
