@@ -1,0 +1,35 @@
+.soft-glow {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  margin: 20px;
+  background-size: cover;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  /* 20px is the blur  */
+  position: relative;
+}
+.soft-glow:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: inherit;
+   /*inherit the background from its parent */
+  filter: blur(20px) contrast(200%);
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+.soft-glow:hover:after {
+  filter: blur(20px) contrast(200%);
+  opacity: 1;
+  visibility: visible;
+}
+/* .soft-glow:hover{
+  filter: blur(20px) contrast(200%);
+} */

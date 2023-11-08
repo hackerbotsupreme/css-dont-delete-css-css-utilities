@@ -1,0 +1,80 @@
+first we will start from the  
+
+html , 
+the eye-catching thing here how  the background image is been added here 
+
+look at this , 
+<div class="soft-glow" style="background-image:url('https://od.lk/s/NTlfMTQyMzM0NTlf/candy-2538878_640-min.jpg')">
+    </div>
+
+    <div class="soft-glow"
+        style="background-image:url('https://web.opendrive.com/api/v1/download/file.json/NTlfNjY0NDg0NV8?inline=1')">
+    </div>
+
+    <div class="soft-glow"
+        style="background-image:url('https://web.opendrive.com/api/v1/download/file.json/NTlfMTM5MzgyNzdf?inline=1')">
+    </div>
+
+remember , The image specified in the background-image property will be used as a background image for the div element with the class soft-glow. This background image does not become part of the document's layout like an img element would.
+
+////////////////////////////////////////
+
+ok one is relative one is  absolute its natural that the absolute will come up of the relative one but  now t do the relative zindex 1  so will it come first ?
+
+In the scenario where you have one element with position: relative and another with position: absolute, and you set the z-index of the relative element to 1, the relative element will indeed appear in front of the absolute element.
+
+so it means z index is also invades planes ?
+
+Yes, that's correct. The z-index property allows you to control the stacking order or layering of elements on the z-axis, effectively changing their position in the "stack" of elements on a webpage. Elements with a higher z-index value are stacked in front of elements with a lower z-index value, just like planes flying at different altitudes in the sky.
+
+Think of it as if you have a stack of planes in the sky, and each plane represents an HTML element with a different z-index value. The plane with the highest z-index is at the top of the stack and appears in front of all the others.
+
+So, z-index allows you to control which elements appear in front of or behind other elements, creating a sense of depth and layering in your web design
+
+
+so it means i can also say all the planes of relative absolute fixed  lies on the z planes ?
+and also as its the z plane its called z index so that's why we can chage 
+the stacking order of planes as well as stacking order of eleents in those planes ?  
+
+Yes, you have a good understanding. The concept of planes and the z-axis in web development is analogous to how z-index works in CSS.
+
+HTML elements with CSS positioning properties like relative, absolute, and fixed can be thought of as "planes" that exist on the z-axis.
+The z-index property allows you to change the stacking order of these "planes" in the z-axis, just like you would with planes flying at different altitudes in the sky.
+So, you can indeed say that z-index allows you to change both the stacking order of "planes" (elements with different positioning) and the stacking order of elements within those "planes.
+
+
+///////////////////////////////////////////
+
+
+
+can contrast means the depth of difference ?
+
+Yes, in the context of visual design and perception, contrast often refers to the degree of difference between two elements, such as colors, tones, or shapes. It measures how distinct or noticeable one element is compared to another.
+in every aspect from the  soft-glow right .
+
+///////////////////////////////////////////
+
+so the next thing i want to know if i need an glow eefect  on hover  i can just add    filter: blur(100px) contrast(200%);
+ line under the hover why i need a seperate element just for it? what could be the hidden/needs or criteria that the above tecnique can not do but a seperatte element can ?
+
+the reason being  we apply blur to text shadow .
+in other  words the element we apply the blur to that gets blurred .
+like the shadow  gets bliurred .
+now you said if  i can just add    filter: blur(100px) contrast(200%);
+ line under the hover -- if you do that then when you hover then the whole element will
+ be blurredintead of seeing thhe  blurred effect behind the element .
+ so we need the the another similar element behind it to make a blurred effect 
+ behind it . 
+
+
+ /////////////////////////////////////////////// 
+
+
+ and secondly why does it looks different  for blur on pseudo and the main element  while the blur are thae same 20px  and the pseudo is exactl y same  as the main element .
+
+ oh you mean  render on hover and rendered as default  creating the difference ?
+yeah also as its background colr mixes it creating that visual effect .
+
+
+
+/////////////////////////////////////////////////
