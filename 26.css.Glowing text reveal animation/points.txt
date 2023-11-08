@@ -1,0 +1,65 @@
+h1{
+  margin: 0;
+  padding: 0;
+  columns: transparent;
+  font-size: 12em;
+}
+- what is    columns : transparent is doing here ? and why is it neccesary ?
+In your CSS code, the columns: transparent; property is applied to the h1 element. This property has no direct effect on the h1 element itself, but it might be used as a placeholder or leftover code that doesn't impact the visual appearance of your text reveal animation. In other words, it appears to be unnecessary and doesn't serve any meaningful purpose in this context.
+
+The columns property is typically used to control the layout of text in multi-column elements, but when applied to a single block-level element like h1, it doesn't have any significant impact. In this case, it can be safely removed from your CSS code without affecting the animation or layout of your glowing text reveal effect.
+
+
+//////////////////////////////////////////////////////////////////////
+
+@keyframes animate{
+  0%,100%{
+    color: #fff;
+    filter: blur(2px);
+    text-shadow: 0 0 10px #00b3ff,
+                  0 0 20px #00b3ff,
+                  0 0 40px #00b3ff,
+                  0 0 80px #00b3ff,
+                  0 0 120px #00b3ff,
+                  0 0 300px #00b3ff,
+                  0 0 400px #00b3ff;
+  }
+}
+- > there it has shadow  + blur() effect to the  ..
+The combination of the "blur" and "shadow" effects together creates a visual effect commonly referred to as a "glow" or "halo" effect. This effect gives the text or element a soft, radiant, and luminous appearance, as if it's emitting light or surrounded by a gentle aura. Here's how the two effects work together:
+////////////////////////////////////////////////////////////
+h1 span{
+  display: table-cell;
+  animation: animate 1s linear infinite;
+} 
+-> using the combination of 
+ columns: transparent; + display: table-cell;
+ with 
+ h1 span:nth-child(9n+1){
+  animation-delay: 0.5s;
+}
+h1 span:nth-child(9n+2){
+  animation-delay: 1.25s;
+}
+h1 span:nth-child(9n+3){
+  animation-delay: 2.35s;
+}
+h1 span:nth-child(9n+4){
+  animation-delay: 2.75s;
+}
+h1 span:nth-child(9n+5){
+  animation-delay: 1s;
+}
+h1 span:nth-child(9n+6){
+  animation-delay: 1s;
+}
+h1 span:nth-child(9n+7){
+  animation-delay: 1.5s;
+}
+h1 span:nth-child(9n+8){
+  animation-delay: 1.65s;
+}
+h1 span:nth-child(9n+9){
+  animation-delay: 3.85s;
+}
+ timing on the  animation-delay makes it quite cooler .
