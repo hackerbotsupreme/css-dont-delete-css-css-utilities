@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>sticky notes | css +js project</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="notes">
+        <div id="create">
+          <i class="fa-solid fa-plus"></i>
+          <div class="createBox">
+            <div class="innerCreateBox">
+              <textarea
+                name=""
+                id="userInput"
+                placeholder="Write Here .................."
+                maxlength="160"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="note">abcd</div> -->
+      </div>
+    </div>
+    <script>
+      let createBox = document.getElementsByClassName("createBox")[0];
+      let notes = document.getElementsByClassName("notes")[0];
+      let input = document.getElementById("userInput");
+      let i = 0;
+      createBox.addEventListener("keydown", content);
+      document.getElementById("create").addEventListener("click", function () {
+        createBox.style.display = "block";
+      });
+      function content(e) {
+        if (e.keyCode == "13") {
+          divStyle(input.value);
+          input.value = "";
+
+          createBox.style.display = "none";
+        }
+      }
+      function colours() {
+        let randomColor = [
+          "#00E0D4",
+          "#EA0010",
+          "#EF0B98",
+          "#6700B0",
+          "#1472C7",
+          "#09FFE6",
+          "#FF9A09",
+        ];
+        if (i > randomColor.length - 1) {
+          i = 0;
+        }
+        return randomColor[i++];
+      }
+      function divStyle(text) {
+        let div = document.createElement("div");
+        div.className = "note";
+        div.innerHTML =
+          '<div class="details">' + "<h3>" + text + "<h3>" + "</div>";
+
+        // remove note on double click
+        div.addEventListener("dblclick", function () {
+          div.remove();
+        });
+        // fill random colours in notes
+        div.setAttribute("style", "background: " + colours() + "");
+        notes.appendChild(div);
+      }
+    </script>
+  </body>
+</html>

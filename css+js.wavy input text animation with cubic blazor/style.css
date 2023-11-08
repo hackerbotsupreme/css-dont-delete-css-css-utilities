@@ -41,7 +41,7 @@ body {
   color: #666;
   user-select: none;
 }
-/* label */
+
 .InputBox label span {
   position: relative;
   display: inline-flex;

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>text hover effects  using css and js </title>
+</head>
+<body>
+    <h2 class="text"> Vanila Javascript </h2>
+    <script>
+        let text=document.querySelector('h2')
+        text.innerHTML=text.innerText.split('').map((letters,i)=>`
+        <span style= "transition-delay:${i*40}ms;filter:hue-rotate(${i*30}deg)">${letters}</span>`).join('');
+
+    </script>
+</body>
+</html>

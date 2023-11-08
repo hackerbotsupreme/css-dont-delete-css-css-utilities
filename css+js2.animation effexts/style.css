@@ -21,7 +21,7 @@ h2 {
   color: #333;
   text-transform: uppercase;
 }
-i{
+i {
   position: absolute;
   background: #000;
   display: block;
@@ -36,20 +36,20 @@ i{
     transform: translateY(-300px);
   }
 }
-i:nth-child(5n + 1){
+i:nth-child(5n + 1) {
   background: #fff;
 }
-i:nth-child(5n + 2){
+i:nth-child(5n + 2) {
   background: #ffb03c;
 }
-i:nth-child(5n + 3){
+i:nth-child(5n + 3) {
   background: #fff;
   border: 5px solid #ff9933;
 }
-i:nth-child(5n + 4){
+i:nth-child(5n + 4) {
   background: #2bd11b;
 }
-i:nth-child(5n + 5){
+i:nth-child(5n + 5) {
   background: #fff;
   border: 5px solid #ff9933;
 }

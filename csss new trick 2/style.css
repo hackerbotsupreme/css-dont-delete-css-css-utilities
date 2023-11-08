@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    height: 100vh;
+    background-color: yellow;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.card{
+    height: 500px;
+    width: 300px;
+    background-color: blue;
+    border-radius: 40px;
+    background-image: linear-gradient(rgb(255, 102, 102,0.5),rgb(255, 255, 128,0.5),rgb(174, 251, 174,0.5)),url();
+    background-size: cover;
+    background-position: center;
+    background-repeat:no-repeat ;
+    animation: animate linear;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    backface-visibility: hidden;
+}
+@keyframes animate{
+    0%{
+        /* rotate:  0deg; */
+        /* rotate:x 0deg ;
+        rotate:y 0deg ; */
+        /* rotate:z 0deg; */
+        rotate:0deg;
+    }
+    100%{
+        /* rotate: 360deg; */
+        /* rotate:x 0deg ;
+        rotate:y 0deg ; */
+        /* rotate:z 360deg; */
+        rotate:1 2 1 360deg;
+        
+    }
+}
