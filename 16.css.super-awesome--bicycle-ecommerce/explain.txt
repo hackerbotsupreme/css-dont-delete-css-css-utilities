@@ -1,0 +1,43 @@
+ok if a file have two css links which one will it follow ?
+the answer is it will apply styles and  will find thise styles in both files 
+it will take it from anywhere it finds it  . 
+
+
+[class*="col-"] {
+    padding: 0 15px;
+} - what does it means in css ?
+The CSS selector [class*="col-"] is using an attribute selector with the * operator. It selects any element that has a class attribute containing a substring "col-".
+
+
+
+
+if i am making a website is it recommended to use links fo font-styles   or  is it more safer to download that style and make a seperate folder for it  and then make links from it ?
+
+When it comes to using fonts in a website, there are a few considerations to keep in mind, and the choice between using links (via a content delivery network or CDN) and downloading the font files to host them locally depends on your specific needs and preferences. Here are some factors to consider:
+Using Links (CDN):
+Convenience: Linking to fonts via a CDN (such as Google Fonts or Adobe Fonts) is convenient because it doesn't require you to download and host font files on your server. You can quickly access a wide range of fonts by adding a few lines of code to your HTML/CSS.
+Updates and Maintenance: CDNs typically handle updates and maintenance of fonts. When the font provider updates a font, your website automatically benefits from the improvements without any manual intervention.
+Performance: CDNs are optimized for speed and reliability. Fonts served from reputable CDNs are likely to load quickly and efficiently for your users.
+Downloading and Hosting Locally
+Control: Hosting fonts locally gives you more control over the font files. You can customize the font files or serve different font formats based on browser compatibility.
+Privacy: If you have privacy concerns or need to comply with data protection regulations, hosting fonts locally can provide more control over user data as the font requests won't be routed through a third-party CDN.
+Offline Usage: If your website needs to work offline or in environments with restricted internet access, hosting fonts locally ensures that the fonts are available even when there's no internet connection.
+Reduced External Dependencies: Hosting fonts locally reduces external dependencies, which can be beneficial for security and reliability.
+In practice, many websites use a combination of both approaches. They may link to popular fonts via CDNs for common styles but host custom or less common fonts locally for specific design requirements.
+Ultimately, the choice between linking to fonts via a CDN and hosting them locally depends on your project's specific requirements, your preference for control and privacy, and your performance considerations. There's no one-size-fits-all answer, so you should evaluate your project's needs and make an informed decision based on those factors.
+
+
+
+@font-face {
+    font-family: MyriadProCondensed;
+    src: url(./fonts/MyriadProCondensed/MyriadProCondensed.ttf);
+}
+@font-face {
+    font-family: BerlinSansFBDemiBold;
+    src: url(./fonts/BerlinSansFBDemiBold/BerlinSansFBDemiBold.ttf);
+}
+
+
+
+
+

@@ -1,0 +1,5 @@
+the  first thing that comes in my 
+mind is three property that is display , visble and opaity ?
+which should i used in which context... all of them look and feels same ?
+
+
