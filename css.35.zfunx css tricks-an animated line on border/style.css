@@ -1,0 +1,92 @@
+body {
+  background-color: purple;
+  /*use dark background*/
+}
+
+.box {
+  /*width and height should be same*/
+  width: 200px;
+  height: 200px;
+}
+
+.animLine {
+  background-size: cover;
+  float: left;
+  margin: 4px;
+  box-shadow: 0 2px 4px #000;
+  position: relative;
+  transform: scale(0.9);
+  transition: 0.1s;
+}
+
+.animLine:hover {
+  transform: scale(1);
+  box-shadow: 0 2px 4px #000, 0 8px 32px rgba(0, 0, 0, 0.5);
+} 
+
+.animLine:hover:before,
+.animLine:hover:after {
+  position: absolute;
+  content: "";
+  background: linear-gradient(90deg, #ddd 40%, transparent 40%);
+  top: -5px;
+  bottom: -5px;
+  left: -5px;
+  right: -5px;
+  z-index: 1;
+  border-radius: 4px;
+  background-size: 200% 4px;
+  background-repeat: no-repeat;
+  filter: drop-shadow(0 0 8px #fff);
+  background-position: 80% 0;
+}
+
+.animLine:hover:before {
+  animation: beforeLineAnim 2s linear infinite;
+}
+
+.animLine:hover:after {
+  animation: afterLineAnim 2s linear infinite;
+  transform: rotate(-90deg);
+  background-position: -20% 0;
+}
+
+@keyframes beforeLineAnim {
+  45%,
+  50% {
+    background-position: -100% 0;
+  }
+  45% {
+    transform: scale(1);
+  }
+  50%,
+  95% {
+    transform: scale(1, -1);
+  }
+  95% {
+    background-position: 80% 0;
+  }
+}
+
+@keyframes afterLineAnim {
+  20%,
+  25% {
+    background-position: -100% 0;
+  }
+  20% {
+    transform: scale(1) rotate(-90deg);
+  }
+  25% {
+    transform: scale(-1, 1) rotate(-90deg);
+  }
+  70%,
+  75% {
+    background-position: 80% 0;
+  }
+  70% {
+    transform: scale(-1, 1) rotate(-90deg);
+  }
+  75% {
+    transform: scale(1, 1) rotate(-90deg);
+  }
+}

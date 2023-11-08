@@ -1,0 +1,4 @@
+what does scale:-1 do ?
+2. Explanation with Real-World Application: The scale(-1) CSS transformation function is used to flip or mirror an element horizontally. It changes the direction of the element along the horizontal axis. This is commonly used in web development and design when you want to create a mirrored or flipped version of an image, icon, or any other element.
+/////////////////////////
+

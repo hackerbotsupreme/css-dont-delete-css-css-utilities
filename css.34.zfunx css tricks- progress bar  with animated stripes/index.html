@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="line stripesLoader"></div>
+    <div class="line stripesLoader" style="background-position:50%;
+background-color:green"></div>
+    <div class="line stripesLoader" style="background-position:10%;
+background-color:blue"></div>
+    <div class="line stripesLoader" style="background-position:90%;
+background-color:orange"></div>
+
+    <br>
+    <div id="progress" class="line stripesLoader" style="background-position:25%;
+background-color:red"></div>
+
+    <button onclick="changeProgress(0,'red')">0%</button>
+    <button onclick="changeProgress(25,'red')">25%</button>
+    <button onclick="changeProgress(50,'orange')">50%</button>
+    <button onclick="changeProgress(100,'green')">100%</button>
+    <script src="app.js"></script>
+</body>
+
+</html>

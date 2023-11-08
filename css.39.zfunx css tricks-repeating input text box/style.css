@@ -1,0 +1,80 @@
+body {
+  background-color: #000;
+}
+
+.topCenter,
+.bottomCenter {
+  position: fixed;
+  top: 20%;
+  text-align: center;
+  width: 100%;
+}
+
+.bottomCenter {
+  top: auto;
+  bottom: 20%;
+}
+
+/*jumping colors*/
+/*
+  .letters span{
+    color:#fff;
+    display:inline-block;
+    letter-spacing:.3em;
+    transition:.2s;
+  }
+  
+  .letters span.focus{
+    color:red;
+    transform:scale(1.5);
+  }
+  
+  .letters span.focus + span, .letters.minusOne > span:first-child{
+    color:cyan;
+    transform:scale(2) translateY(-0.3em);
+  }
+  
+  .letters span.focus + span + span, .letters.minusTwo > span:first-child,.letters.minusOne > span:nth-child(2){
+    color:yellow;
+    transform:scale(1.5);
+  }
+  */
+
+/*smoke*/
+/*
+  .letters span{
+    color:#333;
+    display:inline-block;
+    letter-spacing:.5em;
+    transition:.8s;
+    font-size:2em;
+    filter:blur(4px);
+  }
+  
+  .letters span.focus, .letters span.focus + span, .letters.minusOne > span:first-child, .letters span.focus + span + span, .letters.minusTwo > span:first-child,.letters.minusOne > span:nth-child(2){
+    color:#fff;
+    filter:blur(0);
+  }
+  */
+
+/*glow in night*/
+.letters span {
+  color: #333;
+  display: inline-block;
+  letter-spacing: 0.3em;
+  transition: 0.8s;
+}
+
+.letters span.focus,
+.letters span.focus + span + span,
+.letters.minusTwo > span:first-child,
+.letters.minusOne > span:nth-child(2) {
+  color: yellow;
+  text-shadow: 0 0 16px yellow;
+}
+
+.letters span.focus + span,
+.letters.minusOne > span:first-child {
+  color: darkOrange;
+  text-shadow: 0 0 16px darkOrange;
+}

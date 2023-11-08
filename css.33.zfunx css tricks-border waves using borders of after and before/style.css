@@ -1,0 +1,55 @@
+body {
+  background-color: crimson;
+}
+
+.borderWaves {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  margin: 10px;
+  background-size: cover;
+  border-radius: 4px;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  position: relative;
+}
+
+.borderWaves:before,
+.borderWaves:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  animation: borderWavesAnim 1s linear infinite;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
+
+.borderWaves:after {
+  animation-delay: 0.5s;
+}
+
+.borderWaves:hover:before,
+.borderWaves:hover:after {
+  opacity: 1;
+  visibility: visible;
+}
+
+@keyframes borderWavesAnim {
+  50% {
+    border-color: #fff;
+  }
+  100% {
+    /* border-color: #fff; */
+    top: -20px;
+    bottom: -20px;
+    left: -20px;
+    right: -20px;
+    border-radius: 20px;
+  }
+}
