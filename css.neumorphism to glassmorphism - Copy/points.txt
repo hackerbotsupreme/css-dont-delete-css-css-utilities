@@ -1,0 +1,16 @@
+there are three important 
+things 
+firsty ,
+the approach with the html structure 
+
+and secondly ,
+how the background is created using linear-gradient 
+
+and thirdly  ,
+how we made the lines of min,hour and second .
+
+lets discuss each of them
+/////////////////////////////////////////////////////
+first 
+approach + html 
+
