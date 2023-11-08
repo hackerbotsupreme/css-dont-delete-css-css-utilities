@@ -1,0 +1,100 @@
+first thing is to notice here is ,
+
+
+//////////////////////////////////////
+
+
+Display: none; is a CSS property that effectively removes an element from the web page's display and layout. Here's how it works:
+
+Invisibility: When you apply display: none; to an HTML element (e.g., a <div> or a <p>), that element becomes completely invisible. It won't be seen by the user, and it doesn't take up any space in the layout.
+
+No Space Occupied: Importantly, when an element is set to display: none;, it doesn't leave an empty space where it used to be. Other elements on the page adjust as if the hidden element never existed. This is different from setting visibility: hidden;, which hides an element but still occupies space in the layout.
+
+Interaction and Events: Elements with display: none; are also removed from the flow of the document, so they can't be interacted with. You can't click on, hover over, or interact with elements that have this property applied.
+
+Visibility Control: display: none; is commonly used in web development to control when elements should be visible or hidden. You can change an element's display property with JavaScript to make it visible when needed.
+
+and
+
+Yes, scale(0) is similar to display: none; in that it effectively hides an element, but there are some key differences:
+
+Visibility:
+
+scale(0) still renders the element in the layout, but it scales it down to a size of 0, effectively making it invisible but still taking up space.
+display: none;, on the other hand, completely removes the element from the layout, so it doesn't take up any space.
+Interaction:
+
+Elements with scale(0) can still be interacted with if they overlap with other elements. For example, if a scaled-down element overlaps a clickable area of another element, the click event might still trigger.
+Elements with display: none; cannot be interacted with because they are not part of the layout or rendering process.
+Animation:
+
+scale(0) can be used for CSS animations and transitions to create effects like collapsing elements or zooming in from an invisible state. When you change the scale back to its original value (e.g., scale(1)), the element becomes visible and takes up space again.
+display: none; is not typically used for animations or transitions because it doesn't smoothly change an element's visibility or size in the same way as scale.
+
+
+/////////////////////////////////////////////////
+
+
+the interesting thing to notice here is  
+how the menu's are invisible all the time untill we 
+hover over the element/li item.
+
+.dropdown menu {
+  display: none;
+}
+
+.menu-bar ul li:hover .dropdown-menu {
+  display: block;
+  position: absolute;
+  background: rgb(0, 100, 0);
+  margin-top: 15px;
+  margin-left: -15px;
+}
+
+
+.menu-bar ul li:hover .dropdown-menu ul {
+  display: block;
+  margin: 10px;
+}
+
+.menu-bar ul li:hover .dropdown-menu ul li {
+  width: 150px;
+  padding: 10px;
+  border-bottom: 1px dotted #fff;
+  background: transparent;
+  border-radius: 0;
+  text-align: left;
+}
+
+.menu-bar ul li:hover .dropdown-menu ul li:last-child {
+  border-bottom: none;
+}
+
+
+one thing you probably noticed here is ,
+what is - display: block; - is doing here ?
+
+first discuss what will happpen  if we do not have 
+display block - okay then the ul items willbe displayed in the  
+line they will not displayed one down the another , they all will be in line  with just that paddin and other things . 
+
+
+You are correct in your observation. If you do not apply display: block; to the <ul> elements within your sub-menus, they will still be displayed horizontally in line with each other. The display: block; property is commonly used to change the behavior of block-level elements like <ul> and make them stack vertically, one below the other, which is the typical behavior for lists.
+
+So, without display: block;, the <ul> items within your sub-menus will be displayed horizontally (in a line) if there is enough horizontal space available. If the space is limited, they may wrap to the next line.
+
+Here's a brief explanation:
+
+By default, <ul> elements are block-level, which means they stack vertically, one below the other.
+
+If you don't apply display: block;, the <ul> elements within your sub-menus will inherit their default behavior and remain in line with each other horizontally.
+
+The sub-menu items within these <ul> elements (i.e., <li> items) will still be displayed one below the other, but the sub-menus themselves will be displayed next to each other horizontally.
+
+So, the visual effect will be different from the typical dropdown menu behavior, but the sub-menu items (the actual list items) will still be displayed vertically within each <ul> element.
+
+
+
+////////////////////////////
+
+

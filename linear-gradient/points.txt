@@ -1,0 +1,74 @@
+What is the difference between CSS and SCSS ?
+Read
+Discuss
+Courses
+
+Introduction:
+
+    CSS: Cascading Style Sheet is a stylesheet language used to define the presentation and layout of a webpage written in HTML or XML. CSS follows a cascading hierarchy, where styles defined at a higher level in the stylesheet cascade down to affect the lower-level elements. CSS is now an essential part of web development in conjunction with HTML and Javascript. CSS has a file extension of .css.
+    SCSS: Syntactically Awesome Style Sheet SCSS (Sassy CSS) is a preprocessor scripting language that is a superset of CSS. It provides additional features and functionalities that are not available in regular CSS. SCSS syntax is very similar to CSS, but it allows for the use of variables, nesting, mixins, and other programming constructs. SCSS has a file extension of .scss.
+
+Differences:
+
+     Syntax: CSS follows a plain-text syntax, whereas SCSS follows a more structured syntax with additional features such as variables, nesting, and mixins.
+    Variables: SCSS allows you to define variables to store commonly used values such as colors, font sizes, and spacing, whereas CSS does not.
+    Nesting: SCSS allows you to nest selectors within other selectors, making it easier to write and read complex stylesheets, whereas CSS requires you to write each selector separately.
+    Mixins: SCSS allows you to create reusable code snippets using mixins, which are like functions in programming languages. CSS does not provide this functionality.
+    File Extension: CSS files use the .css file extension, while SCSS files use the .scss file extension.
+    Compilation: CSS files are interpreted by web browsers directly, whereas SCSS files must be preprocessed into standard CSS files using a preprocessor such as Sass.
+    SCSS contains all the features of CSS and contains more features that are not present in CSS which makes it a good choice for developers to use it.
+    SCSS offers variables, you can shorten your code by using variables. It is a great advantage over conventional CSS.
+
+Example: In CSS
+
+body{
+     color: #ffffff;
+    font: $ubuntu-font: 'Ubuntu', 
+                         'Arial',
+                         'Helvetica',
+                          sans-serif;
+     font-size: xx-large;
+     padding: 2rem;
+}
+
+Output:
+
+Example: In SCSS
+
+$white: #ffffff;
+$ubuntu-font: $ubuntu-font: 'Ubuntu', 'Arial', 'Helvetica', sans-serif;
+
+body{
+     color: $white;
+     font: $ubuntu-font;
+     font-size: xx-large;
+     padding: 2rem;
+}
+
+Output:
+
+    Knowing SCSS helps you to customize Bootstrap 4.
+    SASS adds the feature of @import which lets you import your customized SCSS files. 
+
+Example:
+
+@import "my theme";
+@import "framework/bootstrap";
+
+SASS allows us to use nested syntax. Let’s say you have to style a specific ‘paragraph’ in ‘div’ in ‘footer’ you can definitely do that by SASS. 
+
+Example:
+
+footer {
+    div {
+        p {
+            margin: 2rem;
+            color: #2f2f2f;
+        }
+    }
+}
+
+Both CSS and SASS have comprehensive documentation and communities of users making it easier to find support.
+
+CSS is the foundation of webpages and is used for webpage development by styling websites and web apps. You can learn CSS from the ground up by following this CSS Tutorial and CSS Examples.
+Last Updated : 24 Mar, 2023

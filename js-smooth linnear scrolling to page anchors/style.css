@@ -1,0 +1,26 @@
+/*[Updated on 2 Oct 2017]*/
+_:-moz-tree-row(hover), html {
+    scroll-behavior: smooth;/*for firefox*/
+  }
+  
+  body,
+  html {
+    color: #fff;
+    margin: 0;
+    height: 100%;
+  }
+  
+  .section {
+    height: 90%;
+    padding: 8px;
+  }
+  
+  .section a {
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    border: 2px solid #fff;
+    padding: 8px;
+    border-radius: 4px;
+    margin: 8px;
+  }
