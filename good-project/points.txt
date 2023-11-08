@@ -1,0 +1,80 @@
+here we are starting from the nav section , whre when we click on the buttons 
+we will land on that perticuiar section , so how this is happening revive 
+id + a with # (a href="#home")
+
+
+the name of the website is which is my name , some letters 
+which are a and p are pink in color is how we done that 
+
+we used   - <h1><span>A</span>loke <span>P</span>ramanik</h1>
+
+
+next exiciting thing is the  animation of waving  of the monu bar icon -
+which is createed  using before and after elements .
+remeber  : is class and :: is elements . 
+and class represents a state. and :: represents an individual element . 
+
+and that's not the only interesting thing here , look at this structuring 
+<div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="#hero" data-after="Home">Home</a></li>
+            <li><a href="#services" data-after="Service">Services</a></li>
+            <li><a href="#projects" data-after="Projects">Projects</a></li>
+            <li><a href="#about" data-after="About">About</a></li>
+            <li><a href="#contact" data-after="Contact">Contact</a></li>
+          </ul>
+        </div>
+this structuring also carries teh  reponsiveess like when the  width  decreses the 
+before or after elemnt  combines and becomes another element withthe animation which was actually 
+implementes theough (@ media only screen and (min/max height/width )) and when the width is not changed 
+the menu-list visible and elements are vnished ..
+
+Responsive navigation menus like this are used in websites and web applications to provide an optimal user experience across various devices, from desktops to mobile phones.
+
+
+but also on looking at everything above , a questionarises 
+that waht are data-text and data-after ? 
+
+data-text and data-after are not standard HTML attributes but are likely custom attributes used in your web development project to store additional data or configuration settings for specific elements.
+
+
+The data-* global attributes form a class of attributes called custom data attributes, that allow proprietary information to be exchanged between the HTML and its DOM representation by scripts.
+
+
+next when you will be looking at the website you will see  that 
+an animatin would happen before the name apperas and you must be wondering how is that happend ?
+well it all because of before and after elements  that we applled and 
+you can also reassure that inspecting the  website ,
+go to the html tab select that element and under that you will see a - ::after 
+
+
+
+
+also a tip that is wehrnever you are trying to lrarn a big website 
+you cen only  depend on inspect . 
+
+
+
+and when you scroll the page the background clour of the navbar goes from transparent to black ?
+how? 
+remember what to do when this kind of things happen then go to the inspect tab then open the html  tab reload and then scroll 
+then if you  see  that  a style of bg color is getting added to the  html tag ehrn you scroll 
+then its js and if nothing chaes of the element in the htn=ml tag then you can say its because of the css . 
+
+
+now when you reachesthe top you would see the img with crimson layes on ? it is created like this .
+
+
+#about .col-left .about-img::after {
+	content: '';
+	position: absolute;
+	left: -33px;
+	top: 19px;
+	height: 98%;
+	width: 98%;
+	border: 7px solid crimson;
+	z-index: -1;
+}
