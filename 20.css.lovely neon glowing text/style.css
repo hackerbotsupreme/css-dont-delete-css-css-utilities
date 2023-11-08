@@ -56,7 +56,7 @@ p{
     0 0 8px rgba(255,255,255,1),
     0 0 16px rgba(255,255,255,1);
 }
-/* section:before{
+section:before{
     content: "";
     position: absolute;
     top: 0;
@@ -67,4 +67,4 @@ p{
     z-index: 1;
     mix-blend-mode: color;
     animation: animate 10s linear infinite;
-} */
+}

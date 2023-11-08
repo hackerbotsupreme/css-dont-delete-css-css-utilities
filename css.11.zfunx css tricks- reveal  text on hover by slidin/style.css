@@ -1,0 +1,64 @@
+.reveal-text-on-image {
+  width: 200px;
+  height: 200px;
+  margin: 8px;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  border: 4px solid #000;
+  position: relative;
+  overflow: hidden;
+}
+
+.reveal-text-on-image:before,
+.reveal-text-on-image:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: inherit;
+  transition: 0.3s;
+}
+
+.reveal-text-on-image:after {
+  background: #fff;
+  transform: translateY(100%);
+  content: attr(data-text);
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.reveal-text-on-image:hover:before {
+  transform: translateY(-50%); /*try different values*/
+}
+
+.reveal-text-on-image.slide-down:after {
+  transform: translateY(-100%);
+}
+.reveal-text-on-image.slide-down:hover:before {
+  transform: translateY(50%); /*try different values*/
+}
+
+.reveal-text-on-image.slide-left:after {
+  transform: translate(100%, 0);
+}
+.reveal-text-on-image.slide-left:hover:before {
+  transform: translate(-50%, 0); /*try different values*/
+}
+
+.reveal-text-on-image.slide-right:after {
+  transform: translate(-100%, 0);
+}
+.reveal-text-on-image.slide-right:hover:before {
+  transform: translate(50%, 0); /*try different values*/
+}
+
+.reveal-text-on-image:hover:after {
+  transform: translateY(0);
+  box-shadow: 0 0 0 200px rgba(0, 0, 0, 0.5);
+}

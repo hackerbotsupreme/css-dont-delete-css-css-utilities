@@ -118,9 +118,110 @@ and it behaves like a container to text and p.
 
 
 yesh so i think its done .
-
-
-
-
 fiter : and how exactily does it works and what does it do ?
 
+/////////////////////////////////////////////
+
+my main questui=tion is what us :before  - this ... i searched it in all over mdn even in the under the pseudo classes abd elements 
+but i did not find anything :before ? so what is it ?
+
+
+and my second question  is if there is something like section:before and it has a background colour of blue then how deos 
+it's not displayed  even if having positoin absolute but  its colour and animation is still   blending with  the textshadow ..
+jus how ? 
+just what is this and how is it working ?
+
+
+When you use position: absolute; on an element, it takes the element out of the normal document flow and positions it relative to its nearest positioned ancestor. In the case of section:before, it appears you have set position: absolute; along with a background color and animation.
+
+if it is true then ehy is not the pseudo element getting displayed when it has  z index and background color with position absolute 
+as well ? i mean if the psedo element is  not getting displayed under the text and textshadow then it also mean that is not the 
+ blue colour should not be the first colour the shadow should blend with but still its colour combining with the text hadow how ?
+
+
+
+/////////////////////////////////////////////
+
+some cool cases/uses of pseudo element..
+search :before css  click on kolosek
+The CSS :before and :after properties are what also known as pseudo elements. They are used to add something before or after the content of an element. There are a lot of great uses for these pseudo elements, and we are here to explore some of them.
+
+The Syntax
+If we have an element like this one:
+
+<h2>welcome to our website</h2>
+
+We can add a pseudo element before it using CSS, like this:
+
+h2:before {
+  content: “Hello“;
+  color : blue;
+}
+The result will be:
+
+before_add_element
+
+This is a quite simple principle. You are adding content before or after a certain element. It can be extremely helpful when adding icons, clearing floats, and in many other cases.
+
+The content property of the pseudo element can be left empty with empty quotes like this content: “”. This way you can treat the pseudo element like a box with no content. If the content property is removed altogether, the pseudo element will not work.
+
+Adding Icons
+Probably the most popular usage of the before and after pseudo elements is using them to add icons. We can add a simple .png icon.
+
+Let’s look at the markup.
+
+HTML
+
+<h2>Weather report</h2>
+CSS
+
+h2:before {
+  content: “ ”; 
+  display: block;
+  height: 15px;
+  width: 25px;
+  url: (‘images/icon.png’’);
+  margin-right: 5px;
+}
+The result:
+
+before_add_icon
+
+Now we have successfully added an icon before the text. Easy, right?
+
+Clearing Floats
+After elements are floated, another one needs to be added in order to clear that float. You can avoid adding a new element and simply using a pseudo one.
+
+Let's say we have this situation:
+
+after_clear_float
+
+We can use the next code to achieve clearing of the floats.
+
+HTML
+
+<div class="box-container">
+  <div class=”box”></div>
+  <div class=”box”></div>
+</div>
+<p>Lorem ipsum dolor amet truffaut kombucha roof party iPhone forage farm-to-table.</p>
+CSS
+
+.box-container:before,
+.box-container:after {
+  content: "";
+  display: block;
+}
+
+.box-container:after {
+  clear: both;
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+  background-color: #C98EED;
+  margin: 5px;
+  float: left;
+}
+Now, let's take a look at the result.

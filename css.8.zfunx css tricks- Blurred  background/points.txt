@@ -1,0 +1,40 @@
+we are is bluured background of text 
+means we will apply blur but the backgound will only be blurred not the text / content of it  .
+
+
+so how is it happening  
+it is happening only due to ,
+
+
+.blurred-bg-container .blur {
+  background: inherit;
+  height: 100vh; /* h */
+  width: 166.667%; /* (100/cw) x 100% */
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-10%, -30%); /* - [cl - (cw/2)] % ,  -[ct - (ch/2)] % */
+  filter: blur(20px);
+  z-index: -1;
+}
+
+
+and as  i said in the 
+css soft glow  
+if you see an blurred effect without blurring the whole 
+then there is a seperate element 
+that is  creating that blurred effect . 
+
+/////////////////////////
+
+background: inherit; - does this mean  it will take its parents background as it is including its dimensions  image all that ?
+
+Yes, the CSS property background: inherit; means that an element will inherit its background properties, including background color, background image, and other background-related settings, from its parent element.
+This property is often used when you want child elements to have a consistent background appearance with their parent elements. It ensures that the child element's background matches that of the parent without duplicating the background settings in the child's CSS rules.
+
+
+
+/////////////////////////
+
+
+

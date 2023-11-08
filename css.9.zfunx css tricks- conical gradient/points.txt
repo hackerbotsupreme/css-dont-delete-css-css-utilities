@@ -1,0 +1,81 @@
+first  we will try to get an idea what is 
+tell me how conical-gradient works ?
+
+A conical gradient is a type of CSS gradient that creates a circular gradient pattern, radiating from a central point outward in all directions. It simulates the appearance of a color wheel or a cone-shaped gradient.
+
+example  -
+background: conic-gradient(red, yellow, green);
+
+and revise  what things we learned  , 
+we larened about  , 
+1.linear-gradient (makes gradient in linear )
+1.conic-gradient (makes gradient in circular )
+1.radial-gradient (makes gradient in wavy like starts from the center   )
+///////////////////////////////////
+
+
+the first thing that will catch your eyes on 
+looking on the code is ,
+
+this , 
+
+.conical-grad:before,
+.conical-grad:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 50%;
+  left: 0;
+  right: 0;
+  background: linear-gradient(45deg, hsl(0, 100%, 50%) 50%, transparent 50%),
+    linear-gradient(90deg, hsl(45, 100%, 50%) 50%, transparent 50%),
+    linear-gradient(135deg, hsl(90, 100%, 50%) 50%, transparent 50%),
+    linear-gradient(180deg, hsl(135, 100%, 50%) 50%, transparent 50%);
+  background-size: 200px 200px;
+}
+
+.conical-grad:after {
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 50%, hsl(180, 100%, 50%) 50%),
+    linear-gradient(90deg, transparent 50%, hsl(225, 100%, 50%) 50%),
+    linear-gradient(135deg, transparent 50%, hsl(270, 100%, 50%) 50%),
+    linear-gradient(180deg, transparent 50%, hsl(315, 100%, 50%) 50%);
+  z-index: -1;
+}
+
+
+the first thing that is here is creation of pseudo elements ,
+so ehy would i need pseudo elements to apply the conical gradient ?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//////////////////////////////////
+
+
+and secondly why would i need to use linear gradient for cubic-gradient ?
+
+
+//////////////////////////////////
+
+thirdly how the container has a height and width 
+is it because of its child inside it that has height and width?
+yes . The container div does not have an explicit height and width defined in its CSS, but it appears to have a height and width because of its child element, the conical-grad div.
+
+
+
+//////////////////////////////////
+fourth thing is the whole toic of this code is making cinicgradient but in the code there is not even one conic gradient 
+there is only linear-gradient .
+if you want to know about the conicgradient then 
+search  conic-gradient  mdn .

@@ -1,0 +1,96 @@
+.confirmNotifi {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #000;
+  text-align: center;
+  font-size: large;
+  font-family: "Arial Black", Gadget, sans-serif;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  /* perspective: 100vh; */
+}
+
+.confirmNotifi.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.confirmNotifi .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateX(-90deg);
+  transition: 0.3s;
+  perspective: 100vh;
+}
+
+.confirmNotifi.show .content {
+  transform: translate(-50%, -50%);
+  transition: 0.7s cubic-bezier(0.7, 0.5, 0, 1.8);
+}
+
+.confirmNotifi .title {
+  background: hsl(0, 0%, 90%);
+  padding: 50px;
+  border-radius: 10px 10px 0 0;
+}
+
+.confirmNotifi .title h2 {
+  margin-top: 0;
+}
+
+.confirmNotifi .yes,
+.confirmNotifi .no {
+  width: 50%;
+  float: left;
+  padding: 20px;
+  box-sizing: border-box;
+  transform: rotateX(90deg);
+  transform-origin: 50% 0;
+  transition: 0.3s;
+}
+
+.confirmNotifi .yes {
+  border-radius: 0 0 0 10px;
+  background: hsl(120, 100%, 60%);
+}
+
+.confirmNotifi .no {
+  border-radius: 0 0 10px;
+  background: hsl(0, 100%, 60%);
+}
+
+.confirmNotifi .content > * {
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.confirmNotifi.show .yes,
+.confirmNotifi.show .no {
+  transform: rotateX(0);
+}
+
+.confirmNotifi.show .yes {
+  transition: 0.7s 0.2s cubic-bezier(0.7, 0.5, 0, 1.8);
+}
+
+.confirmNotifi.show .no {
+  transition: 1s 0.2s cubic-bezier(0.7, 0.5, 0, 1.8);
+}
+
+.confirmNotifi.show .yes:hover,
+.confirmNotifi.show .no:hover {
+  transform: rotateX(-25deg);
+  transition: 0.3s;
+}
+
+@media (max-width: 600px) {
+  .confirmNotifi .content {
+    width: 80%;
+  }
+}
+

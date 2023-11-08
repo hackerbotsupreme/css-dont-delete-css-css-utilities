@@ -1,0 +1,31 @@
+one of the most important lessons about linear-gradient is ,
+the default means the default direction the linear-gradient 
+starts is upwards/180deg .
+like if you do 
+    background: linear-gradient(red,blue,green);
+
+you will see red at the top , then it starts mixing colours and the grreen at the bottom . 
+
+    background: linear-gradient(0deg,red,blue,green);
+in this case the red will be on the botttom of screen ,
+so its on 0deg. 
+
+remember knowllege of directiions is very imp when it comes 
+to making various gradient designs .
+
+/////////////////////////////////////////////
+
+another thing that catches the eye is ,
+
+-webkit-text-fill-color: transparent;
+and what does it mean ?
+
+it means fill the colour of the text with transparent .
+
+
+//////////////////////////////////////
+
+here only one thing is surprising 
+why the background of div is not visible ?
+
+

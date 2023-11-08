@@ -1,0 +1,29 @@
+box-shadow: 0 0 16px #3b5998;
+box-shadow: 0 0 16px #00aced;
+box-shadow: 0 0 16px #cd486b;
+box-shadow: 0 0 16px #c92228;
+box-shadow: 0 0 16px #666666;
+note : 3rd value is the blur
+
+now remeber the times when you got 
+surprised by when you see glowy shadow effect 
+of a box ...
+
+now on this times wht you should notice is 
+that the shadow made up of only 1 colour or not .
+if it is remember you can do it by above .
+
+
+but if you see the shadow is of the background of container 
+then there is an elemnt(which could be pseudo / anther html trick/ :/ class/state ) wich has more  spread radius and 
+blur if it is blur.
+box-shadow: 0 0 16px  40px #3b5998;
+box-shadow: 0 0 16px  40px #00aced;
+box-shadow: 0 0 16px  40px #cd486b;
+box-shadow: 0 0 16px  40px #c92228;
+box-shadow: 0 0 16px  40px #666666;
+note : 4th value is the spread radius 
+
+////////////////////////////////////////////
+
+

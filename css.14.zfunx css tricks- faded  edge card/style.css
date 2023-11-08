@@ -1,0 +1,111 @@
+body {
+  background: url(https://web.opendrive.com/api/v1/download/file.json/NTlfMTA0NTI4NDhf?inline=1);
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+}
+.container {
+  height: 400px;
+  width: 300px;
+  margin: 16px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 4px;
+  box-shadow: 0 0 32px #000;
+  position: relative;
+  display: inline-block;
+  color: #000;
+}
+
+.container:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "";
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.7),
+    transparent 20%,
+    transparent 80%,
+    rgba(255, 255, 255, 0.7)
+  );
+  pointer-events: none;
+}
+
+.fadedEdge {
+  overflow: auto;
+  height: 100%;
+  padding: 10% 8px;
+  box-sizing: border-box;
+}
+.fadedEdge img {
+  width: 100%;
+  margin: 8px 0;
+  border-radius: 4px;
+}
+
+.container.black {
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+}
+.container.black:after {
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.7),
+    transparent 20%,
+    transparent 80%,
+    rgba(0, 0, 0, 0.7)
+  );
+}
+
+.container.purple {
+  background: rgba(128, 0, 128, 0.7);
+  color: #fff;
+}
+.container.purple:after {
+  background: linear-gradient(
+    rgba(128, 0, 128, 0.7),
+    transparent 20%,
+    transparent 80%,
+    rgba(128, 0, 128, 0.7)
+  );
+}
+
+.container.red {
+  background: rgba(255, 0, 0, 0.7);
+  color: #fff;
+}
+.container.red:after {
+  background: linear-gradient(
+    rgba(255, 0, 0, 0.7),
+    transparent 20%,
+    transparent 80%,
+    rgba(255, 0, 0, 0.7)
+  );
+}
+
+.container.yellow {
+  background: rgba(255, 255, 0, 0.7);
+  color: #000;
+}
+.container.yellow:after {
+  background: linear-gradient(
+    rgba(255, 255, 0, 0.7),
+    transparent 20%,
+    transparent 80%,
+    rgba(255, 255, 0, 0.7)
+  );
+}
+
+.container.MediumSpringGreen {
+  background: rgba(0, 250, 154, 0.7);
+  color: #000;
+}
+.container.MediumSpringGreen:after {
+  background: linear-gradient(
+    rgba(0, 250, 154, 0.7),
+    transparent 20%,
+    transparent 80%,
+    rgba(0, 250, 154, 0.7)
+  );
+}

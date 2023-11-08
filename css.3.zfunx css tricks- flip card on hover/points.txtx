@@ -1,0 +1,106 @@
+fisrsfirst thing here is 
+why the perspective is doing without the transform style ,
+
+
+well you misundertood the perpective with the transform-style : preserve-3d 
+its not neccesary to always have transform-style . 
+
+perspective means The perspective CSS property determines the distance between the z=0 plane and the user in order to give a 3D-positioned element some perspective.
+in simpler words, 
+Perspective: Imagine you're looking at a 3D object on your screen. The "perspective" is like the way you view it. If you have a lot of perspective, the object seems smaller. If you have less perspective, it appears larger.
+
+Z-axis: Think of it as depth. If something has a positive depth (z>0), it looks bigger. If it has a negative depth (z<0), it looks smaller. If it's behind you, you can't see it.
+
+Vanishing Point: Normally, things look smaller as they move away from you. The "vanishing point" is where they seem to disappear. By default, it's in the center of your view, but you can change it.
+
+New Stacking Context: Changing perspective creates a new way of stacking things on your screen. Also, if you use perspective, it can affect how fixed-positioned things behave inside that area.
+
+So, perspective controls how 3D objects appear on your screen, making some look bigger, others smaller, and affecting where they vanish.
+
+in one line, you can say: "Perspective controls the depth of the Z-axis."
+
+
+
+now but how it  will plays in the this case so 
+lets  
+
+//////////////////////
+
+
+float: left; - what does this do ?
+
+float: left; is a CSS property-value pair that's used to make an element float to the left within its containing element
+ok lets say i have already places an element  to the left which means its already part of layout   and now we say teh other elements to float to left then will this elements  float over that element or thase elements will float next to the right to that element . 
+If you have already placed an element to the left using float: left;, and then you apply float: left; to other elements as well, those new elements will float next to the right of the previously floated element.
+In other words, when you apply float: left; to multiple elements within the same container, they will align horizontally from left to right, with each new floated element appearing to the right of the previous one. This is the default behavior of the float property when applied to multiple elements within the same container.
+
+
+no i mean that element is not floated left , its like  i placed an element will the elements that we applied float to  will float next to the right to that element . 
+I see what you mean now. If you have an element that is not floated left (i.e., it's part of the normal flow of the document), and you apply float: left; to other elements, those new elements with float: left; will indeed float to the right of the non-floated element.
+
+In this scenario, the non-floated element will maintain its position in the normal flow of the document, and the elements with float: left; will be positioned to the right of it, as if the non-floated element is acting as a sort of anchor point.
+
+and this how it works .
+
+remeber the float property is reponsive by default .
+//////////////////////////
+
+the next thing that catches eye is 
+.flip-card:hover .front {
+  transform: rotateY(180deg) scale(0.5);
+}
+
+here it ays the front will rotate by 180deg in y direction and the backface-visibility  is also hidden then what is sense of adding scale(0.5) ?.
+but what is the  scale(0.5) is doing ?
+
+
+
+
+
+////////////////////////////////
+firstly if applying the float effect makes elements responsive by default then why 
+we are needing additional media queries ?
+
+
+so if i am thinking like this , i am wrong bcz 
+Applying the float property to elements doesn't make them responsive by default. Instead, it changes their positioning within the document flow. When you float an element, it's taken out of the normal flow of the document, and other elements can wrap around it. This can be useful for creating layouts where elements appear side by side, but it doesn't automatically make your design responsive to different screen sizes.
+
+Media queries are used to make a webpage responsive to different screen sizes and devices. While floating elements can affect layout, they don't automatically adapt to different screen sizes. Media queries allow you to define specific CSS rules for different screen widths, making it possible to adjust the layout, font sizes, and other design elements to provide a better user experience on various devices.
+
+So, media queries are necessary to create a responsive design that works well on both desktop and mobile devices, even when floating elements are used for layout purposes. They help you control the appearance and behavior of your website based on the screen size and device characteristics.
+
+adding the media queariees fot the responsive ness 
+
+/////////////////////////////////
+
+another thing is , 
+
+  flex-direction: column;
+so what it does lets revice in simple wrors and easy to understand .
+
+flex-direction: column; is a CSS property that specifies the direction in which flex items are placed within a flex container. In simple words, it tells the elements inside a container to stack on top of each other vertically, like a column of items.
+
+Here's a breakdown:
+
+Default Behavior: By default, when you use flex, the items inside the container are arranged in a row from left to right.
+
+flex-direction: column;: When you apply this property, it changes the arrangement so that the items stack on top of each other vertically, from top to bottom, like a list.
+
+In summary, flex-direction: column; is used to create a vertical layout where items are placed one above the other, making it suitable for creating things like vertical menus or lists.
+
+
+////////////////////////////////
+
+
+and at last the unique approach of making this project 
+
+look at this structuring of html , 
+to make the front and back effect 
+<div class="flip-card">
+        <div class="front"
+            style="background-image:url(https://web.opendrive.com/api/v1/download/file.json/NTlfMjE4NTg1NDVf?inline=1)">
+        </div>
+        <div class="back">
+            Lorem ipsum
+        </div>
+    </div>

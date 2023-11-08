@@ -1,0 +1,32 @@
+:focus - does this means clicking on the element ?
+
+When an element is in focus, it means it's currently selected for interaction, which can happen through clicking with a mouse, tapping on a touch device, or navigating to it using the keyboard (e.g., by pressing the Tab key).
+
+//////////////////////////////////////////////
+
+the next thing that caches eyes is ,
+input[type="range"]:hover::-webkit-slider-runnable-track,
+input[type="range"]:focus::-webkit-slider-runnable-track 
+
+method to address the runnabke track 
+
+
+//////////////////////////////////////////////
+
+how to address input without adding the class ?
+
+input[type="range"] 
+
+and this is how we overplayed the default line ?
+
+input[type="range"] {
+  -webkit-appearance: none; /*remove the line*/
+
+and how we address the thumb ?
+
+input[type="range"]::-moz-range-thumb 
+input[type="range"]:hover::-moz-range-thumb,
+//////////////////////////////////////////////
+
+
+

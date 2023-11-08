@@ -1,0 +1,59 @@
+body {
+  background: url(https://web.opendrive.com/api/v1/download/file.json/NTlfMTM3Njg4Nzdf?inline=1);
+  background-size: cover;
+  background-position: center;
+  font-family: arial;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  color: #fff;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 8px;
+  opacity: 0.8;
+}
+
+.header.gradientBG {
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+}
+
+.header > div {
+  margin-bottom: 24px;
+  background: linear-gradient(rgba(255, 255, 255, 0), #fff 20%, #fff);
+  background-attachment: fixed;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* _:-moz-tree-row(hover),
+.header > div {
+  margin-bottom: 24px;
+  background: none;
+  -webkit-text-fill-color: #fff;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .header > div {
+    background: none;
+  }
+}
+@supports (-ms-ime-align: auto) {
+  .header > div {
+    -webkit-text-fill-color: #fff;
+  }
+}
+
+.header h1 {
+  padding: 12px;
+}
+
+.content {
+  background-color: #fff;
+  padding: 8px;
+  box-shadow: 0 0 24px #000;
+} */

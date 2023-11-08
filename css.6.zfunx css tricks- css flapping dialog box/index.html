@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="showConfirmationNotification('confirmNotifi')">
+        Delete file
+    </button>
+    <div id="confirmNotifi" class="confirmNotifi" onclick="hideConfirmationNotification(this)">
+        <div class="content">
+            <div class="title">
+                <h2>Delete this file?</h2>
+                This action is final and you won't be able to recover any data
+            </div>
+            <div class="yes" onclick="deleteSuccess()">Yes</div>
+            <div class="no">No</div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

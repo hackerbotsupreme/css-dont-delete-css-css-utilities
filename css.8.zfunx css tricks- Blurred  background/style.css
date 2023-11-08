@@ -1,0 +1,42 @@
+body,
+.blurred-bg-container .content h1 {
+  margin: 0;
+}
+
+.blurred-bg-container {
+  background-image: url('https://static6.depositphotos.com/1167801/651/i/450/depositphotos_6517777-stock-photo-rainbow-of-colorful-boxes.jpg');
+  height: 100vh; /* =h */
+  background-size: cover;
+}
+
+.blurred-bg-container .content {
+  background: inherit;
+  width: 60%; /* =cw */
+  height: 40%; /* =ch */
+  border-radius: 8px;
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 50%; /* =ct */
+  left: 40%; /* =cl */
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+.blurred-bg-container .text {
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.3);
+  height: 100%;
+  box-sizing: border-box; /* so that padding is included in height */
+}
+
+.blurred-bg-container .blur {
+  background: inherit;
+  height: 100vh; /* h */
+  width: 166.667%; /* (100/cw) x 100% */
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-10%, -30%); /* - [cl - (cw/2)] % ,  -[ct - (ch/2)] % */
+  filter: blur(20px);
+  z-index: -1;
+}

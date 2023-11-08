@@ -1,0 +1,61 @@
+body,
+header h1 {
+  margin: 0;
+  padding: 0;
+}
+
+/*height of wave = h = 50px*/
+header {
+  background: linear-gradient(45deg, blueviolet, crimson);
+  height: 200px;
+  color: #fff;
+  padding: 8px;
+  padding-bottom: 50px; /*h*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+header:before,
+header:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 25px; /*h/2*/
+  height: 50px; /*h*/
+  background: radial-gradient(closest-side, #fff, #fff 50%, transparent 50%);
+  /*or farthest-side*/
+  background-size: 50px 50px; /*h h*/
+  background-position: 0 25px; /*0 h/2*/
+  background-repeat: repeat-x;
+}
+
+header:after {
+  background: radial-gradient(
+    closest-side,
+    transparent,
+    transparent 50%,
+    #fff 50%
+  );
+  /*or farthest-side*/
+  background-size: 50px 50px; /*h h*/
+  background-position: 25px -25px; /*h/2 -h/2*/
+  background-repeat: repeat-x;
+  bottom: -25px;
+}
+
+header.animatedWave:before,
+header.animatedWave:after {
+  left: -50px; /*-h*/
+  animation: animateWave 0.2s linear infinite;
+}
+/* 
+@keyframes animateWave {
+  to {
+    transform: translateX(50px);
+  }
+} */

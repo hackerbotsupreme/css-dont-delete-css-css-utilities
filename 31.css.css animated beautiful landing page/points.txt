@@ -1,0 +1,300 @@
+ok , we will start with the 
+layers here  see this 
+		<div class="open">
+			<div class="layer"></div>
+			<div class="layer"></div>
+		</div>
+.open
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	pointer-events: none;
+	z-index: 10000;
+}
+here first thing of the 
+revice is position fixed where we fixes the elements relative to the screen 
+and remember 
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0; this comes togehter .
+    but is it neccesary to write like this ?
+    cant we write like 
+    position : fixed 
+    height: 100vh;
+    width : 100% ? 
+Yes, it's correct to use position: fixed; along with top: 0; left: 0; right: 0; bottom: 0; to create a fixed element that covers the entire viewport.
+
+However, you can also achieve the same result with position: fixed; height: 100vh; width: 100%;.
+
+Critical points:
+
+Both approaches achieve the same visual result, i.e., a fixed element covering the entire viewport.
+Using height: 100vh; and width: 100%; is more explicit and easier to understand.
+The first approach (top, left, right, bottom) might be useful when you need to set additional properties like padding or margins relative to the viewport edges.
+Real-world applications and approaches:
+
+The choice between the two methods often depends on the specific design requirements of your web project.
+Using height: 100vh; and width: 100%; is more in line with modern CSS practices and is easier for developers to maintain and read.
+Best practices:
+
+It's generally recommended to use the height: 100vh; and width: 100%; approach for simplicity and clarity unless you have specific reasons to use top, left, right, and bottom properties.
+
+
+
+
+//////////////////
+
+.open .layer
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transform-origin: top;
+	animation: open 1s ease-in-out forwards;
+}
+why we needed transform origin: top in here ?
+
+the thing is when the animation starts you will see the slides are closing from  bottom to top 
+now imagine the top (line) is the center so then  it all makes sense .
+
+
+
+///////////////////////////
+
+
+
+but the question still remains that how the whole animaation is happening ?
+
+well its because of this , 
+.open
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	pointer-events: none;
+	z-index: 10000;
+}
+.open .layer
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transform-origin: top;
+	animation: open 1s ease-in-out forwards;
+}
+.open .layer:nth-child(1)
+{
+	background: #000;
+	z-index: 2;
+}
+.open .layer:nth-child(2)
+{
+	background: #03a9f4;
+	animation-delay: 1s;
+	z-index: 1;
+}
+@keyframes open
+{
+	0%
+	{
+		transform: scaleY(1);
+	}
+	100%
+	{
+		transform: scaleY(0);
+	}
+}
+in words , 
+first 
+the slider is  coming from bottom to top 
+or in ther words we can say the nimation is happening from the 
+bottom to top which is the  y axis and it is expanding so its 
+scaling so it will be like , scaleY (1) and scale is a transform value so 
+		transform: scaleY(1);
+
+with this it will scale up but where it would do ?
+it would do it in the open div
+and what is forwards is doing in the animation ?
+"forwards" in CSS animations means that after the animation finishes, the element will stay in the final state that the animation reached.
+
+In your animation, you are using "transform" to make the element scale down ("transform: scaleY(0);"). Without "forwards," after the animation completes, the element would snap back to its original size.
+
+However, with "forwards," it ensures that the element remains scaled down (in its final state) even after the animation is done. So, it stays hidden as intended.
+
+In summary, "forwards" is like saying, "Hey, CSS, keep this element in the state it reached after the animation ends," which is useful for creating various visual effects.
+
+Best practice: When you want to maintain the final state of an animation, use "forwards" in your animation properties.
+
+and look at the addressers 
+.open .layer
+.open .layer:nth-child(1)
+.open .layer:nth-child(2)
+and keep in mind the animation is being applid  to the  .open .layer
+in words this is saying the  layers will follow the  animation but the 
+nth childs means .open .layer:nth-child(1)
+.open .layer:nth-child(2) - will decide their initial states. 
+
+and then the animation and then the attributes  are getting combined to it .
+and the animation in words , 
+important information ,
+However, in the @keyframes animation section, you are using transform: scaleY(0);, which scales the element vertically along its central axis.
+
+When you set the scale to 0 vertically, it effectively collapses the element, making it disappear from the bottom to the top, even though the transform origin is at the top edge.
+
+and it is (dirction is important ) beacuse the  animation we will see should be happening in the  bottom to top .
+in shory scale y shorts/shrinks the element from top to bottom, and the scale X does it in from left to right.
+and on top of it and with this explanation yu can thinl 
+if scale y is expanig  elements from the bottom to top why we neeed transform origin top ? what is it really doing in the code ?
+
+its a good and valid question ,
+okay you know that  scale shrinks element from top to bottom to center and vice versa when it will expand  from center 
+or the origin so normally if  you remove 
+	transform-origin: top;
+you will see that the center / origin of y asis is the center of fthe screen so 
+when  yu applying tat it create create an effect of bottom to top animation and 
+vice versa when you apply bottom to it .
+so 
+You are absolutely correct, and I appreciate your patience in explaining this further. Let's clarify:
+
+By default, when you use transform: scaleY(value); without specifying transform-origin, it scales the element along its central vertical axis. This means it shrinks or expands the element symmetrically from its center.
+
+When you add transform-origin: top;, you are explicitly setting the reference point for the vertical scaling operation to be at the top of the element.
+
+If you remove transform-origin: top;, the origin remains at the center of the element along the vertical axis. In this case:
+
+Scaling with transform: scaleY(0); would indeed appear as if the element is collapsing from its center both upwards and downwards.
+Scaling with transform: scaleY(1); would maintain the element's original size.
+So, you are correct that transform-origin: top; creates an effect where the element appears to collapse from the top to the bottom. Thank you for pointing out the clarification.
+
+
+but also , what does - transform origin : top - is doing explain me in simple words with a simple defination?
+
+/////////////////////////////////////////
+
+and following this  
+
+look at this  ,
+
+
+first , 
+.bannerText h2:before,
+.bannerText h3:before
+{
+		transform-origin: right;
+	animation: revealText 1s ease-in-out forwards;
+}
+@keyframes revealText
+{
+	0%
+	{
+		transform: scaleX(1);
+	}
+	100%
+	{
+		transform: scaleX(0);
+	}
+}
+
+second(then),
+.bannerText h2,
+.bannerText h3
+{
+	text-transform: uppercase;
+	transform-origin: left;
+	transform: scaleX(0);
+	animation: revealTextReverse 1s ease-in-out forwards;
+}
+@keyframes revealTextReverse
+{
+	0%
+	{
+		transform: scaleX(0);
+	}
+	100%
+	{
+		transform: scaleX(1);
+	}
+}
+
+
+revise , the animation(revealText)  will  start towards  the origin(right)  and will stay as same as its 100%
+then , the text which waas at scale 0 will start  towards  the origin(left) and also   stay as same as its 100%.
+in short , transform-origin + transform + animation . is making it .
+
+
+
+//////////////////////////////
+
+the next thing is 
+
+the postioning of the bulb ,
+
+look at this , 
+.bulb
+{
+	opacity: 0;
+	position: absolute;
+	right: 10%;
+	top: 50%;
+	transform: translateY(-50%);
+	animation: fadeIn 1s linear forwards;
+	animation-delay: 6s;
+	z-index: 100;
+}
+
+now look at this  ,
+	top: 50%;
+	transform: translateY(-50%);
+first 10 %  from the rigth then  50% from the top then  -50% fromthe  y axis which makes element 
+center vertically . 
+
+
+
+
+
+//////////////////////////////
+
+
+whenever you see an element puhed outside of the frame then 
+the first thing that should comes to your mind is that element has 
+a negative positioning 
+like
+top :-40/-100 px
+bottom :-40/-100 px
+left :-40/-100 px
+right :-40/-100 px
+
+disclaimer the inset cennot have  a -ve value
+
+///////////////////////////////////////////////
+
+
+now , for practice ,
+look at this 
+
+0%
+	{
+		transform: translateX(150px);
+		opacity: 0;
+	}
+	100%
+	{
+		transform: translateX(0);
+		opacity: 1;
+	}
+
+it is saying 
+at  0 % it will be at 150px along the x axis but at the 100% it will  be at 0px .
+which will be creating that the text is coming from the right sliding .
+//////////////////////////////////////

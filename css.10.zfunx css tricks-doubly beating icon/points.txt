@@ -1,0 +1,34 @@
+well there is only one special thing here ,
+that is ,
+how the structuring/html has been done 
+
+<div>
+          <i class="fa-solid fa-heart"></i>
+</div>
+
+        inside of 
+<div class="beating-icon">
+        <div>
+          <i class="fa-solid fa-heart"></i>
+        </div>
+</div>
+
+and the css timing to make it perfect .
+
+.beating-icon div {
+  animation: beat 0.35s ease infinite;
+}
+
+.beating-icon div i {
+  color: salmon;
+  animation: beat 0.7s ease infinite;
+}
+
+@keyframes beat {
+  50%{
+    transform: scale(3);
+  }
+}
+
+notice the timing ,
+0.7 and 0.35 sec .
