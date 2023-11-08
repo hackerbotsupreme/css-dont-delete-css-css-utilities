@@ -1,0 +1,89 @@
+ok so this file is especially made 
+to understand and to put a little light on 
+  mix-blend-mode: multiply;
+
+
+wwell on the very first look you may confuse it with the 
+hue-rotate but its very differrent from that . 
+
+it says ,
+The mix-blend-mode CSS property sets how an element's content should blend with the content of the element's parent and the element's background.
+well it is surely the interesting one search - mix-blend-mode mdn
+///////////////////////////////////
+one more interesting thing hre all the things you see multiple , screen , hardlight more...
+
+when you hover over any of these  you will see it say 
+Defines the formula that must be used to mix the colors with the backdrop
+means there is a formula to mix colors using the backdrop so 
+the root/fundamentally  it is using backdrop while saying  mix-blend-mode . 
+
+
+so learning backdrop will also help to understand the concept deeper. 
+You're absolutely right! Understanding backdrop and how colors are mixed with it is fundamental to comprehending how mix-blend mode works. The formula used to mix colors with the backdrop is what defines the various mix-blend mode options like screen, hardlight, and more.
+
+Learning about the backdrop and how it interacts with elements is indeed a valuable part of understanding the broader concept of graphic design and CSS effects. It provides the foundation for creating visually appealing designs and effects on the web.
+
+So, if you want to dive deeper into mix-blend modes and similar CSS properties, delving into the concept of backdrops and color blending will certainly enhance your understanding and creative capabilities in web design and development.
+
+can backdrop filter control how colors mix ?
+
+
+Yes, backdrop-filter can control how colors mix in the context of an HTML element. It applies graphical effects to the area behind the element (the backdrop) and can affect how the colors of the element itself mix with the backdrop. Here are a few ways backdrop-filter can influence color mixing:
+
+
+///////////////////////////////
+The mix-blend-mode CSS property sets how an element's content should blend with the content of the element's parent and the element's background. It allows us to specify a blending effect when two elements overlap. The final color shown for each pixel will be the result of a combination of the original pixel color and that of the pixel in the layer underneath it.
+
+To understand how mix-blend-mode works, let's look at an example. We have two <div> elements, each with a background image and a background color. The first <div> is positioned on top of the second <div>, which has a purple background. We want to see how the elements will blend together using the multiply blend mode.
+
+CSS
+
+article {
+  width: 280px;
+  height: 180px;
+  margin: 10px;
+  position: relative;
+  display: inline-block;
+}
+
+div {
+  width: 250px;
+  height: 130px;
+  padding: 10px;
+  margin: 10px;
+}
+
+article div:first-child {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  background: url(colorful-heart.png) no-repeat center 20px;
+  background-color: green;
+}
+
+article div:last-child {
+  background-color: purple;
+  position: absolute;
+  bottom: -10px;
+  right: 0;
+  z-index: -1;
+}
+
+.multiply-mix {
+  mix-blend-mode: multiply;
+}
+In this example, the mix-blend-mode property is set to multiply for the first <div>. When we apply this blend mode, it blends together not only the two background images but also the color from the second <div> below it. The result is a blended image where the colors are multiplied together.
+
+Please note that the mix-blend-mode property is relatively new and may not be supported in all browsers. It is important to check the browser compatibility before using this property in production.
+
+I hope this explanation helps! Let me know if you have any further questions.
+
+MDN content that I've consulted that you might want to check:
+
+mix-blend-mode
+Advanced styling effects
+<blend-mode>
+////////////////////////////////
+
+
+

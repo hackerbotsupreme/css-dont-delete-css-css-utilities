@@ -1,0 +1,28 @@
+body,
+html {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+.overlay {
+  background: url(https://web.opendrive.com/api/v1/download/file.json/NTlfMTM2NDExNjNf?inline=1);
+  height: 100%;
+  position: relative;
+  background-size: cover;
+}
+.overlay h1 {
+  background-color: #000;
+  color: #fff;
+  mix-blend-mode: multiply;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 16px;
+  border-radius: 8px;
+  font-family: arial;
+  font-size: 3em;
+  margin: 0;
+  opacity: 0.9;
+  box-shadow: 0 0 16px #000, 0 0 32px #000;
+}

@@ -30,7 +30,7 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-/* _:-moz-tree-row(hover),
+_:-moz-tree-row(hover),
 .header > div {
   margin-bottom: 24px;
   background: none;
@@ -56,4 +56,4 @@ body {
   background-color: #fff;
   padding: 8px;
   box-shadow: 0 0 24px #000;
-} */
+}

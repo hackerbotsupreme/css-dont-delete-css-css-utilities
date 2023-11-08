@@ -27,7 +27,7 @@ ul.socialIcons {
 }
 
 .socialIcons li i {
-  margin-right: 1em;
+  margin-right: 0.5em;
 }
 
 .socialIcons li:hover a {

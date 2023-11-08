@@ -9,9 +9,9 @@
   */
 
 input[type="range"] {
-  -webkit-appearance: none; /*remove the line*/
   width: 100%;
   height: 28px; /* thumbHeight + (2 x thumbBorderWidth)*/
+  -webkit-appearance: none; /*remove the line*/
   outline: none;
   /*background-color:cyan;*/
   border: 0; /*for firefox on android*/
