@@ -13,7 +13,7 @@
   align-items: center;
   background: #353535;
 }
- .container h2 {
+.container h2 {
   position: absolute;
   font-size: 12em;
   color: #444;
@@ -33,11 +33,9 @@
   clip-path: circle(20% at 50% 100%);
   transition: clip-path 2.5s;
 }
-
 .container h2:hover:nth-child(2) {
   clip-path: circle(60% at 50% 100%);
 }
-
 
 .container h2:nth-child(3) {
   color: #2cff37;
@@ -65,4 +63,4 @@
 }
 .container h2:hover:nth-child(4) {
   clip-path: circle(120% at 100% 50%);
-}/* */
+}

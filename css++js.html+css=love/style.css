@@ -28,15 +28,9 @@ body {
   color: #333;
   text-shadow: -2px -2px 5px #fff;
   filter: drop-shadow(4px 4px 10px #fff);
-  /* box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.05),
-    inset -10px -10px 15px rgba(255, 255, 255, 0.9),
-    15px 25px 10px rgba(0, 0, 0, 0.05), 15px 20px 20px rgba(0, 0, 0, 0.05); */
-  box-shadow:
-   inset 10px 10px 10px rgba(0, 0, 0, 0.05),
+  box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.05),
+    15px 25px 10px rgba(0, 0, 0, 0.05), 15px 20px 20px rgba(0, 0, 0, 0.05),
     inset -10px -10px 15px rgba(255, 255, 255, 0.9);
-  /* box-shadow:
-    15px 25px 10px rgba(0, 0, 0, 0.05), 
-    15px 20px 20px rgba(0, 0, 0, 0.05); */
 }
 
 .drop ion-icon {

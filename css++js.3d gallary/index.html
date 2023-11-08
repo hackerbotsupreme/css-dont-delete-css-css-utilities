@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>3d image gallery</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <span style="--i:1;">
+                <img src="pic1.jpg" alt="">
+            </span>
+            <span style="--i:2;">
+                <img src="pic2.jpg" alt="">
+            </span>
+            <span style="--i:3;">
+                <img src="pic3.jpg" alt="">
+            </span>
+            <span style="--i:4;">
+                <img src="pic4.jpg" alt="">
+            </span>
+            <span style="--i:5;">
+                <img src="pic5.jpg" alt="">
+            </span>
+            <span style="--i:6;">
+                <img src="pic6.jpg" alt="">
+            </span>
+            <span style="--i:7;">
+                <img src="pic7.jpg" alt="">
+            </span>
+            <span style="--i:8;">
+                <img src="pic8.jpg" alt="">
+            </span>
+        </div>
+        <div class="btns">
+            <div class="btn prev"></div>
+            <div class="btn next "></div>
+        </div>
+    </div>
+    <script>
+        let prev = document.querySelector('.prev')
+        let next = document.querySelector('.next')
+        let box = document.querySelector('.box')
+
+        let degrees = 0;
+        prev.addEventListener('click', function () {
+            degrees += 45;
+            box.style = `transform: perspective(1000px) rotateY(${degrees}deg);`;
+        })
+        next.addEventListener('click', function () {
+            degrees -= 45;
+            box.style = `transform: perspective(1000px) rotateY(${degrees}deg);`;
+        })
+
+    </script>
+</body>
+
+</html>

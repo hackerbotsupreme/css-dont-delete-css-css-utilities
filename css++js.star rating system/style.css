@@ -19,9 +19,9 @@ body {
 }
 .rating {
   position: relative;
-  padding: 30px 40px;
   display: flex;
   flex-direction: row-reverse;
+  padding: 30px 40px;
   border: 3px solid #111;
   border-radius: 30px;
   background: #353535;
@@ -51,16 +51,19 @@ body {
 
 .rating input::before {
   content: "\f005";
-  font-family: fontAwesome;
-  font-size: 34px;
-  position: absolute;
-  color: #111;
-  transition: 0.5s;
+    font-family: fontAwesome;
+    font-size: 34px ;
+    position: absolute;
+    color: #111;
+    transition: 0.5s;
+
+
 }
 
-.rating input:hover ~ input::before,
+.rating input:hover~input::before,
 .rating input:hover::before,
-.rating input:checked ~ input::before,
-.rating input:checked::before {
-  color: var(--c);
+.rating input:checked~input::before,
+.rating input:checked::before
+{
+    color: var(--c);
 }

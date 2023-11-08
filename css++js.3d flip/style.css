@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Borel&family=Kaushan+Script&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Borel", cursive;
+  /* font-family: 'Kaushan Script', cursive; */
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #222;
+}
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+.container .card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background: #333;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.container .card .imgBox,
+.container .card .textBx {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.container .card .imgBox {
+  background: #fff;
+  height: 120px;
+  z-index: 1;
+  transform-origin: top;
+}
+.container .card:hover .imgBox
+{
+    transform: translateY(-100%) rotateX(90deg);
+}
+.container .card .textBx {
+  height: 280px;
+  background: var(--clr);
+  border-top: 8px solid #333;
+  transform-origin: bottom;
+}
+.container .card:hover .textBx
+{
+    transform: translateY(100%) rotateX(90deg);
+}
+
+.container .card .imgBox::before{
+    content: '';
+    position: absolute;
+    bottom: -70px;
+    width: 144px;
+    height: 74px;
+    background: #fff;
+    border-bottom-left-radius:80px ;
+    border-bottom-right-radius:80px ;
+    z-index: 1;
+}
