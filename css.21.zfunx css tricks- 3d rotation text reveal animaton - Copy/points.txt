@@ -1,0 +1,19 @@
+what does this -.textReveal > div- means ?
+
+The > div part is a child combinator, which means it selects a <div> element that is a direct child of an element with the class "textReveal."
+In summary, -.textReveal > div- is used to select and style <div> elements that are immediate children of an element with the "textReveal" class.
+
+////////////////////////////////////////
+
+
+In summary, .textReveal > div > div is used to target and style <div> elements that are nested within a parent <div> that has the class "textReveal."
+
+////////////////////////////////////////
+
+so > indicating the direct child ?
+
+
+Yes, you're correct. The > symbol in a CSS selector indicates the direct child relationship.
+
+
+////////////////////////////////////////

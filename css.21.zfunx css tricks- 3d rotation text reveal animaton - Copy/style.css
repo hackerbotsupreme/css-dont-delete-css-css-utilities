@@ -1,0 +1,86 @@
+.textRevealContainer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 1.5em; /*adjust according to your need*/
+  text-align: center; /*in case you write multiline text*/
+}
+
+.textReveal {
+  overflow: hidden;
+  animation: textRevealAnim 2s ease 0.5s forwards;
+}
+
+.textReveal > div {
+  padding: 8px 16px;
+  transform: translateX(100%);
+  border-left: 2px solid red;
+  overflow: hidden;
+  animation: textRevealAnim 2s ease 0.5s forwards,
+    borderOpacityAnim 2s ease 0.5s forwards;
+}
+
+.textReveal > div > div {
+  transform: translateX(-100%);
+  animation: textRevealAnim 2s ease 0.5s forwards;
+}
+
+@keyframes textRevealAnim {
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes borderOpacityAnim {
+  50% {
+    border-left: 2px solid red;
+  }
+  100% {
+    border-left: 2px solid transparent;
+  }
+}
+
+.textReveal.x50 {
+  transform: translateX(-50%);
+}
+
+.textReveal.x100 {
+  transform: translateX(-100%);
+}
+
+.textReveal.zoom > div {
+  transform: translateX(100%) scale(0.5, 0.5);
+}
+
+.textReveal.rotateY {
+  perspective: 100px; /*adjust according to your need*/
+}
+
+.textReveal.rotateY > div {
+  transform: translateX(100%) rotateY(20deg);
+}
+
+.textReveal.color > div > div {
+  background: linear-gradient(
+    to right,
+    red,
+    red 45%,
+    orange 45%,
+    orange 55%,
+    red 55%,
+    red
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-size: 300%;
+  animation: textRevealAnim 2s ease 0.5s forwards,
+    bgShiftAnim 3s ease 0.5s forwards;
+}
+
+@keyframes bgShiftAnim {
+  to {
+    background-position: 100%;
+  }
+}

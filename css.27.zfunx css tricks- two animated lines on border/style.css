@@ -1,0 +1,55 @@
+body {
+  background-color: purple;
+  /*use dark background*/
+}
+
+.box > div {
+  width: 200px;
+  height: 200px;
+}
+
+.animLine {
+  padding: 0;
+  display: inline-block;
+  margin: 4px;
+  box-shadow: 0 2px 4px #000;
+  transform: scale(0.9);
+  transition: 1s;
+  border-radius: 4px;
+  background: linear-gradient(
+    -45deg,
+    transparent 40%,
+    #fff 40%,
+    #fff 50%,
+    transparent 50%
+  );
+  background-color: rgba(255, 255, 255, 0.3);
+  background-size: 400% 400%;
+  background-position: 80% 80%;
+  animation: beforeLineAnim 2s ease-in-out infinite;
+}
+.animLine > div {
+  background-size: auto 130%;
+  background-position: center;
+  border-radius: 4px;
+  transition: 0.2s;
+}
+.animLine:hover > div {
+  background-size: auto 100%;
+}
+.animLine:hover {
+  padding: 4px;
+  margin: 0;
+  transform: scale(1);
+  box-shadow: 0 2px 4px #000, 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes beforeLineAnim {
+  to {
+    background-position: 30% 30%;
+  }
+}
+
+.animLine.rect > div {
+  width: 300px;
+}

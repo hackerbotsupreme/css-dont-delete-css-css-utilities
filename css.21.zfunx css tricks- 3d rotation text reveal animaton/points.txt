@@ -1,0 +1,106 @@
+
+this this is crazy  how 
+
+simple things ends up making some of the craziest thing s  
+if you can figure out what tricks to pull.
+
+here how we did it  -->
+the first thing er did is make an container and as the simplelogic says 
+we will need one more container with two elements one div for the element and one div for the animation 
+
+
+and now think something like this  taht there are one parent container which will come from the 
+-x and the child container that will come from the +x to position 0 and posiyion 0 is the same for both of them 
+and when two will be at same position it will create like text reavel anumation. 
+
+well that is exactly what it is . 
+
+html -> 
+
+	<div class="textRevealContainer">
+		<div class="textReveal rotateY">
+			<div>
+				<div>
+					Text Reveal Animation
+					<div>
+					</div>
+				</div>
+		
+
+
+
+css->
+/* simple confusing but exellently done man  */
+/* awesome */
+.textRevealContainer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-color: aqua;
+  transform: translate(-50%, -50%);
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 1.5em; /*adjust according to your need*/
+  text-align: center; /*in case you write multiline text*/
+}
+
+.textReveal {
+  overflow: hidden;
+  animation: textRevealAnim 2s ease 0.5s forwards;
+}
+
+.textReveal > div {
+  padding: 8px 16px;
+  transform: translateX(100%);
+  border-left: 2px solid red;
+  overflow: hidden;
+  animation: textRevealAnim 2s ease 0.5s forwards,
+    borderOpacityAnim 2s ease 0.5s forwards;
+}
+
+.textReveal > div > div {
+  transform: translateX(-100%);
+  animation: textRevealAnim 2s ease 0.5s forwards;
+}
+/* 
+  textReveal has two divs under it 
+  first div has the second div 
+  and the second div has the thired div .
+
+  and mind that the second div has the textt content .
+ */
+@keyframes textRevealAnim {
+  to {
+    transform: translateX(0);
+  }
+}
+
+
+
+
+
+
+
+////////////////////////////////////////
+what does this -.textReveal > div- means ?
+
+The > div part is a child combinator, which means it selects a <div> element that is a direct child of an element with the class "textReveal."
+In summary, -.textReveal > div- is used to select and style <div> elements that are immediate children of an element with the "textReveal" class.
+
+////////////////////////////////////////
+
+
+In summary, .textReveal > div > div is used to target and style <div> elements that are nested within a parent <div> that has the class "textReveal."
+
+////////////////////////////////////////
+
+so > indicating the direct child ?
+
+
+Yes, you're correct. The > symbol in a CSS selector indicates the direct child relationship.
+
+
+////////////////////////////////////////
+
+
+
+

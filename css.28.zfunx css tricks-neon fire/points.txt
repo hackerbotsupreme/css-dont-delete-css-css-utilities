@@ -1,0 +1,29 @@
+there are two main things here 
+that are ,
+1. that we can use two animations  at the 
+same time . 
+but more surprising than that is , 
+one is covering the text-shadow (get bigger and smaller )
+and 
+second one is applying the huerotate of 360 deg 
+
+and that's how the neon fire is being done .
+
+2.we have also seen 
+how to make neon effect but we 
+are seeing usage of filter here ... 
+
+
+that's cool
+and remember the filter means we are applying 
+change on the colour .
+we are not mixing it .
+
+
+but backdrop-filter means mixing it  .
+
+
+
+
+
+///////////////////////////////////////////////

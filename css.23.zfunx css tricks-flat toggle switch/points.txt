@@ -1,0 +1,185 @@
+plan ->
+the paln here is 
+
+first we neeed a checbox type input 
+then we need a span(an inline element  as a block level element brings extra trouble ) operating 
+now to create the space between the the slider button 
+and the border what we will do is  m we will 
+make border as the box shadow means the box-shadow is  the 
+boder and how we are gonna create the gooey effect of the trasition ?
+
+well think of it like when you make the element 
+as the transition shows then when it trasitions the 
+same visual effect will appaer .
+
+so make a span pseudo element 
+that will cover the whole thing then 
+translateX it by half which is -30px which is -(w-h)
+now why (w-h) because as yu can see the width is 60px 
+and the height is 30px so i can tink of two parts 30 and 30 
+which are half of the whole element means if i translateX by half 
+then only half will be visible as with border redius on element and the slider container 
+on it it will look like an cicle and also 
+whwn clicked i will also do the the same with 
+translateX but this time it will be  +30px  with lime color and shadow 
+(switch on effect ) . 
+
+
+and dont forget in this process we have also madr an unique 
+visual effect as its unique code . and that's why i love this code .
+
+
+
+
+
+
+
+
+
+
+//////////////////////////////////
+input:checked + .slider:before
+ we can divide these kinds of interactions in three different parts 
+there are  +,space( ) and comma(,) - and yes each carries a different purpose and meaning =s  
+
+it will be like 
+
+input:checked + .slider:before
+input:checked   .slider:before
+input:checked , .slider:before
+
+
+so here 
+ + says  when this , this and this happens together 
+   says  when this element of this 
+ , says  this and this will follow this 
+
+//////////////////////////////////
+
+on seeing the animation the first thing that will 
+catch the eye is 
+1. which elements its actually consists of - convverting the input into this 
+2. the slider effect ehich does not resembles anythin shadow, pseudo elements , html elements  none so 
+how is it created ?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//////////////////////////////////
+
+the html setup is also very interesting  
+like -
+<div>
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+        </label> Switch 2
+    </div>
+
+    here 
+    div only serving to provide a blck
+    the label making  as switch
+    the input checkbox is on behind 
+    and the span making the slider 
+
+
+
+//////////////////////////////////
+
+and is :before and ::before are same? or is both of them makes pseudo-element?
+
+
+//////////////////////////////////
+
+and as you have seen it the way this code 
+is written is just funcking unique man  
+
+html - >
+  <div>
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+        </label> Switch 3
+    </div>
+
+css ->
+.switch input {
+  display: none;
+}
+
+.switch {
+  display: inline-block;
+  width: 60px; /*=w*/
+  height: 30px; /*=h*/
+  margin: 8px;
+  transform: translateY(50%);
+  position: relative;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 30px;
+  box-shadow: 0 0 0 2px #777, 0 0 4px #777;
+  cursor: pointer;
+  border: 4px solid transparent;
+  overflow: hidden;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #777;
+  border-radius: 30px;
+  transform: translateX(-30px); 
+  /*translateX(-(w-h))*/
+  transition: 0.4s;
+}
+
+input:checked + .slider:before {
+  transform: translateX(30px); /*translateX(w-h)*/
+  background-color: limeGreen;
+}
+
+
+look at this shit its fucking wnique .

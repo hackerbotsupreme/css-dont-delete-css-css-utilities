@@ -1,0 +1,53 @@
+what comes in mind when you 
+first  sees this effect 
+
+it is like  a glass effect .
+it can be used in so many places 
+but we want to say like on bottons 
+it will really shine but more important than 
+that is everything is wrapped up in the a 
+tag which is used for links .
+
+
+so it is a good mockup/example of that 
+how you can create/ttransform an a to a beutiful mirror 
+effect .
+
+///////////////////////////////////////////////////////////////
+
+and now how can we make it 
+ok so how we make it is actually very interesting 
+ok so first we will take a anchor tag/a  tag then we 
+will take an div tag in it here this will contain our content 
+and now we will give the a sizing,background 
+and we will apply inline-block property to it 
+so that we can apply box-shadow,background  property to it  
+and now we will make the most 
+
+
+important thing the shining line effect ,
+to make it 
+first will apply a linear-gradient to it 
+then we will apply a background color on it which is transparent white 
+then we will manipulate its position to make the  animation in future .
+and we will now  increase the size  of the bacckground the purpose of doing it to make the element bigger add some help in taaking the shinny gradient out of the view .
+
+
+
+
+///////////////////////////////////////////
+
+  background-size: auto 130%;
+- what is this telling me ?
+
+"auto" for the width indicates that the background image's width should remain unchanged, preserving its original size.
+"130%" for the height indicates that the background image's height should be increased to 130% of its original height.
+
+Short summary of more real-world applications and approaches:
+
+It's useful when you want to ensure that a background image fits the height of an element while preserving its original width, which can be particularly handy for maintaining image quality.
+In responsive design, this property can be combined with media queries to adjust the background image size based on different screen sizes or device orientations.
+
+///////////////////////////////////////////
+
+
